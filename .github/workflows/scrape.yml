@@ -1,0 +1,36 @@
+name: 공고 수집
+
+on:
+  schedule:
+    - cron: '0 23 * * *'
+  workflow_dispatch:
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 코드 체크아웃
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GH_PAT }}
+
+      - name: Python 설정
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: 의존성 설치
+        run: |
+          pip install -r requirements.txt
+          playwright install chromium --with-deps
+
+      - name: 공고 수집
+        run: python scraper.py --no-browser
+
+      - name: results.html 커밋
+        run: |
+          git config user.email "actions@github.com"
+          git config user.name "GitHub Actions"
+          git add results.html
+          git diff --staged --quiet || git commit -m "공고 업데이트 $(date '+%Y-%m-%d %H:%M')"
+          git push
