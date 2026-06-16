@@ -1262,8 +1262,8 @@ function exportCSV() {{
     const cols = [a.title, a.company, a.site, a.deadline, a.appliedDate, a.interviewDate, a.status, a.memo||''];
     lines.push(cols.map(c => '"' + (c||'').replace(/"/g, '""') + '"').join(','));
   }});
-  const bom = '﻿';
-  const blob = new Blob([bom + lines.join('\r\n')], {{ type: 'text/csv;charset=utf-8;' }});
+  const bom = '\\uFEFF';
+  const blob = new Blob([bom + lines.join('\\r\\n')], {{ type: 'text/csv;charset=utf-8;' }});
   const url = URL.createObjectURL(blob);
   const a = document.createElement('a'); a.href = url;
   a.download = '지원현황_' + new Date().toISOString().slice(0,10) + '.csv';
