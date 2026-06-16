@@ -920,6 +920,10 @@ def generate_html(jobs: list, cfg: dict, output_file: str):
         <label style="font-size:11px;color:#888">마감일</label>
         <input id="af-deadline" type="text" placeholder="예) 07.31" style="border:1.5px solid #dde0e8;border-radius:8px;padding:7px 10px;font-size:13px;font-family:inherit;outline:none">
       </div>
+      <div style="display:flex;flex-direction:column;gap:4px;flex:1;min-width:110px">
+        <label style="font-size:11px;color:#888">지원일</label>
+        <input id="af-applied" type="date" style="border:1.5px solid #dde0e8;border-radius:8px;padding:7px 10px;font-size:13px;font-family:inherit;outline:none;height:36px">
+      </div>
       <div style="display:flex;flex-direction:column;gap:4px;flex:1;min-width:100px">
         <label style="font-size:11px;color:#888">초기 상태</label>
         <select id="af-status" style="border:1.5px solid #dde0e8;border-radius:8px;padding:7px 10px;font-size:13px;font-family:inherit;outline:none;height:36px">
@@ -951,6 +955,59 @@ def generate_html(jobs: list, cfg: dict, output_file: str):
       </thead>
       <tbody id="appTbody"></tbody>
     </table>
+  </div>
+</div>
+
+<!-- 수정 모달 -->
+<div id="editModal" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.4);z-index:1000;align-items:center;justify-content:center">
+  <div style="background:white;border-radius:16px;padding:28px 32px;width:min(520px,90vw);box-shadow:0 8px 40px rgba(0,0,0,0.18)">
+    <div style="font-size:15px;font-weight:700;margin-bottom:20px;color:#1a1a2e">지원 기록 수정</div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
+      <div style="display:flex;flex-direction:column;gap:4px;grid-column:span 2">
+        <label style="font-size:11px;color:#888">공고 링크</label>
+        <input id="em-url" type="text" style="border:1.5px solid #dde0e8;border-radius:8px;padding:7px 10px;font-size:13px;font-family:inherit;outline:none">
+      </div>
+      <div style="display:flex;flex-direction:column;gap:4px">
+        <label style="font-size:11px;color:#888">직무명 *</label>
+        <input id="em-title" type="text" style="border:1.5px solid #dde0e8;border-radius:8px;padding:7px 10px;font-size:13px;font-family:inherit;outline:none">
+      </div>
+      <div style="display:flex;flex-direction:column;gap:4px">
+        <label style="font-size:11px;color:#888">회사명 *</label>
+        <input id="em-company" type="text" style="border:1.5px solid #dde0e8;border-radius:8px;padding:7px 10px;font-size:13px;font-family:inherit;outline:none">
+      </div>
+      <div style="display:flex;flex-direction:column;gap:4px">
+        <label style="font-size:11px;color:#888">사이트</label>
+        <input id="em-site" type="text" style="border:1.5px solid #dde0e8;border-radius:8px;padding:7px 10px;font-size:13px;font-family:inherit;outline:none">
+      </div>
+      <div style="display:flex;flex-direction:column;gap:4px">
+        <label style="font-size:11px;color:#888">마감일</label>
+        <input id="em-deadline" type="text" placeholder="예) 07.31" style="border:1.5px solid #dde0e8;border-radius:8px;padding:7px 10px;font-size:13px;font-family:inherit;outline:none">
+      </div>
+      <div style="display:flex;flex-direction:column;gap:4px">
+        <label style="font-size:11px;color:#888">지원일</label>
+        <input id="em-applied" type="date" style="border:1.5px solid #dde0e8;border-radius:8px;padding:7px 10px;font-size:13px;font-family:inherit;outline:none">
+      </div>
+      <div style="display:flex;flex-direction:column;gap:4px">
+        <label style="font-size:11px;color:#888">면접일정</label>
+        <input id="em-interview" type="date" style="border:1.5px solid #dde0e8;border-radius:8px;padding:7px 10px;font-size:13px;font-family:inherit;outline:none">
+      </div>
+      <div style="display:flex;flex-direction:column;gap:4px">
+        <label style="font-size:11px;color:#888">진행상태</label>
+        <select id="em-status" style="border:1.5px solid #dde0e8;border-radius:8px;padding:7px 10px;font-size:13px;font-family:inherit;outline:none;height:36px">
+          <option>지원완료</option><option>서류검토</option><option>면접예정</option>
+          <option>최종합격</option><option>불합격</option><option>보류</option>
+        </select>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:4px;grid-column:span 2">
+        <label style="font-size:11px;color:#888">결과/메모</label>
+        <textarea id="em-memo" rows="3" style="border:1.5px solid #dde0e8;border-radius:8px;padding:7px 10px;font-size:13px;font-family:inherit;outline:none;resize:vertical"></textarea>
+      </div>
+    </div>
+    <div id="em-err" style="display:none;color:#ef4444;font-size:12px;margin-top:8px"></div>
+    <div style="display:flex;gap:8px;justify-content:flex-end;margin-top:20px">
+      <button onclick="closeEditModal()" style="background:#f3f4f6;color:#555;border:none;border-radius:8px;padding:8px 20px;font-size:13px;cursor:pointer;font-family:inherit">취소</button>
+      <button onclick="submitEdit()" style="background:#2563eb;color:white;border:none;border-radius:8px;padding:8px 24px;font-size:13px;cursor:pointer;font-family:inherit;font-weight:600">저장</button>
+    </div>
   </div>
 </div>
 
@@ -1137,7 +1194,10 @@ function renderAppTable() {{
         <textarea class="memo-input" rows="2" placeholder="결과 메모 (면접 후기, 탈락 사유 등...)"
           data-id="${{safeId}}" onblur="saveField(this)" data-field="memo">${{a.memo||''}}</textarea>
       </td>
-      <td><button class="del-btn" data-id="${{safeId}}" onclick="deleteApp(this.dataset.id)">✕</button></td>
+      <td style="white-space:nowrap">
+        <button class="edit-btn" data-id="${{safeId}}" onclick="openEditModal(this.dataset.id)" title="수정" style="background:#f3f4f6;border:none;border-radius:6px;padding:4px 8px;cursor:pointer;font-size:12px;margin-bottom:4px;display:block;width:100%">✏️ 수정</button>
+        <button class="del-btn" data-id="${{safeId}}" onclick="deleteApp(this.dataset.id)">✕</button>
+      </td>
     </tr>`;
   }}).join('');
 }}
@@ -1158,6 +1218,60 @@ async function changeStatus(sel) {{
   await saveApps();
   renderAppTable();
 }}
+
+// ── 수정 모달 ──
+let _editingId = null;
+function openEditModal(id) {{
+  const a = APPS[id];
+  if (!a) return;
+  _editingId = id;
+  document.getElementById('em-url').value       = a.url || '';
+  document.getElementById('em-title').value     = a.title || '';
+  document.getElementById('em-company').value   = a.company || '';
+  document.getElementById('em-site').value      = a.site || '';
+  document.getElementById('em-deadline').value  = a.deadline || '';
+  document.getElementById('em-applied').value   = a.appliedDate || '';
+  document.getElementById('em-interview').value = a.interviewDate || '';
+  document.getElementById('em-status').value    = a.status || '지원완료';
+  document.getElementById('em-memo').value      = a.memo || '';
+  document.getElementById('em-err').style.display = 'none';
+  const modal = document.getElementById('editModal');
+  modal.style.display = 'flex';
+}}
+function closeEditModal() {{
+  document.getElementById('editModal').style.display = 'none';
+  _editingId = null;
+}}
+async function submitEdit() {{
+  if (!_editingId || !APPS[_editingId]) return;
+  const title   = document.getElementById('em-title').value.trim();
+  const company = document.getElementById('em-company').value.trim();
+  if (!title || !company) {{
+    const err = document.getElementById('em-err');
+    err.textContent = '직무명과 회사명은 필수입니다.';
+    err.style.display = '';
+    return;
+  }}
+  APPS[_editingId] = {{
+    ...APPS[_editingId],
+    url:           document.getElementById('em-url').value.trim(),
+    title,
+    company,
+    site:          document.getElementById('em-site').value.trim() || APPS[_editingId].site,
+    deadline:      document.getElementById('em-deadline').value.trim(),
+    appliedDate:   document.getElementById('em-applied').value,
+    interviewDate: document.getElementById('em-interview').value,
+    status:        document.getElementById('em-status').value,
+    memo:          document.getElementById('em-memo').value,
+  }};
+  await saveApps();
+  closeEditModal();
+  renderAppTable();
+}}
+// 모달 바깥 클릭 시 닫기
+document.getElementById('editModal').addEventListener('click', function(e) {{
+  if (e.target === this) closeEditModal();
+}});
 
 async function deleteApp(id) {{
   if (!confirm('지원 기록을 삭제할까요?')) return;
@@ -1187,6 +1301,7 @@ document.getElementById('af-submit').addEventListener('click', async () => {{
   const site     = document.getElementById('af-site').value.trim() || '직접입력';
   const deadline = document.getElementById('af-deadline').value.trim();
   const status   = document.getElementById('af-status').value;
+  const applied  = document.getElementById('af-applied').value || new Date().toISOString().slice(0,10);
   const err      = document.getElementById('af-err');
 
   if (!title || !company) {{
@@ -1199,14 +1314,14 @@ document.getElementById('af-submit').addEventListener('click', async () => {{
     id, site, title, company,
     location: '', experience: '', employment_type: '',
     deadline, url, keyword: '직접입력',
-    appliedDate: new Date().toISOString().slice(0,10),
+    appliedDate: applied,
     interviewDate: '', result: '', status, memo: '',
   }};
   await saveApps();
   updateBadge();
   renderAppTable();
 
-  ['af-url','af-title','af-company','af-site','af-deadline'].forEach(i => document.getElementById(i).value = '');
+  ['af-url','af-title','af-company','af-site','af-deadline','af-applied'].forEach(i => document.getElementById(i).value = '');
   document.getElementById('addForm').style.display = 'none';
 }});
 document.getElementById('af-url').addEventListener('paste', () => {{
