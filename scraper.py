@@ -1088,10 +1088,46 @@ async function loadApps() {{
       const r = await fetch('/api/apps');
       APPS = await r.json();
     }} catch {{ APPS = {{}}; }}
+    // 서버에 데이터 없고 로컬에 이전 데이터 있으면 복구 배너 표시
+    if (Object.keys(APPS).length === 0) {{
+      try {{
+        const local = JSON.parse(localStorage.getItem(LS_KEY) || '{{}}');
+        if (Object.keys(local).length > 0) {{
+          showRecoverBanner(local);
+        }}
+      }} catch {{}}
+    }}
   }} else {{
     try {{ APPS = JSON.parse(localStorage.getItem(LS_KEY) || '{{}}'); }} catch {{ APPS = {{}}; }}
   }}
   return APPS;
+}}
+
+function showRecoverBanner(localData) {{
+  const cnt = Object.keys(localData).length;
+  const banner = document.createElement('div');
+  banner.id = 'recoverBanner';
+  banner.style.cssText = 'position:fixed;bottom:20px;right:20px;background:#1e40af;color:white;padding:16px 20px;border-radius:12px;box-shadow:0 4px 20px rgba(0,0,0,.3);z-index:9999;font-size:13px;max-width:340px;line-height:1.5';
+  banner.innerHTML = `<div style="font-weight:700;margin-bottom:8px">이전 지원 데이터 발견 (${{cnt}}개)</div>
+    <div style="font-size:12px;color:#bfdbfe;margin-bottom:12px">이 브라우저 로컬에 저장된 지원 현황이 있어요. 서버로 복구하시겠어요?</div>
+    <div style="display:flex;gap:8px">
+      <button onclick="recoverLocalData()" style="background:#3b82f6;color:white;border:none;border-radius:8px;padding:7px 16px;font-size:12px;cursor:pointer;font-weight:600;font-family:inherit">복구하기</button>
+      <button onclick="document.getElementById('recoverBanner').remove()" style="background:rgba(255,255,255,.15);color:white;border:none;border-radius:8px;padding:7px 12px;font-size:12px;cursor:pointer;font-family:inherit">닫기</button>
+    </div>`;
+  document.body.appendChild(banner);
+}}
+
+async function recoverLocalData() {{
+  try {{
+    const local = JSON.parse(localStorage.getItem(LS_KEY) || '{{}}');
+    APPS = local;
+    await saveApps();
+    document.getElementById('recoverBanner')?.remove();
+    updateBadge();
+    alert('복구 완료! 지원 현황 탭에서 확인하세요.');
+  }} catch(e) {{
+    alert('복구 실패: ' + e.message);
+  }}
 }}
 
 async function saveApps() {{
@@ -1614,9 +1650,9 @@ function applyFilter() {{
   }});
   countEl.textContent = n + '개 공고 표시 중';
 }}
-document.querySelectorAll('.filter-btn').forEach(btn => {{
+document.querySelectorAll('.filter-btn[data-filter]').forEach(btn => {{
   btn.addEventListener('click', () => {{
-    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    document.querySelectorAll('.filter-btn[data-filter]').forEach(b => b.classList.remove('active'));
     btn.classList.add('active');
     state.site = btn.dataset.filter;
     applyFilter();
