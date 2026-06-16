@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: job-scraper
+    runtime: python
+    buildCommand: pip install -r requirements.txt && playwright install chromium --with-deps
+    startCommand: python server.py
+    envVars:
+      - key: GITHUB_TOKEN
+        sync: false
+      - key: GITHUB_REPO
+        sync: false
+      - key: GITHUB_WORKFLOW
+        value: scrape.yml

@@ -1,0 +1,59 @@
+# =============================================
+#  맞춤형 채용공고 스크래퍼 설정
+# =============================================
+
+search:
+  # 검색 키워드 (여러 개 가능, OR 검색)
+  keywords:
+    - "UI/UX 디자이너"
+    - "그래픽 디자이너"
+    - "마케터"
+    - "브랜드 디자이너"
+    # 예시: "게임 디자이너", "콘텐츠 마케터", "퍼포먼스 마케터"
+
+  # 지역 (비워두면 전국)
+  locations:
+    - "서울"
+    # - "경기"
+    # - "전국"
+
+  # 경력 조건
+  experience:
+    min_years: 0   # 최소 경력 (0 = 신입 포함)
+    max_years: 5   # 최대 경력 (99 = 무관)
+
+  # 제외할 키워드 (이 단어가 포함된 공고는 제외)
+  exclude_keywords:
+    - "주임"
+    - "책임"
+    - "수석"
+
+  # 고용 형태 (전체 가져오려면 주석처리)
+  employment_types:
+    - "정규직"
+    # - "계약직"
+    # - "인턴"
+    # - "프리랜서"
+
+  # 최소 연봉 (만원 단위, 0 = 필터 안함)
+  min_salary: 0
+
+# 어떤 사이트에서 가져올지
+sites:
+  saramin: true     # 사람인 (웹 스크래핑)
+  jobkorea: true    # 잡코리아 (웹 스크래핑)
+  wanted: true      # 원티드 (공개 API, 가장 정확)
+  jobplanet: true   # 잡플래닛 (JS 기반, 기업 링크만 추출)
+  gamejob: true     # 게임잡 (Playwright 브라우저 자동화)
+
+# 각 사이트에서 가져올 최대 공고 수
+max_results_per_site: 30
+
+# 사람인 API 키 (무료 발급: https://oapi.saramin.co.kr/)
+# 없어도 스크래핑으로 대체됩니다
+saramin_api_key: ""
+
+# 결과 저장
+output:
+  filename: "results.html"
+  open_browser: true   # 완료 후 브라우저 자동 열기
