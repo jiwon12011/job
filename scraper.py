@@ -609,6 +609,7 @@ def generate_html(jobs: list, cfg: dict, output_file: str):
         "keyword": j["keyword"],
     } for j in jobs], ensure_ascii=False)
 
+    new_total = sum(1 for j in jobs if j.get("is_new"))
     rows = ""
     for job in jobs:
         color = SITE_COLORS.get(job["site"], "#666")
@@ -618,6 +619,7 @@ def generate_html(jobs: list, cfg: dict, output_file: str):
         else:
             title_cell = f'<span class="job-title-plain">{job["title"]}</span>'
         kw_badge = f'<span class="kw-badge">{job["keyword"]}</span>'
+        new_badge = '<span class="new-badge">NEW</span>' if job.get("is_new") else ''
 
         loc_n = _normalize_loc(job["location"])
         exp_n = _normalize_exp(job["experience"])
@@ -627,9 +629,9 @@ def generate_html(jobs: list, cfg: dict, output_file: str):
         rows += f"""
         <tr data-site="{job['site']}" data-keyword="{job['keyword']}"
             data-loc="{loc_n}" data-exp="{exp_n}" data-emp="{job['employment_type']}"
-            data-id={jid} data-deadline="{deadline_val}">
+            data-id={jid} data-deadline="{deadline_val}" data-isnew="{1 if job.get('is_new') else 0}">
           <td>{badge}</td>
-          <td class="td-title">{title_cell}<br>{kw_badge}</td>
+          <td class="td-title">{new_badge}{title_cell}<br>{kw_badge}</td>
           <td>{job['company'] or '-'}</td>
           <td>{_loc_chip(job['location'])}</td>
           <td>{_exp_chip(job['experience'])}</td>
@@ -675,6 +677,8 @@ def generate_html(jobs: list, cfg: dict, output_file: str):
         f'<div class="stat"><strong>{sum(1 for j in jobs if j["site"]==s)}</strong>{s}</div>'
         for s in sites
     )
+    if new_total:
+        stat_html += f'<div class="stat" style="background:rgba(74,222,128,.2);"><strong style="color:#4ade80">+{new_total}</strong>새 공고</div>'
 
     html = f"""<!DOCTYPE html>
 <html lang="ko">
@@ -821,6 +825,12 @@ def generate_html(jobs: list, cfg: dict, output_file: str):
     font-size: 16px; padding: 2px 6px; border-radius: 4px; transition: color .15s;
   }}
   .del-btn:hover {{ color: #ef4444; }}
+  .new-badge {{
+    display: inline-block; background: #dcfce7; color: #16a34a;
+    border: 1px solid #bbf7d0; border-radius: 4px;
+    font-size: 10px; font-weight: 700; padding: 1px 5px;
+    margin-right: 5px; vertical-align: middle; letter-spacing: 0.5px;
+  }}
 
   .empty-state {{
     text-align: center; padding: 60px 0; color: #aaa; font-size: 14px;
@@ -923,6 +933,7 @@ def generate_html(jobs: list, cfg: dict, output_file: str):
       <span style="font-size:11px;color:#999;white-space:nowrap">기타</span>
       <button id="bookmarkOnlyBtn" class="filter-btn" onclick="toggleBookmarkOnly()" title="북마크한 공고만 보기">⭐ 관심만 보기</button>
       <button id="deadlineBtn" class="filter-btn" onclick="toggleDeadlineFilter()" title="마감 7일 이내">마감임박 (D-7)</button>
+      <button id="newOnlyBtn" class="filter-btn" onclick="toggleNewOnly()" title="이번 업데이트에서 새로 추가된 공고">🆕 새 공고만</button>
       <label style="font-size:12px;color:#555;display:flex;align-items:center;gap:4px;cursor:pointer">
         <input type="checkbox" id="showHiddenChk" onchange="applyFilter()"> 숨긴 공고 표시
       </label>
@@ -1249,6 +1260,14 @@ let deadlineFilterOn = false;
 function toggleDeadlineFilter() {{
   deadlineFilterOn = !deadlineFilterOn;
   document.getElementById('deadlineBtn').classList.toggle('active', deadlineFilterOn);
+  applyFilter();
+}}
+
+// ── 새 공고 필터 ──
+let newOnlyFilter = false;
+function toggleNewOnly() {{
+  newOnlyFilter = !newOnlyFilter;
+  document.getElementById('newOnlyBtn').classList.toggle('active', newOnlyFilter);
   applyFilter();
 }}
 
@@ -1636,6 +1655,7 @@ function applyFilter() {{
       const d = parseDday(r.dataset.deadline);
       ddOk = d !== null && d <= 7 && d >= 0;
     }}
+    const isNew = r.dataset.isnew === '1';
     const ok =
       (state.site === 'all' || r.dataset.site === state.site) &&
       (state.kw   === 'all' || r.dataset.keyword === state.kw) &&
@@ -1644,6 +1664,7 @@ function applyFilter() {{
       (state.emp  === 'all' || r.dataset.emp === state.emp) &&
       (!state.q   || r.textContent.toLowerCase().includes(state.q)) &&
       (!bookmarkOnly || isBookmarked) &&
+      (!newOnlyFilter || isNew) &&
       ddOk;
     r.classList.toggle('hidden', !ok);
     if (ok) n++;
@@ -1665,9 +1686,10 @@ document.getElementById('empFilter').addEventListener('change', e => {{ state.em
 document.getElementById('search').addEventListener('input', e => {{ state.q = e.target.value.toLowerCase(); applyFilter(); }});
 document.getElementById('resetBtn').addEventListener('click', () => {{
   state = {{ site: 'all', kw: 'all', loc: 'all', exp: 'all', emp: 'all', q: '' }};
-  bookmarkOnly = false; deadlineFilterOn = false;
+  bookmarkOnly = false; deadlineFilterOn = false; newOnlyFilter = false;
   document.getElementById('bookmarkOnlyBtn').classList.remove('active');
   document.getElementById('deadlineBtn').classList.remove('active');
+  document.getElementById('newOnlyBtn').classList.remove('active');
   document.getElementById('showHiddenChk').checked = false;
   document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
   document.querySelector('.filter-btn[data-filter="all"]').classList.add('active');
@@ -1742,6 +1764,29 @@ def main(no_browser=False):
 
     all_jobs = deduplicate(all_jobs)
     print(f"\n총 {len(all_jobs)}개 공고 수집 (중복 제거 완료)")
+
+    # 이전 공고와 비교해서 새 공고 표시
+    snapshot_file = os.path.join(os.path.dirname(__file__), "jobs_snapshot.json")
+    today_str = datetime.now().strftime("%Y-%m-%d")
+    if os.path.exists(snapshot_file):
+        with open(snapshot_file, encoding="utf-8") as f:
+            snapshot = json.load(f)
+        prev_ids = set(snapshot.get("ids", []))
+    else:
+        prev_ids = set()
+
+    for job in all_jobs:
+        jid = f"{job['site']}|{job['title'][:40]}|{job['company']}"
+        job["is_new"] = jid not in prev_ids
+
+    # 스냅샷 업데이트
+    current_ids = [f"{j['site']}|{j['title'][:40]}|{j['company']}" for j in all_jobs]
+    with open(snapshot_file, "w", encoding="utf-8") as f:
+        json.dump({"ids": current_ids, "date": today_str}, f, ensure_ascii=False)
+
+    new_count = sum(1 for j in all_jobs if j.get("is_new"))
+    if new_count:
+        print(f"  새 공고: {new_count}개")
 
     output_file = cfg.get("output", {}).get("filename", "results.html")
     generate_html(all_jobs, cfg, output_file)
