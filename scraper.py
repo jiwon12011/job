@@ -623,17 +623,30 @@ def generate_html(jobs: list, cfg: dict, output_file: str):
         exp_n = _normalize_exp(job["experience"])
         jid = json.dumps(f"{job['site']}|{job['title'][:40]}|{job['company']}", ensure_ascii=False)
 
+        deadline_val = job['deadline'] or ''
         rows += f"""
         <tr data-site="{job['site']}" data-keyword="{job['keyword']}"
-            data-loc="{loc_n}" data-exp="{exp_n}" data-emp="{job['employment_type']}">
+            data-loc="{loc_n}" data-exp="{exp_n}" data-emp="{job['employment_type']}"
+            data-id={jid} data-deadline="{deadline_val}">
           <td>{badge}</td>
           <td class="td-title">{title_cell}<br>{kw_badge}</td>
           <td>{job['company'] or '-'}</td>
           <td>{_loc_chip(job['location'])}</td>
           <td>{_exp_chip(job['experience'])}</td>
           <td>{_emp_chip(job['employment_type'])}</td>
-          <td class="td-dead">{job['deadline'] or '-'}</td>
-          <td><button class="apply-btn" data-id={jid} onclick="toggleApply(this)">지원하기</button></td>
+          <td class="td-dead" data-deadline-cell>{job['deadline'] or '-'}</td>
+          <td style="white-space:nowrap;vertical-align:middle">
+            <button class="apply-btn" data-id={jid} onclick="toggleApply(this)">지원하기</button>
+            <button class="bookmark-btn" data-id={jid} onclick="toggleBookmark(this)" title="북마크">☆</button>
+            <button class="hide-btn" data-id={jid} onclick="hideJob(this)" title="숨기기">✕</button>
+            <button class="memo-toggle-btn" data-id={jid} onclick="toggleJobMemo(this)">메모</button>
+          </td>
+        </tr>
+        <tr class="job-memo-row" data-memo-for={jid} style="display:none">
+          <td colspan="8" style="padding:4px 12px 8px 40px;background:#fafafa">
+            <textarea class="job-memo-ta" data-id={jid} rows="2" placeholder="이 공고에 대한 메모를 남겨보세요..."
+              onblur="saveJobMemo(this)" style="width:100%;max-width:600px;border:1px solid #e2e5ea;border-radius:6px;padding:6px 8px;font-size:12px;font-family:inherit;resize:vertical;outline:none"></textarea>
+          </td>
         </tr>"""
 
     site_btns = f'<button class="filter-btn active" data-filter="all" data-type="site">전체 {len(jobs)}건</button>'
@@ -825,6 +838,44 @@ def generate_html(jobs: list, cfg: dict, output_file: str):
   .app-sum-card strong {{ display: block; font-size: 24px; font-weight: 700; }}
   .app-sum-card span {{ font-size: 11px; color: #888; }}
 
+  /* ── 북마크/숨기기/메모 버튼 ── */
+  .bookmark-btn {{
+    border: none; background: none; font-size: 16px; cursor: pointer; padding: 2px 4px;
+    color: #ccc; transition: color .15s; vertical-align: middle;
+  }}
+  .bookmark-btn.bookmarked {{ color: #f59e0b; }}
+  .hide-btn {{
+    border: none; background: none; font-size: 13px; cursor: pointer; padding: 2px 5px;
+    color: #ccc; border-radius: 4px; transition: color .15s; vertical-align: middle;
+  }}
+  .hide-btn:hover {{ color: #ef4444; }}
+  .memo-toggle-btn {{
+    border: 1px solid #dde0e8; background: #f7f8fa; border-radius: 6px;
+    padding: 3px 8px; font-size: 11px; cursor: pointer; font-family: inherit;
+    color: #888; transition: all .15s; vertical-align: middle;
+  }}
+  .memo-toggle-btn.has-memo {{ border-color: #93c5fd; color: #2563eb; background: #eff6ff; }}
+  .memo-toggle-btn.has-memo::after {{ content: '•'; margin-left: 2px; color: #2563eb; }}
+  /* ── 숨긴 공고 ── */
+  tr.job-hidden {{ opacity: 0.4; background: #f9f9f9; }}
+  tr.job-hidden td {{ color: #aaa; }}
+  /* ── D-day 칩 ── */
+  .dday-chip {{
+    display: inline-block; padding: 1px 6px; border-radius: 10px;
+    font-size: 11px; font-weight: 700; margin-left: 4px; white-space: nowrap;
+  }}
+  .dday-red {{ background: #fee2e2; color: #b91c1c; }}
+  .dday-orange {{ background: #ffedd5; color: #c2410c; }}
+  .dday-yellow {{ background: #fef9c3; color: #854d0e; }}
+  .dday-green {{ background: #dcfce7; color: #15803d; }}
+  /* ── 면접 임박 배너 ── */
+  .interview-alert {{
+    background: #fef9c3; border-left: 4px solid #f59e0b; padding: 10px 20px;
+    margin: 8px 32px 0; border-radius: 8px; font-size: 13px; color: #78350f;
+    cursor: pointer; display: flex; align-items: center; gap: 8px;
+  }}
+  .interview-alert:hover {{ background: #fef08a; }}
+
   @media (max-width: 900px) {{
     .container, header, .controls, .app-controls, .app-summary {{ padding-left: 14px; padding-right: 14px; }}
     th, td {{ padding: 8px; font-size: 11px; }}
@@ -868,6 +919,14 @@ def generate_html(jobs: list, cfg: dict, output_file: str):
       <select id="empFilter">{emp_opts}</select>
       <button id="resetBtn" style="margin-left:auto;border:1px solid #dde0e8;background:#f7f8fa;border-radius:8px;padding:6px 12px;font-size:11px;cursor:pointer;font-family:inherit">초기화</button>
     </div>
+    <div class="controls-row">
+      <span style="font-size:11px;color:#999;white-space:nowrap">기타</span>
+      <button id="bookmarkOnlyBtn" class="filter-btn" onclick="toggleBookmarkOnly()" title="북마크한 공고만 보기">⭐ 관심만 보기</button>
+      <button id="deadlineBtn" class="filter-btn" onclick="toggleDeadlineFilter()" title="마감 7일 이내">마감임박 (D-7)</button>
+      <label style="font-size:12px;color:#555;display:flex;align-items:center;gap:4px;cursor:pointer">
+        <input type="checkbox" id="showHiddenChk" onchange="applyFilter()"> 숨긴 공고 표시
+      </label>
+    </div>
   </div>
   <div class="container">
     <p class="count" id="count">{len(jobs)}개 공고 표시 중</p>
@@ -893,6 +952,7 @@ def generate_html(jobs: list, cfg: dict, output_file: str):
     <button class="status-filter-btn" data-sf="최종합격">최종합격</button>
     <button class="status-filter-btn" data-sf="불합격">불합격</button>
     <button class="status-filter-btn" data-sf="보류">보류</button>
+    <button onclick="exportCSV()" style="background:#16a34a;color:white;border:none;border-radius:8px;padding:7px 14px;font-size:12px;cursor:pointer;font-family:inherit;font-weight:600">CSV 내보내기</button>
     <button id="openAddBtn" style="margin-left:auto;background:#2563eb;color:white;border:none;border-radius:8px;padding:7px 16px;font-size:12px;cursor:pointer;font-family:inherit;font-weight:600">+ 직접 추가</button>
   </div>
 
@@ -939,6 +999,7 @@ def generate_html(jobs: list, cfg: dict, output_file: str):
     <div id="af-err" style="display:none;color:#ef4444;font-size:12px;margin-top:8px"></div>
   </div>
 
+  <div id="interviewAlerts"></div>
   <div class="app-summary" id="appSummary"></div>
   <div class="container">
     <div id="appEmpty" class="empty-state" style="display:none">
@@ -1045,6 +1106,178 @@ async function saveApps() {{
   }}
 }}
 
+// ── D-day 계산 ──
+function parseDday(deadlineStr) {{
+  if (!deadlineStr || deadlineStr === '-') return null;
+  const today = new Date(); today.setHours(0,0,0,0);
+  let m, day, month, year = today.getFullYear();
+  // "~MM.DD" or "MM.DD" or "MM/DD"
+  m = deadlineStr.match(/(\d{{1,2}})[./](\d{{1,2}})/);
+  if (!m) return null;
+  month = parseInt(m[1], 10) - 1;
+  day   = parseInt(m[2], 10);
+  let d = new Date(year, month, day);
+  if (d < today) d = new Date(year + 1, month, day);
+  return Math.round((d - today) / 86400000);
+}}
+
+function renderDday(deadlineStr) {{
+  const d = parseDday(deadlineStr);
+  if (d === null) return '';
+  let cls = 'dday-green', label = 'D-' + d;
+  if (d === 0) {{ cls = 'dday-red'; label = 'D-day'; }}
+  else if (d <= 3) cls = 'dday-red';
+  else if (d <= 7) cls = 'dday-orange';
+  else if (d <= 14) cls = 'dday-yellow';
+  return `<span class="dday-chip ${{cls}}">${{label}}</span>`;
+}}
+
+function initDdays() {{
+  document.querySelectorAll('#jobTable tbody tr[data-deadline]').forEach(row => {{
+    const dl = row.dataset.deadline;
+    const cell = row.querySelector('[data-deadline-cell]');
+    if (cell && dl) cell.innerHTML = (cell.textContent.trim() || dl) + renderDday(dl);
+  }});
+}}
+
+// ── 북마크 ──
+let bookmarkOnly = false;
+function toggleBookmarkOnly() {{
+  bookmarkOnly = !bookmarkOnly;
+  const btn = document.getElementById('bookmarkOnlyBtn');
+  btn.classList.toggle('active', bookmarkOnly);
+  applyFilter();
+}}
+
+function toggleBookmark(btn) {{
+  const id = btn.dataset.id;
+  if (!APPS[id]) {{
+    // create a stub entry just for bookmark
+    const job = JOBS.find(j => j.id === id);
+    if (!job) return;
+    APPS[id] = {{ ...job, bookmarked: true, hidden: false, jobMemo: '',
+      appliedDate: '', interviewDate: '', result: '', status: '', memo: '' }};
+  }} else {{
+    APPS[id].bookmarked = !APPS[id].bookmarked;
+  }}
+  btn.classList.toggle('bookmarked', !!APPS[id].bookmarked);
+  btn.textContent = APPS[id].bookmarked ? '★' : '☆';
+  saveApps();
+}}
+
+// ── 공고 숨기기 ──
+function hideJob(btn) {{
+  const id = btn.dataset.id;
+  const job = JOBS.find(j => j.id === id);
+  if (!APPS[id]) {{
+    APPS[id] = {{ ...(job || {{}}), bookmarked: false, hidden: true, jobMemo: '',
+      appliedDate: '', interviewDate: '', result: '', status: '', memo: '' }};
+  }} else {{
+    APPS[id].hidden = true;
+  }}
+  saveApps();
+  applyFilter();
+}}
+
+// ── 공고 메모 ──
+function toggleJobMemo(btn) {{
+  const id = btn.dataset.id;
+  const memoRow = document.querySelector(`.job-memo-row[data-memo-for="${{id}}"]`);
+  if (!memoRow) return;
+  const visible = memoRow.style.display !== 'none';
+  memoRow.style.display = visible ? 'none' : '';
+  if (!visible) {{
+    const ta = memoRow.querySelector('.job-memo-ta');
+    if (ta && APPS[id] && APPS[id].jobMemo) ta.value = APPS[id].jobMemo;
+    ta && ta.focus();
+  }}
+}}
+
+async function saveJobMemo(ta) {{
+  const id = ta.dataset.id;
+  const job = JOBS.find(j => j.id === id);
+  if (!APPS[id]) {{
+    APPS[id] = {{ ...(job || {{}}), bookmarked: false, hidden: false, jobMemo: ta.value,
+      appliedDate: '', interviewDate: '', result: '', status: '', memo: '' }};
+  }} else {{
+    APPS[id].jobMemo = ta.value;
+  }}
+  await saveApps();
+  // update memo button indicator
+  const memoBtn = document.querySelector(`.memo-toggle-btn[data-id="${{id}}"]`);
+  if (memoBtn) memoBtn.classList.toggle('has-memo', !!ta.value);
+}}
+
+// ── 마감임박 필터 ──
+let deadlineFilterOn = false;
+function toggleDeadlineFilter() {{
+  deadlineFilterOn = !deadlineFilterOn;
+  document.getElementById('deadlineBtn').classList.toggle('active', deadlineFilterOn);
+  applyFilter();
+}}
+
+// ── CSV 내보내기 ──
+function exportCSV() {{
+  const rows = Object.values(APPS).filter(a => a.status);
+  if (rows.length === 0) {{ alert('지원 기록이 없습니다.'); return; }}
+  const headers = ['직무명','회사','사이트','마감일','지원일','면접일정','진행상태','메모'];
+  const lines = [headers.join(',')];
+  rows.forEach(a => {{
+    const cols = [a.title, a.company, a.site, a.deadline, a.appliedDate, a.interviewDate, a.status, a.memo||''];
+    lines.push(cols.map(c => '"' + (c||'').replace(/"/g, '""') + '"').join(','));
+  }});
+  const bom = '﻿';
+  const blob = new Blob([bom + lines.join('\r\n')], {{ type: 'text/csv;charset=utf-8;' }});
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a'); a.href = url;
+  a.download = '지원현황_' + new Date().toISOString().slice(0,10) + '.csv';
+  a.click(); URL.revokeObjectURL(url);
+}}
+
+// ── 면접 임박 배너 ──
+function renderInterviewAlerts() {{
+  const container = document.getElementById('interviewAlerts');
+  if (!container) return;
+  const today = new Date(); today.setHours(0,0,0,0);
+  const tomorrow = new Date(today); tomorrow.setDate(tomorrow.getDate() + 1);
+  const alerts = Object.values(APPS).filter(a => {{
+    if (!a.interviewDate) return false;
+    const d = new Date(a.interviewDate); d.setHours(0,0,0,0);
+    return d.getTime() === today.getTime() || d.getTime() === tomorrow.getTime();
+  }});
+  container.innerHTML = alerts.map(a => {{
+    const d = new Date(a.interviewDate); d.setHours(0,0,0,0);
+    const when = d.getTime() === today.getTime() ? '오늘' : '내일';
+    const safeId = a.id.replace(/['"<>&]/g, c => ({{"'":"&#39;",'"':'&quot;','<':'&lt;','>':'&gt;','&':'&amp;'}}[c]));
+    return `<div class="interview-alert" onclick="scrollToAppRow('${{safeId}}')">
+      ⚠️ [${{a.company}} - ${{a.title}}] 면접이 ${{when}}입니다!
+    </div>`;
+  }}).join('');
+}}
+
+function scrollToAppRow(id) {{
+  const rows = document.querySelectorAll('#appTbody tr');
+  for (const row of rows) {{
+    const sel = row.querySelector(`[data-id="${{id}}"]`);
+    if (sel) {{ row.scrollIntoView({{behavior:'smooth', block:'center'}}); break; }}
+  }}
+}}
+
+// ── 지원 통계 추가 ──
+function renderAppSummaryExtra(counts, total) {{
+  const summary = document.getElementById('appSummary');
+  const interviewed = (counts['면접예정']||0) + (counts['최종합격']||0);
+  const passed = counts['최종합격'] || 0;
+  const validTotal = total.filter(a => a.status).length;
+  const passRate = validTotal > 0 ? Math.round(interviewed / validTotal * 100) : 0;
+  const interviewRate = (counts['지원완료']||0) + (counts['서류검토']||0) + interviewed > 0
+    ? Math.round(interviewed / validTotal * 100) : 0;
+  summary.innerHTML += `
+    <div class="app-sum-card"><strong style="color:#7c3aed">${{passRate}}%</strong><span>서류통과율</span></div>
+    <div class="app-sum-card"><strong style="color:#0891b2">${{interviewRate}}%</strong><span>면접전환율</span></div>
+  `;
+}}
+
 // ── 공고 업데이트 ──
 let _pollTimer = null;
 async function triggerUpdate() {{
@@ -1147,6 +1380,8 @@ function renderAppTable() {{
     STATUS_LIST.map(s =>
       `<div class="app-sum-card"><strong style="color:${{sumColors[s]||'#333'}}">${{counts[s]}}</strong><span>${{s}}</span></div>`
     ).join('');
+  renderAppSummaryExtra(counts, total);
+  renderInterviewAlerts();
 
   if (entries.length === 0) {{
     empty.style.display = '';
@@ -1339,20 +1574,41 @@ document.querySelectorAll('.status-filter-btn').forEach(btn => {{
 }});
 
 // ── 공고 목록 필터 ──
-const allRows = Array.from(document.querySelectorAll('#jobTable tbody tr'));
+const allRows = Array.from(document.querySelectorAll('#jobTable tbody tr[data-id]'));
 const countEl = document.getElementById('count');
 let state = {{ site: 'all', kw: 'all', loc: 'all', exp: 'all', emp: 'all', q: '' }};
 
 function applyFilter() {{
+  const showHidden = document.getElementById('showHiddenChk').checked;
   let n = 0;
   allRows.forEach(r => {{
+    if (!r.dataset.id) return; // skip memo rows
+    const id = r.dataset.id;
+    const appData = APPS[id] || {{}};
+    const isHidden = appData.hidden === true;
+    const isBookmarked = appData.bookmarked === true;
+    // hidden logic
+    if (isHidden) {{
+      if (!showHidden) {{ r.classList.add('hidden'); r.nextElementSibling && r.nextElementSibling.classList.contains('job-memo-row') && (r.nextElementSibling.style.display='none'); return; }}
+      r.classList.add('job-hidden');
+    }} else {{
+      r.classList.remove('job-hidden');
+    }}
+    // deadline filter
+    let ddOk = true;
+    if (deadlineFilterOn) {{
+      const d = parseDday(r.dataset.deadline);
+      ddOk = d !== null && d <= 7 && d >= 0;
+    }}
     const ok =
       (state.site === 'all' || r.dataset.site === state.site) &&
       (state.kw   === 'all' || r.dataset.keyword === state.kw) &&
       (state.loc  === 'all' || r.dataset.loc.includes(state.loc)) &&
       (state.exp  === 'all' || r.dataset.exp === state.exp) &&
       (state.emp  === 'all' || r.dataset.emp === state.emp) &&
-      (!state.q   || r.textContent.toLowerCase().includes(state.q));
+      (!state.q   || r.textContent.toLowerCase().includes(state.q)) &&
+      (!bookmarkOnly || isBookmarked) &&
+      ddOk;
     r.classList.toggle('hidden', !ok);
     if (ok) n++;
   }});
@@ -1373,6 +1629,10 @@ document.getElementById('empFilter').addEventListener('change', e => {{ state.em
 document.getElementById('search').addEventListener('input', e => {{ state.q = e.target.value.toLowerCase(); applyFilter(); }});
 document.getElementById('resetBtn').addEventListener('click', () => {{
   state = {{ site: 'all', kw: 'all', loc: 'all', exp: 'all', emp: 'all', q: '' }};
+  bookmarkOnly = false; deadlineFilterOn = false;
+  document.getElementById('bookmarkOnlyBtn').classList.remove('active');
+  document.getElementById('deadlineBtn').classList.remove('active');
+  document.getElementById('showHiddenChk').checked = false;
   document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
   document.querySelector('.filter-btn[data-filter="all"]').classList.add('active');
   ['kwFilter','locFilter','expFilter','empFilter'].forEach(id => document.getElementById(id).value = 'all');
@@ -1389,10 +1649,21 @@ document.head.appendChild(dStyle);
 (async function init() {{
   await loadApps();
   Object.keys(APPS).forEach(id => {{
+    const appData = APPS[id];
+    // 지원하기 버튼 복원
     const btn = document.querySelector(`.apply-btn[data-id="${{id}}"]`);
-    if (btn) {{ btn.classList.add('applied'); btn.textContent = '지원완료 ✓'; }}
+    if (btn && appData.status) {{ btn.classList.add('applied'); btn.textContent = '지원완료 ✓'; }}
+    // 북마크 복원
+    const bkBtn = document.querySelector(`.bookmark-btn[data-id="${{id}}"]`);
+    if (bkBtn && appData.bookmarked) {{ bkBtn.classList.add('bookmarked'); bkBtn.textContent = '★'; }}
+    // 메모 버튼 dot 복원
+    const memoBtn = document.querySelector(`.memo-toggle-btn[data-id="${{id}}"]`);
+    if (memoBtn && appData.jobMemo) {{ memoBtn.classList.add('has-memo'); }}
   }});
+  // 숨긴 공고 처리 (applyFilter가 처리)
   updateBadge();
+  initDdays();
+  applyFilter();
 }})();
 </script>
 </body>
