@@ -897,7 +897,7 @@ def generate_html(jobs: list, cfg: dict, output_file: str):
 <body>
 <header>
   <h1>맞춤 채용공고 스크래퍼</h1>
-  <p>수집: {now} &nbsp;|&nbsp; 키워드: {', '.join(keywords)}</p>
+  <p>키워드: {', '.join(keywords)}</p>
   <div class="stats">
     <div class="stat"><strong>{len(jobs)}</strong>총 공고</div>
     {stat_html}
@@ -906,7 +906,10 @@ def generate_html(jobs: list, cfg: dict, output_file: str):
     <button class="tab-btn active" data-tab="jobs">공고 목록</button>
     <button class="tab-btn" data-tab="applied">내 지원 현황 <span class="tab-badge" id="appliedBadge">0</span></button>
     <div style="margin-left:auto;display:flex;align-items:center;gap:10px;padding-bottom:4px">
-      <span style="font-size:11px;color:#8899bb">업데이트: PC에서 업데이트.bat 실행</span>
+      <div style="text-align:right">
+        <div style="font-size:11px;color:#8899bb">마지막 업데이트</div>
+        <div style="font-size:13px;color:white;font-weight:600">{now}</div>
+      </div>
     </div>
   </div>
 </header>
