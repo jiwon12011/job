@@ -1733,7 +1733,7 @@ document.head.appendChild(dStyle);
 
 
 # ── 메인 ────────────────────────────────────────────────
-def main(no_browser=False):
+def main(no_browser=False, skip_gamejob=False):
     cfg = load_config()
     print("=" * 52)
     print("   맞춤 채용공고 수집 시작")
@@ -1758,9 +1758,18 @@ def main(no_browser=False):
         print("\n[잡플래닛] 수집 중... (JS 기반, 기업 링크만)")
         all_jobs += scrape_jobplanet(cfg)
 
-    if sites_cfg.get("gamejob", True):
+    if sites_cfg.get("gamejob", True) and not skip_gamejob:
         print("\n[게임잡] 수집 중... (Playwright 브라우저)")
         all_jobs += scrape_gamejob(cfg)
+    elif skip_gamejob:
+        print("\n[게임잡] 스킵 (--skip-gamejob 플래그)")
+        # 이전 스냅샷에서 게임잡 공고 유지
+        snapshot_file = os.path.join(os.path.dirname(__file__), "jobs_snapshot.json")
+        if os.path.exists(snapshot_file):
+            with open(snapshot_file, encoding="utf-8") as f:
+                snap = json.load(f)
+            gamejob_ids = [i for i in snap.get("ids", []) if i.startswith("게임잡|")]
+            print(f"  이전 스냅샷에서 게임잡 {len(gamejob_ids)}개 ID 유지")
 
     all_jobs = deduplicate(all_jobs)
     print(f"\n총 {len(all_jobs)}개 공고 수집 (중복 제거 완료)")
@@ -1797,5 +1806,6 @@ def main(no_browser=False):
 
 if __name__ == "__main__":
     import sys as _sys
-    no_browser = "--no-browser" in _sys.argv
-    main(no_browser=no_browser)
+    no_browser    = "--no-browser"    in _sys.argv
+    skip_gamejob  = "--skip-gamejob"  in _sys.argv
+    main(no_browser=no_browser, skip_gamejob=skip_gamejob)
