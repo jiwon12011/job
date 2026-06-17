@@ -1733,7 +1733,7 @@ document.head.appendChild(dStyle);
 
 
 # ── 메인 ────────────────────────────────────────────────
-def main(no_browser=False, skip_gamejob=False):
+def main(no_browser=False, skip_gamejob=False, skip_jobkorea=False):
     cfg = load_config()
     print("=" * 52)
     print("   맞춤 채용공고 수집 시작")
@@ -1746,9 +1746,11 @@ def main(no_browser=False, skip_gamejob=False):
         print("\n[사람인] 수집 중...")
         all_jobs += scrape_saramin(cfg)
 
-    if sites_cfg.get("jobkorea", True):
+    if sites_cfg.get("jobkorea", True) and not skip_jobkorea:
         print("\n[잡코리아] 수집 중...")
         all_jobs += scrape_jobkorea(cfg)
+    elif skip_jobkorea:
+        print("\n[잡코리아] 스킵 (--skip-jobkorea 플래그, 해외 IP 차단)")
 
     if sites_cfg.get("wanted", True):
         print("\n[원티드] 수집 중...")
@@ -1808,4 +1810,5 @@ if __name__ == "__main__":
     import sys as _sys
     no_browser    = "--no-browser"    in _sys.argv
     skip_gamejob  = "--skip-gamejob"  in _sys.argv
-    main(no_browser=no_browser, skip_gamejob=skip_gamejob)
+    skip_jobkorea = "--skip-jobkorea" in _sys.argv
+    main(no_browser=no_browser, skip_gamejob=skip_gamejob, skip_jobkorea=skip_jobkorea)
