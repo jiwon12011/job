@@ -25,7 +25,9 @@ jobs:
           playwright install chromium --with-deps
 
       - name: 공고 수집
-        run: python scraper.py --no-browser
+        run: python scraper.py --no-browser --skip-gamejob --skip-jobkorea
+        env:
+          PYTHONIOENCODING: utf-8
 
       - name: results.html 커밋
         run: |
