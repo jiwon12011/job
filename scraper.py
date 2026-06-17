@@ -906,8 +906,7 @@ def generate_html(jobs: list, cfg: dict, output_file: str):
     <button class="tab-btn active" data-tab="jobs">공고 목록</button>
     <button class="tab-btn" data-tab="applied">내 지원 현황 <span class="tab-badge" id="appliedBadge">0</span></button>
     <div style="margin-left:auto;display:flex;align-items:center;gap:10px;padding-bottom:4px">
-      <span id="updateMsg" style="font-size:11px;color:#8899bb"></span>
-      <button id="updateBtn" onclick="triggerUpdate()" style="background:rgba(255,255,255,.15);color:white;border:1px solid rgba(255,255,255,.3);border-radius:8px;padding:7px 16px;font-size:12px;cursor:pointer;font-family:inherit;font-weight:600;transition:all .2s">공고 업데이트</button>
+      <span style="font-size:11px;color:#8899bb">업데이트: PC에서 업데이트.bat 실행</span>
     </div>
   </div>
 </header>
