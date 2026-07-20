@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>맞춤 채용공고 2026-07-20 02:14</title>
+<title>맞춤 채용공고 2026-07-20 23:47</title>
 <style>
   * { box-sizing: border-box; margin: 0; padding: 0; }
   body { font-family: 'Malgun Gothic', 'Apple SD Gothic Neo', sans-serif; background: #f0f2f5; color: #222; }
@@ -217,8 +217,8 @@
   <h1>맞춤 채용공고 스크래퍼</h1>
   <p>키워드: UI/UX 디자이너, 그래픽 디자이너, 마케터, 브랜드 디자이너, 웹디자이너</p>
   <div class="stats">
-    <div class="stat"><strong>50</strong>총 공고</div>
-    <div class="stat"><strong>50</strong>사람인</div><div class="stat" style="background:rgba(74,222,128,.2);"><strong style="color:#4ade80">+46</strong>새 공고</div>
+    <div class="stat"><strong>53</strong>총 공고</div>
+    <div class="stat"><strong>53</strong>사람인</div><div class="stat" style="background:rgba(74,222,128,.2);"><strong style="color:#4ade80">+49</strong>새 공고</div>
   </div>
   <div class="tab-bar">
     <button class="tab-btn active" data-tab="jobs">공고 목록</button>
@@ -226,7 +226,7 @@
     <div style="margin-left:auto;display:flex;align-items:center;gap:10px;padding-bottom:4px">
       <div style="text-align:right">
         <div style="font-size:11px;color:#8899bb">마지막 업데이트</div>
-        <div style="font-size:13px;color:white;font-weight:600">2026-07-20 02:14</div>
+        <div style="font-size:13px;color:white;font-weight:600">2026-07-20 23:47</div>
       </div>
     </div>
   </div>
@@ -237,7 +237,7 @@
   <div class="controls">
     <div class="controls-row">
       <span style="font-size:11px;color:#999;white-space:nowrap">사이트</span>
-      <button class="filter-btn active" data-filter="all" data-type="site">전체 50건</button><button class="filter-btn" data-filter="사람인" data-type="site" style="--c:#0066CC">사람인 50</button>
+      <button class="filter-btn active" data-filter="all" data-type="site">전체 53건</button><button class="filter-btn" data-filter="사람인" data-type="site" style="--c:#0066CC">사람인 53</button>
       <span class="sep">|</span>
       <select id="kwFilter"><option value="all">전체 키워드</option><option value="UI/UX 디자이너">UI/UX 디자이너</option><option value="그래픽 디자이너">그래픽 디자이너</option><option value="마케터">마케터</option><option value="브랜드 디자이너">브랜드 디자이너</option><option value="웹디자이너">웹디자이너</option></select>
       <input type="text" id="search" placeholder="회사명/직무 검색...">
@@ -260,7 +260,7 @@
     </div>
   </div>
   <div class="container">
-    <p class="count" id="count">50개 공고 표시 중</p>
+    <p class="count" id="count">53개 공고 표시 중</p>
     <table id="jobTable">
       <thead>
         <tr>
@@ -269,6 +269,29 @@
         </tr>
       </thead>
       <tbody>
+        <tr data-site="사람인" data-keyword="UI/UX 디자이너"
+            data-loc="서울" data-exp="신입" data-emp=""
+            data-id="사람인|각 부문 신입/경력 채용|㈜폴라리스오피스" data-deadline="~07.31(금)" data-isnew="1">
+          <td><span class="site-badge" style="background:#0066CC">사람인</span></td>
+          <td class="td-title"><span class="new-badge">NEW</span><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=list&rec_idx=54483631" target="_blank" class="job-title">각 부문 신입/경력 채용</a><br><span class="kw-badge">UI/UX 디자이너</span></td>
+          <td>㈜폴라리스오피스</td>
+          <td><span class="chip" style="color:#1565c0;background:#e3f2fd">서울전체 외</span></td>
+          <td><span class="chip" style="color:#1b5e20;background:#c8e6c9">신입/경력</span></td>
+          <td><span class="chip chip-empty">미제공</span></td>
+          <td class="td-dead" data-deadline-cell>~07.31(금)</td>
+          <td style="white-space:nowrap;vertical-align:middle">
+            <button class="apply-btn" data-id="사람인|각 부문 신입/경력 채용|㈜폴라리스오피스" onclick="toggleApply(this)">지원하기</button>
+            <button class="bookmark-btn" data-id="사람인|각 부문 신입/경력 채용|㈜폴라리스오피스" onclick="toggleBookmark(this)" title="북마크">☆</button>
+            <button class="hide-btn" data-id="사람인|각 부문 신입/경력 채용|㈜폴라리스오피스" onclick="hideJob(this)" title="숨기기">✕</button>
+            <button class="memo-toggle-btn" data-id="사람인|각 부문 신입/경력 채용|㈜폴라리스오피스" onclick="toggleJobMemo(this)">메모</button>
+          </td>
+        </tr>
+        <tr class="job-memo-row" data-memo-for="사람인|각 부문 신입/경력 채용|㈜폴라리스오피스" style="display:none">
+          <td colspan="8" style="padding:4px 12px 8px 40px;background:#fafafa">
+            <textarea class="job-memo-ta" data-id="사람인|각 부문 신입/경력 채용|㈜폴라리스오피스" rows="2" placeholder="이 공고에 대한 메모를 남겨보세요..."
+              onblur="saveJobMemo(this)" style="width:100%;max-width:600px;border:1px solid #e2e5ea;border-radius:6px;padding:6px 8px;font-size:12px;font-family:inherit;resize:vertical;outline:none"></textarea>
+          </td>
+        </tr>
         <tr data-site="사람인" data-keyword="UI/UX 디자이너"
             data-loc="서울" data-exp="신입" data-emp=""
             data-id="사람인|디자이너/프로모션 및 운영 정규직 채용|(주)씨티티디" data-deadline="~08.05(수)" data-isnew="1">
@@ -289,6 +312,29 @@
         <tr class="job-memo-row" data-memo-for="사람인|디자이너/프로모션 및 운영 정규직 채용|(주)씨티티디" style="display:none">
           <td colspan="8" style="padding:4px 12px 8px 40px;background:#fafafa">
             <textarea class="job-memo-ta" data-id="사람인|디자이너/프로모션 및 운영 정규직 채용|(주)씨티티디" rows="2" placeholder="이 공고에 대한 메모를 남겨보세요..."
+              onblur="saveJobMemo(this)" style="width:100%;max-width:600px;border:1px solid #e2e5ea;border-radius:6px;padding:6px 8px;font-size:12px;font-family:inherit;resize:vertical;outline:none"></textarea>
+          </td>
+        </tr>
+        <tr data-site="사람인" data-keyword="UI/UX 디자이너"
+            data-loc="서울" data-exp="신입" data-emp=""
+            data-id="사람인|2026년 신입 및 경력 채용|(주)디알텍" data-deadline="~07.31(금)" data-isnew="1">
+          <td><span class="site-badge" style="background:#0066CC">사람인</span></td>
+          <td class="td-title"><span class="new-badge">NEW</span><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=list&rec_idx=54325051" target="_blank" class="job-title">2026년 신입 및 경력 채용</a><br><span class="kw-badge">UI/UX 디자이너</span></td>
+          <td>(주)디알텍</td>
+          <td><span class="chip" style="color:#1565c0;background:#e3f2fd">서울전체 외</span></td>
+          <td><span class="chip" style="color:#1b5e20;background:#c8e6c9">신입/경력</span></td>
+          <td><span class="chip chip-empty">미제공</span></td>
+          <td class="td-dead" data-deadline-cell>~07.31(금)</td>
+          <td style="white-space:nowrap;vertical-align:middle">
+            <button class="apply-btn" data-id="사람인|2026년 신입 및 경력 채용|(주)디알텍" onclick="toggleApply(this)">지원하기</button>
+            <button class="bookmark-btn" data-id="사람인|2026년 신입 및 경력 채용|(주)디알텍" onclick="toggleBookmark(this)" title="북마크">☆</button>
+            <button class="hide-btn" data-id="사람인|2026년 신입 및 경력 채용|(주)디알텍" onclick="hideJob(this)" title="숨기기">✕</button>
+            <button class="memo-toggle-btn" data-id="사람인|2026년 신입 및 경력 채용|(주)디알텍" onclick="toggleJobMemo(this)">메모</button>
+          </td>
+        </tr>
+        <tr class="job-memo-row" data-memo-for="사람인|2026년 신입 및 경력 채용|(주)디알텍" style="display:none">
+          <td colspan="8" style="padding:4px 12px 8px 40px;background:#fafafa">
+            <textarea class="job-memo-ta" data-id="사람인|2026년 신입 및 경력 채용|(주)디알텍" rows="2" placeholder="이 공고에 대한 메모를 남겨보세요..."
               onblur="saveJobMemo(this)" style="width:100%;max-width:600px;border:1px solid #e2e5ea;border-radius:6px;padding:6px 8px;font-size:12px;font-family:inherit;resize:vertical;outline:none"></textarea>
           </td>
         </tr>
@@ -316,98 +362,6 @@
           </td>
         </tr>
         <tr data-site="사람인" data-keyword="UI/UX 디자이너"
-            data-loc="서울" data-exp="신입" data-emp=""
-            data-id="사람인|각 부문 신입/경력 채용|㈜폴라리스오피스" data-deadline="~07.31(금)" data-isnew="1">
-          <td><span class="site-badge" style="background:#0066CC">사람인</span></td>
-          <td class="td-title"><span class="new-badge">NEW</span><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=list&rec_idx=54483631" target="_blank" class="job-title">각 부문 신입/경력 채용</a><br><span class="kw-badge">UI/UX 디자이너</span></td>
-          <td>㈜폴라리스오피스</td>
-          <td><span class="chip" style="color:#1565c0;background:#e3f2fd">서울전체 외</span></td>
-          <td><span class="chip" style="color:#1b5e20;background:#c8e6c9">신입/경력</span></td>
-          <td><span class="chip chip-empty">미제공</span></td>
-          <td class="td-dead" data-deadline-cell>~07.31(금)</td>
-          <td style="white-space:nowrap;vertical-align:middle">
-            <button class="apply-btn" data-id="사람인|각 부문 신입/경력 채용|㈜폴라리스오피스" onclick="toggleApply(this)">지원하기</button>
-            <button class="bookmark-btn" data-id="사람인|각 부문 신입/경력 채용|㈜폴라리스오피스" onclick="toggleBookmark(this)" title="북마크">☆</button>
-            <button class="hide-btn" data-id="사람인|각 부문 신입/경력 채용|㈜폴라리스오피스" onclick="hideJob(this)" title="숨기기">✕</button>
-            <button class="memo-toggle-btn" data-id="사람인|각 부문 신입/경력 채용|㈜폴라리스오피스" onclick="toggleJobMemo(this)">메모</button>
-          </td>
-        </tr>
-        <tr class="job-memo-row" data-memo-for="사람인|각 부문 신입/경력 채용|㈜폴라리스오피스" style="display:none">
-          <td colspan="8" style="padding:4px 12px 8px 40px;background:#fafafa">
-            <textarea class="job-memo-ta" data-id="사람인|각 부문 신입/경력 채용|㈜폴라리스오피스" rows="2" placeholder="이 공고에 대한 메모를 남겨보세요..."
-              onblur="saveJobMemo(this)" style="width:100%;max-width:600px;border:1px solid #e2e5ea;border-radius:6px;padding:6px 8px;font-size:12px;font-family:inherit;resize:vertical;outline:none"></textarea>
-          </td>
-        </tr>
-        <tr data-site="사람인" data-keyword="UI/UX 디자이너"
-            data-loc="서울" data-exp="1년 이상" data-emp=""
-            data-id="사람인|자사몰 카페24 MD|(주)리터니티" data-deadline="~08.12(수)" data-isnew="1">
-          <td><span class="site-badge" style="background:#0066CC">사람인</span></td>
-          <td class="td-title"><span class="new-badge">NEW</span><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=list&rec_idx=54462124" target="_blank" class="job-title">자사몰 카페24 MD</a><br><span class="kw-badge">UI/UX 디자이너</span></td>
-          <td>(주)리터니티</td>
-          <td><span class="chip" style="color:#1565c0;background:#e3f2fd">서울전체 외</span></td>
-          <td><span class="chip" style="color:#bf360c;background:#fbe9e7">1년</span></td>
-          <td><span class="chip chip-empty">미제공</span></td>
-          <td class="td-dead" data-deadline-cell>~08.12(수)</td>
-          <td style="white-space:nowrap;vertical-align:middle">
-            <button class="apply-btn" data-id="사람인|자사몰 카페24 MD|(주)리터니티" onclick="toggleApply(this)">지원하기</button>
-            <button class="bookmark-btn" data-id="사람인|자사몰 카페24 MD|(주)리터니티" onclick="toggleBookmark(this)" title="북마크">☆</button>
-            <button class="hide-btn" data-id="사람인|자사몰 카페24 MD|(주)리터니티" onclick="hideJob(this)" title="숨기기">✕</button>
-            <button class="memo-toggle-btn" data-id="사람인|자사몰 카페24 MD|(주)리터니티" onclick="toggleJobMemo(this)">메모</button>
-          </td>
-        </tr>
-        <tr class="job-memo-row" data-memo-for="사람인|자사몰 카페24 MD|(주)리터니티" style="display:none">
-          <td colspan="8" style="padding:4px 12px 8px 40px;background:#fafafa">
-            <textarea class="job-memo-ta" data-id="사람인|자사몰 카페24 MD|(주)리터니티" rows="2" placeholder="이 공고에 대한 메모를 남겨보세요..."
-              onblur="saveJobMemo(this)" style="width:100%;max-width:600px;border:1px solid #e2e5ea;border-radius:6px;padding:6px 8px;font-size:12px;font-family:inherit;resize:vertical;outline:none"></textarea>
-          </td>
-        </tr>
-        <tr data-site="사람인" data-keyword="UI/UX 디자이너"
-            data-loc="서울" data-exp="2년 이상" data-emp=""
-            data-id="사람인|디자인팀 경력직 채용|(주)아이알큐더스" data-deadline="~08.14(금)" data-isnew="1">
-          <td><span class="site-badge" style="background:#0066CC">사람인</span></td>
-          <td class="td-title"><span class="new-badge">NEW</span><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=list&rec_idx=54486581" target="_blank" class="job-title">디자인팀 경력직 채용</a><br><span class="kw-badge">UI/UX 디자이너</span></td>
-          <td>(주)아이알큐더스</td>
-          <td><span class="chip" style="color:#1565c0;background:#e3f2fd">서울 영등포구</span></td>
-          <td><span class="chip" style="color:#bf360c;background:#fbe9e7">2년</span></td>
-          <td><span class="chip chip-empty">미제공</span></td>
-          <td class="td-dead" data-deadline-cell>~08.14(금)</td>
-          <td style="white-space:nowrap;vertical-align:middle">
-            <button class="apply-btn" data-id="사람인|디자인팀 경력직 채용|(주)아이알큐더스" onclick="toggleApply(this)">지원하기</button>
-            <button class="bookmark-btn" data-id="사람인|디자인팀 경력직 채용|(주)아이알큐더스" onclick="toggleBookmark(this)" title="북마크">☆</button>
-            <button class="hide-btn" data-id="사람인|디자인팀 경력직 채용|(주)아이알큐더스" onclick="hideJob(this)" title="숨기기">✕</button>
-            <button class="memo-toggle-btn" data-id="사람인|디자인팀 경력직 채용|(주)아이알큐더스" onclick="toggleJobMemo(this)">메모</button>
-          </td>
-        </tr>
-        <tr class="job-memo-row" data-memo-for="사람인|디자인팀 경력직 채용|(주)아이알큐더스" style="display:none">
-          <td colspan="8" style="padding:4px 12px 8px 40px;background:#fafafa">
-            <textarea class="job-memo-ta" data-id="사람인|디자인팀 경력직 채용|(주)아이알큐더스" rows="2" placeholder="이 공고에 대한 메모를 남겨보세요..."
-              onblur="saveJobMemo(this)" style="width:100%;max-width:600px;border:1px solid #e2e5ea;border-radius:6px;padding:6px 8px;font-size:12px;font-family:inherit;resize:vertical;outline:none"></textarea>
-          </td>
-        </tr>
-        <tr data-site="사람인" data-keyword="UI/UX 디자이너"
-            data-loc="서울" data-exp="5년 이상" data-emp=""
-            data-id="사람인|웹 콘텐츠 디자인 Sr. 매니저|(주)더파운더즈" data-deadline="~08.10(월)" data-isnew="1">
-          <td><span class="site-badge" style="background:#0066CC">사람인</span></td>
-          <td class="td-title"><span class="new-badge">NEW</span><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=list&rec_idx=54418007" target="_blank" class="job-title">웹 콘텐츠 디자인 Sr. 매니저</a><br><span class="kw-badge">UI/UX 디자이너</span></td>
-          <td>(주)더파운더즈</td>
-          <td><span class="chip" style="color:#1565c0;background:#e3f2fd">서울 강남구 외</span></td>
-          <td><span class="chip" style="color:#bf360c;background:#fbe9e7">5년</span></td>
-          <td><span class="chip chip-empty">미제공</span></td>
-          <td class="td-dead" data-deadline-cell>~08.10(월)</td>
-          <td style="white-space:nowrap;vertical-align:middle">
-            <button class="apply-btn" data-id="사람인|웹 콘텐츠 디자인 Sr. 매니저|(주)더파운더즈" onclick="toggleApply(this)">지원하기</button>
-            <button class="bookmark-btn" data-id="사람인|웹 콘텐츠 디자인 Sr. 매니저|(주)더파운더즈" onclick="toggleBookmark(this)" title="북마크">☆</button>
-            <button class="hide-btn" data-id="사람인|웹 콘텐츠 디자인 Sr. 매니저|(주)더파운더즈" onclick="hideJob(this)" title="숨기기">✕</button>
-            <button class="memo-toggle-btn" data-id="사람인|웹 콘텐츠 디자인 Sr. 매니저|(주)더파운더즈" onclick="toggleJobMemo(this)">메모</button>
-          </td>
-        </tr>
-        <tr class="job-memo-row" data-memo-for="사람인|웹 콘텐츠 디자인 Sr. 매니저|(주)더파운더즈" style="display:none">
-          <td colspan="8" style="padding:4px 12px 8px 40px;background:#fafafa">
-            <textarea class="job-memo-ta" data-id="사람인|웹 콘텐츠 디자인 Sr. 매니저|(주)더파운더즈" rows="2" placeholder="이 공고에 대한 메모를 남겨보세요..."
-              onblur="saveJobMemo(this)" style="width:100%;max-width:600px;border:1px solid #e2e5ea;border-radius:6px;padding:6px 8px;font-size:12px;font-family:inherit;resize:vertical;outline:none"></textarea>
-          </td>
-        </tr>
-        <tr data-site="사람인" data-keyword="UI/UX 디자이너"
             data-loc="서울" data-exp="5년 이상" data-emp=""
             data-id="사람인|[히디프] 웹 디자이너|(주)메디테라피" data-deadline="~08.10(월)" data-isnew="1">
           <td><span class="site-badge" style="background:#0066CC">사람인</span></td>
@@ -431,71 +385,25 @@
           </td>
         </tr>
         <tr data-site="사람인" data-keyword="UI/UX 디자이너"
-            data-loc="서울" data-exp="5년 이상" data-emp=""
-            data-id="사람인|PM (Lead)|에이온비주식회사" data-deadline="~08.12(수)" data-isnew="1">
+            data-loc="서울" data-exp="2년 이상" data-emp=""
+            data-id="사람인|브랜드 디자이너 경력 채용|(주)완벽한우리들" data-deadline="~08.18(화)" data-isnew="1">
           <td><span class="site-badge" style="background:#0066CC">사람인</span></td>
-          <td class="td-title"><span class="new-badge">NEW</span><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=list&rec_idx=54461343" target="_blank" class="job-title">PM (Lead)</a><br><span class="kw-badge">UI/UX 디자이너</span></td>
-          <td>에이온비주식회사</td>
-          <td><span class="chip" style="color:#1565c0;background:#e3f2fd">서울 강남구 외</span></td>
-          <td><span class="chip" style="color:#bf360c;background:#fbe9e7">5년</span></td>
+          <td class="td-title"><span class="new-badge">NEW</span><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=list&rec_idx=54508201" target="_blank" class="job-title">브랜드 디자이너 경력 채용</a><br><span class="kw-badge">UI/UX 디자이너</span></td>
+          <td>(주)완벽한우리들</td>
+          <td><span class="chip" style="color:#1565c0;background:#e3f2fd">서울 금천구</span></td>
+          <td><span class="chip" style="color:#bf360c;background:#fbe9e7">2년</span></td>
           <td><span class="chip chip-empty">미제공</span></td>
-          <td class="td-dead" data-deadline-cell>~08.12(수)</td>
+          <td class="td-dead" data-deadline-cell>~08.18(화)</td>
           <td style="white-space:nowrap;vertical-align:middle">
-            <button class="apply-btn" data-id="사람인|PM (Lead)|에이온비주식회사" onclick="toggleApply(this)">지원하기</button>
-            <button class="bookmark-btn" data-id="사람인|PM (Lead)|에이온비주식회사" onclick="toggleBookmark(this)" title="북마크">☆</button>
-            <button class="hide-btn" data-id="사람인|PM (Lead)|에이온비주식회사" onclick="hideJob(this)" title="숨기기">✕</button>
-            <button class="memo-toggle-btn" data-id="사람인|PM (Lead)|에이온비주식회사" onclick="toggleJobMemo(this)">메모</button>
+            <button class="apply-btn" data-id="사람인|브랜드 디자이너 경력 채용|(주)완벽한우리들" onclick="toggleApply(this)">지원하기</button>
+            <button class="bookmark-btn" data-id="사람인|브랜드 디자이너 경력 채용|(주)완벽한우리들" onclick="toggleBookmark(this)" title="북마크">☆</button>
+            <button class="hide-btn" data-id="사람인|브랜드 디자이너 경력 채용|(주)완벽한우리들" onclick="hideJob(this)" title="숨기기">✕</button>
+            <button class="memo-toggle-btn" data-id="사람인|브랜드 디자이너 경력 채용|(주)완벽한우리들" onclick="toggleJobMemo(this)">메모</button>
           </td>
         </tr>
-        <tr class="job-memo-row" data-memo-for="사람인|PM (Lead)|에이온비주식회사" style="display:none">
+        <tr class="job-memo-row" data-memo-for="사람인|브랜드 디자이너 경력 채용|(주)완벽한우리들" style="display:none">
           <td colspan="8" style="padding:4px 12px 8px 40px;background:#fafafa">
-            <textarea class="job-memo-ta" data-id="사람인|PM (Lead)|에이온비주식회사" rows="2" placeholder="이 공고에 대한 메모를 남겨보세요..."
-              onblur="saveJobMemo(this)" style="width:100%;max-width:600px;border:1px solid #e2e5ea;border-radius:6px;padding:6px 8px;font-size:12px;font-family:inherit;resize:vertical;outline:none"></textarea>
-          </td>
-        </tr>
-        <tr data-site="사람인" data-keyword="UI/UX 디자이너"
-            data-loc="서울" data-exp="3년 이상" data-emp=""
-            data-id="사람인|Product Designer(UX/UI)|에이온비주식회사" data-deadline="~08.12(수)" data-isnew="1">
-          <td><span class="site-badge" style="background:#0066CC">사람인</span></td>
-          <td class="td-title"><span class="new-badge">NEW</span><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=list&rec_idx=54461625" target="_blank" class="job-title">Product Designer(UX/UI)</a><br><span class="kw-badge">UI/UX 디자이너</span></td>
-          <td>에이온비주식회사</td>
-          <td><span class="chip" style="color:#1565c0;background:#e3f2fd">서울 강남구 외</span></td>
-          <td><span class="chip" style="color:#bf360c;background:#fbe9e7">3년</span></td>
-          <td><span class="chip chip-empty">미제공</span></td>
-          <td class="td-dead" data-deadline-cell>~08.12(수)</td>
-          <td style="white-space:nowrap;vertical-align:middle">
-            <button class="apply-btn" data-id="사람인|Product Designer(UX/UI)|에이온비주식회사" onclick="toggleApply(this)">지원하기</button>
-            <button class="bookmark-btn" data-id="사람인|Product Designer(UX/UI)|에이온비주식회사" onclick="toggleBookmark(this)" title="북마크">☆</button>
-            <button class="hide-btn" data-id="사람인|Product Designer(UX/UI)|에이온비주식회사" onclick="hideJob(this)" title="숨기기">✕</button>
-            <button class="memo-toggle-btn" data-id="사람인|Product Designer(UX/UI)|에이온비주식회사" onclick="toggleJobMemo(this)">메모</button>
-          </td>
-        </tr>
-        <tr class="job-memo-row" data-memo-for="사람인|Product Designer(UX/UI)|에이온비주식회사" style="display:none">
-          <td colspan="8" style="padding:4px 12px 8px 40px;background:#fafafa">
-            <textarea class="job-memo-ta" data-id="사람인|Product Designer(UX/UI)|에이온비주식회사" rows="2" placeholder="이 공고에 대한 메모를 남겨보세요..."
-              onblur="saveJobMemo(this)" style="width:100%;max-width:600px;border:1px solid #e2e5ea;border-radius:6px;padding:6px 8px;font-size:12px;font-family:inherit;resize:vertical;outline:none"></textarea>
-          </td>
-        </tr>
-        <tr data-site="사람인" data-keyword="UI/UX 디자이너"
-            data-loc="서울" data-exp="3년 이상" data-emp=""
-            data-id="사람인|[더블러버스] 브랜드 디자이너|(주)메디쿼터스" data-deadline="~08.16(일)" data-isnew="1">
-          <td><span class="site-badge" style="background:#0066CC">사람인</span></td>
-          <td class="td-title"><span class="new-badge">NEW</span><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=list&rec_idx=54485287" target="_blank" class="job-title">[더블러버스] 브랜드 디자이너</a><br><span class="kw-badge">UI/UX 디자이너</span></td>
-          <td>(주)메디쿼터스</td>
-          <td><span class="chip" style="color:#1565c0;background:#e3f2fd">서울 강남구</span></td>
-          <td><span class="chip" style="color:#bf360c;background:#fbe9e7">3년</span></td>
-          <td><span class="chip chip-empty">미제공</span></td>
-          <td class="td-dead" data-deadline-cell>~08.16(일)</td>
-          <td style="white-space:nowrap;vertical-align:middle">
-            <button class="apply-btn" data-id="사람인|[더블러버스] 브랜드 디자이너|(주)메디쿼터스" onclick="toggleApply(this)">지원하기</button>
-            <button class="bookmark-btn" data-id="사람인|[더블러버스] 브랜드 디자이너|(주)메디쿼터스" onclick="toggleBookmark(this)" title="북마크">☆</button>
-            <button class="hide-btn" data-id="사람인|[더블러버스] 브랜드 디자이너|(주)메디쿼터스" onclick="hideJob(this)" title="숨기기">✕</button>
-            <button class="memo-toggle-btn" data-id="사람인|[더블러버스] 브랜드 디자이너|(주)메디쿼터스" onclick="toggleJobMemo(this)">메모</button>
-          </td>
-        </tr>
-        <tr class="job-memo-row" data-memo-for="사람인|[더블러버스] 브랜드 디자이너|(주)메디쿼터스" style="display:none">
-          <td colspan="8" style="padding:4px 12px 8px 40px;background:#fafafa">
-            <textarea class="job-memo-ta" data-id="사람인|[더블러버스] 브랜드 디자이너|(주)메디쿼터스" rows="2" placeholder="이 공고에 대한 메모를 남겨보세요..."
+            <textarea class="job-memo-ta" data-id="사람인|브랜드 디자이너 경력 채용|(주)완벽한우리들" rows="2" placeholder="이 공고에 대한 메모를 남겨보세요..."
               onblur="saveJobMemo(this)" style="width:100%;max-width:600px;border:1px solid #e2e5ea;border-radius:6px;padding:6px 8px;font-size:12px;font-family:inherit;resize:vertical;outline:none"></textarea>
           </td>
         </tr>
@@ -523,25 +431,48 @@
           </td>
         </tr>
         <tr data-site="사람인" data-keyword="UI/UX 디자이너"
-            data-loc="서울" data-exp="신입" data-emp=""
-            data-id="사람인|상세페이지 기획자,스토리텔링|(주)이펙터" data-deadline="~08.14(금)" data-isnew="1">
+            data-loc="서울" data-exp="1년 이상" data-emp=""
+            data-id="사람인|자사몰 카페24 MD|(주)리터니티" data-deadline="~08.12(수)" data-isnew="1">
           <td><span class="site-badge" style="background:#0066CC">사람인</span></td>
-          <td class="td-title"><span class="new-badge">NEW</span><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=list&rec_idx=54488375" target="_blank" class="job-title">상세페이지 기획자,스토리텔링</a><br><span class="kw-badge">UI/UX 디자이너</span></td>
-          <td>(주)이펙터</td>
-          <td><span class="chip" style="color:#1565c0;background:#e3f2fd">서울 강남구</span></td>
-          <td><span class="chip" style="color:#1b5e20;background:#c8e6c9">신입/경력</span></td>
+          <td class="td-title"><span class="new-badge">NEW</span><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=list&rec_idx=54462124" target="_blank" class="job-title">자사몰 카페24 MD</a><br><span class="kw-badge">UI/UX 디자이너</span></td>
+          <td>(주)리터니티</td>
+          <td><span class="chip" style="color:#1565c0;background:#e3f2fd">서울전체 외</span></td>
+          <td><span class="chip" style="color:#bf360c;background:#fbe9e7">1년</span></td>
           <td><span class="chip chip-empty">미제공</span></td>
-          <td class="td-dead" data-deadline-cell>~08.14(금)</td>
+          <td class="td-dead" data-deadline-cell>~08.12(수)</td>
           <td style="white-space:nowrap;vertical-align:middle">
-            <button class="apply-btn" data-id="사람인|상세페이지 기획자,스토리텔링|(주)이펙터" onclick="toggleApply(this)">지원하기</button>
-            <button class="bookmark-btn" data-id="사람인|상세페이지 기획자,스토리텔링|(주)이펙터" onclick="toggleBookmark(this)" title="북마크">☆</button>
-            <button class="hide-btn" data-id="사람인|상세페이지 기획자,스토리텔링|(주)이펙터" onclick="hideJob(this)" title="숨기기">✕</button>
-            <button class="memo-toggle-btn" data-id="사람인|상세페이지 기획자,스토리텔링|(주)이펙터" onclick="toggleJobMemo(this)">메모</button>
+            <button class="apply-btn" data-id="사람인|자사몰 카페24 MD|(주)리터니티" onclick="toggleApply(this)">지원하기</button>
+            <button class="bookmark-btn" data-id="사람인|자사몰 카페24 MD|(주)리터니티" onclick="toggleBookmark(this)" title="북마크">☆</button>
+            <button class="hide-btn" data-id="사람인|자사몰 카페24 MD|(주)리터니티" onclick="hideJob(this)" title="숨기기">✕</button>
+            <button class="memo-toggle-btn" data-id="사람인|자사몰 카페24 MD|(주)리터니티" onclick="toggleJobMemo(this)">메모</button>
           </td>
         </tr>
-        <tr class="job-memo-row" data-memo-for="사람인|상세페이지 기획자,스토리텔링|(주)이펙터" style="display:none">
+        <tr class="job-memo-row" data-memo-for="사람인|자사몰 카페24 MD|(주)리터니티" style="display:none">
           <td colspan="8" style="padding:4px 12px 8px 40px;background:#fafafa">
-            <textarea class="job-memo-ta" data-id="사람인|상세페이지 기획자,스토리텔링|(주)이펙터" rows="2" placeholder="이 공고에 대한 메모를 남겨보세요..."
+            <textarea class="job-memo-ta" data-id="사람인|자사몰 카페24 MD|(주)리터니티" rows="2" placeholder="이 공고에 대한 메모를 남겨보세요..."
+              onblur="saveJobMemo(this)" style="width:100%;max-width:600px;border:1px solid #e2e5ea;border-radius:6px;padding:6px 8px;font-size:12px;font-family:inherit;resize:vertical;outline:none"></textarea>
+          </td>
+        </tr>
+        <tr data-site="사람인" data-keyword="UI/UX 디자이너"
+            data-loc="서울" data-exp="1년 이상" data-emp=""
+            data-id="사람인|온라인쇼핑몰 브랜드디자이너|주식회사어센트원" data-deadline="~08.18(화)" data-isnew="1">
+          <td><span class="site-badge" style="background:#0066CC">사람인</span></td>
+          <td class="td-title"><span class="new-badge">NEW</span><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=list&rec_idx=54505941" target="_blank" class="job-title">온라인쇼핑몰 브랜드디자이너</a><br><span class="kw-badge">UI/UX 디자이너</span></td>
+          <td>주식회사어센트원</td>
+          <td><span class="chip" style="color:#1565c0;background:#e3f2fd">서울전체 외</span></td>
+          <td><span class="chip" style="color:#bf360c;background:#fbe9e7">1년</span></td>
+          <td><span class="chip chip-empty">미제공</span></td>
+          <td class="td-dead" data-deadline-cell>~08.18(화)</td>
+          <td style="white-space:nowrap;vertical-align:middle">
+            <button class="apply-btn" data-id="사람인|온라인쇼핑몰 브랜드디자이너|주식회사어센트원" onclick="toggleApply(this)">지원하기</button>
+            <button class="bookmark-btn" data-id="사람인|온라인쇼핑몰 브랜드디자이너|주식회사어센트원" onclick="toggleBookmark(this)" title="북마크">☆</button>
+            <button class="hide-btn" data-id="사람인|온라인쇼핑몰 브랜드디자이너|주식회사어센트원" onclick="hideJob(this)" title="숨기기">✕</button>
+            <button class="memo-toggle-btn" data-id="사람인|온라인쇼핑몰 브랜드디자이너|주식회사어센트원" onclick="toggleJobMemo(this)">메모</button>
+          </td>
+        </tr>
+        <tr class="job-memo-row" data-memo-for="사람인|온라인쇼핑몰 브랜드디자이너|주식회사어센트원" style="display:none">
+          <td colspan="8" style="padding:4px 12px 8px 40px;background:#fafafa">
+            <textarea class="job-memo-ta" data-id="사람인|온라인쇼핑몰 브랜드디자이너|주식회사어센트원" rows="2" placeholder="이 공고에 대한 메모를 남겨보세요..."
               onblur="saveJobMemo(this)" style="width:100%;max-width:600px;border:1px solid #e2e5ea;border-radius:6px;padding:6px 8px;font-size:12px;font-family:inherit;resize:vertical;outline:none"></textarea>
           </td>
         </tr>
@@ -565,6 +496,98 @@
         <tr class="job-memo-row" data-memo-for="사람인|통학차량 서비스 디자인/UX|(주)스쿨버스" style="display:none">
           <td colspan="8" style="padding:4px 12px 8px 40px;background:#fafafa">
             <textarea class="job-memo-ta" data-id="사람인|통학차량 서비스 디자인/UX|(주)스쿨버스" rows="2" placeholder="이 공고에 대한 메모를 남겨보세요..."
+              onblur="saveJobMemo(this)" style="width:100%;max-width:600px;border:1px solid #e2e5ea;border-radius:6px;padding:6px 8px;font-size:12px;font-family:inherit;resize:vertical;outline:none"></textarea>
+          </td>
+        </tr>
+        <tr data-site="사람인" data-keyword="UI/UX 디자이너"
+            data-loc="서울" data-exp="3년 이상" data-emp=""
+            data-id="사람인|[더블러버스] 브랜드 디자이너|(주)메디쿼터스" data-deadline="~08.16(일)" data-isnew="1">
+          <td><span class="site-badge" style="background:#0066CC">사람인</span></td>
+          <td class="td-title"><span class="new-badge">NEW</span><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=list&rec_idx=54485287" target="_blank" class="job-title">[더블러버스] 브랜드 디자이너</a><br><span class="kw-badge">UI/UX 디자이너</span></td>
+          <td>(주)메디쿼터스</td>
+          <td><span class="chip" style="color:#1565c0;background:#e3f2fd">서울 강남구</span></td>
+          <td><span class="chip" style="color:#bf360c;background:#fbe9e7">3년</span></td>
+          <td><span class="chip chip-empty">미제공</span></td>
+          <td class="td-dead" data-deadline-cell>~08.16(일)</td>
+          <td style="white-space:nowrap;vertical-align:middle">
+            <button class="apply-btn" data-id="사람인|[더블러버스] 브랜드 디자이너|(주)메디쿼터스" onclick="toggleApply(this)">지원하기</button>
+            <button class="bookmark-btn" data-id="사람인|[더블러버스] 브랜드 디자이너|(주)메디쿼터스" onclick="toggleBookmark(this)" title="북마크">☆</button>
+            <button class="hide-btn" data-id="사람인|[더블러버스] 브랜드 디자이너|(주)메디쿼터스" onclick="hideJob(this)" title="숨기기">✕</button>
+            <button class="memo-toggle-btn" data-id="사람인|[더블러버스] 브랜드 디자이너|(주)메디쿼터스" onclick="toggleJobMemo(this)">메모</button>
+          </td>
+        </tr>
+        <tr class="job-memo-row" data-memo-for="사람인|[더블러버스] 브랜드 디자이너|(주)메디쿼터스" style="display:none">
+          <td colspan="8" style="padding:4px 12px 8px 40px;background:#fafafa">
+            <textarea class="job-memo-ta" data-id="사람인|[더블러버스] 브랜드 디자이너|(주)메디쿼터스" rows="2" placeholder="이 공고에 대한 메모를 남겨보세요..."
+              onblur="saveJobMemo(this)" style="width:100%;max-width:600px;border:1px solid #e2e5ea;border-radius:6px;padding:6px 8px;font-size:12px;font-family:inherit;resize:vertical;outline:none"></textarea>
+          </td>
+        </tr>
+        <tr data-site="사람인" data-keyword="UI/UX 디자이너"
+            data-loc="서울" data-exp="5년 이상" data-emp=""
+            data-id="사람인|웹 콘텐츠 디자인 Sr. 매니저|(주)더파운더즈" data-deadline="~08.10(월)" data-isnew="1">
+          <td><span class="site-badge" style="background:#0066CC">사람인</span></td>
+          <td class="td-title"><span class="new-badge">NEW</span><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=list&rec_idx=54418007" target="_blank" class="job-title">웹 콘텐츠 디자인 Sr. 매니저</a><br><span class="kw-badge">UI/UX 디자이너</span></td>
+          <td>(주)더파운더즈</td>
+          <td><span class="chip" style="color:#1565c0;background:#e3f2fd">서울 강남구 외</span></td>
+          <td><span class="chip" style="color:#bf360c;background:#fbe9e7">5년</span></td>
+          <td><span class="chip chip-empty">미제공</span></td>
+          <td class="td-dead" data-deadline-cell>~08.10(월)</td>
+          <td style="white-space:nowrap;vertical-align:middle">
+            <button class="apply-btn" data-id="사람인|웹 콘텐츠 디자인 Sr. 매니저|(주)더파운더즈" onclick="toggleApply(this)">지원하기</button>
+            <button class="bookmark-btn" data-id="사람인|웹 콘텐츠 디자인 Sr. 매니저|(주)더파운더즈" onclick="toggleBookmark(this)" title="북마크">☆</button>
+            <button class="hide-btn" data-id="사람인|웹 콘텐츠 디자인 Sr. 매니저|(주)더파운더즈" onclick="hideJob(this)" title="숨기기">✕</button>
+            <button class="memo-toggle-btn" data-id="사람인|웹 콘텐츠 디자인 Sr. 매니저|(주)더파운더즈" onclick="toggleJobMemo(this)">메모</button>
+          </td>
+        </tr>
+        <tr class="job-memo-row" data-memo-for="사람인|웹 콘텐츠 디자인 Sr. 매니저|(주)더파운더즈" style="display:none">
+          <td colspan="8" style="padding:4px 12px 8px 40px;background:#fafafa">
+            <textarea class="job-memo-ta" data-id="사람인|웹 콘텐츠 디자인 Sr. 매니저|(주)더파운더즈" rows="2" placeholder="이 공고에 대한 메모를 남겨보세요..."
+              onblur="saveJobMemo(this)" style="width:100%;max-width:600px;border:1px solid #e2e5ea;border-radius:6px;padding:6px 8px;font-size:12px;font-family:inherit;resize:vertical;outline:none"></textarea>
+          </td>
+        </tr>
+        <tr data-site="사람인" data-keyword="UI/UX 디자이너"
+            data-loc="서울" data-exp="신입" data-emp=""
+            data-id="사람인|상세페이지 기획자,스토리텔링|(주)이펙터" data-deadline="~08.14(금)" data-isnew="1">
+          <td><span class="site-badge" style="background:#0066CC">사람인</span></td>
+          <td class="td-title"><span class="new-badge">NEW</span><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=list&rec_idx=54488375" target="_blank" class="job-title">상세페이지 기획자,스토리텔링</a><br><span class="kw-badge">UI/UX 디자이너</span></td>
+          <td>(주)이펙터</td>
+          <td><span class="chip" style="color:#1565c0;background:#e3f2fd">서울 강남구</span></td>
+          <td><span class="chip" style="color:#1b5e20;background:#c8e6c9">신입/경력</span></td>
+          <td><span class="chip chip-empty">미제공</span></td>
+          <td class="td-dead" data-deadline-cell>~08.14(금)</td>
+          <td style="white-space:nowrap;vertical-align:middle">
+            <button class="apply-btn" data-id="사람인|상세페이지 기획자,스토리텔링|(주)이펙터" onclick="toggleApply(this)">지원하기</button>
+            <button class="bookmark-btn" data-id="사람인|상세페이지 기획자,스토리텔링|(주)이펙터" onclick="toggleBookmark(this)" title="북마크">☆</button>
+            <button class="hide-btn" data-id="사람인|상세페이지 기획자,스토리텔링|(주)이펙터" onclick="hideJob(this)" title="숨기기">✕</button>
+            <button class="memo-toggle-btn" data-id="사람인|상세페이지 기획자,스토리텔링|(주)이펙터" onclick="toggleJobMemo(this)">메모</button>
+          </td>
+        </tr>
+        <tr class="job-memo-row" data-memo-for="사람인|상세페이지 기획자,스토리텔링|(주)이펙터" style="display:none">
+          <td colspan="8" style="padding:4px 12px 8px 40px;background:#fafafa">
+            <textarea class="job-memo-ta" data-id="사람인|상세페이지 기획자,스토리텔링|(주)이펙터" rows="2" placeholder="이 공고에 대한 메모를 남겨보세요..."
+              onblur="saveJobMemo(this)" style="width:100%;max-width:600px;border:1px solid #e2e5ea;border-radius:6px;padding:6px 8px;font-size:12px;font-family:inherit;resize:vertical;outline:none"></textarea>
+          </td>
+        </tr>
+        <tr data-site="사람인" data-keyword="UI/UX 디자이너"
+            data-loc="서울" data-exp="2년 이상" data-emp=""
+            data-id="사람인|디자인팀 경력직 채용|(주)아이알큐더스" data-deadline="~08.14(금)" data-isnew="1">
+          <td><span class="site-badge" style="background:#0066CC">사람인</span></td>
+          <td class="td-title"><span class="new-badge">NEW</span><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=list&rec_idx=54486581" target="_blank" class="job-title">디자인팀 경력직 채용</a><br><span class="kw-badge">UI/UX 디자이너</span></td>
+          <td>(주)아이알큐더스</td>
+          <td><span class="chip" style="color:#1565c0;background:#e3f2fd">서울 영등포구</span></td>
+          <td><span class="chip" style="color:#bf360c;background:#fbe9e7">2년</span></td>
+          <td><span class="chip chip-empty">미제공</span></td>
+          <td class="td-dead" data-deadline-cell>~08.14(금)</td>
+          <td style="white-space:nowrap;vertical-align:middle">
+            <button class="apply-btn" data-id="사람인|디자인팀 경력직 채용|(주)아이알큐더스" onclick="toggleApply(this)">지원하기</button>
+            <button class="bookmark-btn" data-id="사람인|디자인팀 경력직 채용|(주)아이알큐더스" onclick="toggleBookmark(this)" title="북마크">☆</button>
+            <button class="hide-btn" data-id="사람인|디자인팀 경력직 채용|(주)아이알큐더스" onclick="hideJob(this)" title="숨기기">✕</button>
+            <button class="memo-toggle-btn" data-id="사람인|디자인팀 경력직 채용|(주)아이알큐더스" onclick="toggleJobMemo(this)">메모</button>
+          </td>
+        </tr>
+        <tr class="job-memo-row" data-memo-for="사람인|디자인팀 경력직 채용|(주)아이알큐더스" style="display:none">
+          <td colspan="8" style="padding:4px 12px 8px 40px;background:#fafafa">
+            <textarea class="job-memo-ta" data-id="사람인|디자인팀 경력직 채용|(주)아이알큐더스" rows="2" placeholder="이 공고에 대한 메모를 남겨보세요..."
               onblur="saveJobMemo(this)" style="width:100%;max-width:600px;border:1px solid #e2e5ea;border-radius:6px;padding:6px 8px;font-size:12px;font-family:inherit;resize:vertical;outline:none"></textarea>
           </td>
         </tr>
@@ -593,75 +616,6 @@
         </tr>
         <tr data-site="사람인" data-keyword="그래픽 디자이너"
             data-loc="서울" data-exp="신입" data-emp=""
-            data-id="사람인|[리포데이] 마케팅/영상/컨텐츠/인플루언서/영업 담당자 모집|(주)와우바이오텍" data-deadline="~08.03(월)" data-isnew="1">
-          <td><span class="site-badge" style="background:#0066CC">사람인</span></td>
-          <td class="td-title"><span class="new-badge">NEW</span><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=list&rec_idx=54339115" target="_blank" class="job-title">[리포데이] 마케팅/영상/컨텐츠/인플루언서/영업 담당자 모집</a><br><span class="kw-badge">그래픽 디자이너</span></td>
-          <td>(주)와우바이오텍</td>
-          <td><span class="chip" style="color:#1565c0;background:#e3f2fd">서울전체 외</span></td>
-          <td><span class="chip" style="color:#1b5e20;background:#c8e6c9">신입/경력</span></td>
-          <td><span class="chip chip-empty">미제공</span></td>
-          <td class="td-dead" data-deadline-cell>~08.03(월)</td>
-          <td style="white-space:nowrap;vertical-align:middle">
-            <button class="apply-btn" data-id="사람인|[리포데이] 마케팅/영상/컨텐츠/인플루언서/영업 담당자 모집|(주)와우바이오텍" onclick="toggleApply(this)">지원하기</button>
-            <button class="bookmark-btn" data-id="사람인|[리포데이] 마케팅/영상/컨텐츠/인플루언서/영업 담당자 모집|(주)와우바이오텍" onclick="toggleBookmark(this)" title="북마크">☆</button>
-            <button class="hide-btn" data-id="사람인|[리포데이] 마케팅/영상/컨텐츠/인플루언서/영업 담당자 모집|(주)와우바이오텍" onclick="hideJob(this)" title="숨기기">✕</button>
-            <button class="memo-toggle-btn" data-id="사람인|[리포데이] 마케팅/영상/컨텐츠/인플루언서/영업 담당자 모집|(주)와우바이오텍" onclick="toggleJobMemo(this)">메모</button>
-          </td>
-        </tr>
-        <tr class="job-memo-row" data-memo-for="사람인|[리포데이] 마케팅/영상/컨텐츠/인플루언서/영업 담당자 모집|(주)와우바이오텍" style="display:none">
-          <td colspan="8" style="padding:4px 12px 8px 40px;background:#fafafa">
-            <textarea class="job-memo-ta" data-id="사람인|[리포데이] 마케팅/영상/컨텐츠/인플루언서/영업 담당자 모집|(주)와우바이오텍" rows="2" placeholder="이 공고에 대한 메모를 남겨보세요..."
-              onblur="saveJobMemo(this)" style="width:100%;max-width:600px;border:1px solid #e2e5ea;border-radius:6px;padding:6px 8px;font-size:12px;font-family:inherit;resize:vertical;outline:none"></textarea>
-          </td>
-        </tr>
-        <tr data-site="사람인" data-keyword="그래픽 디자이너"
-            data-loc="서울" data-exp="신입" data-emp=""
-            data-id="사람인|[K뷰티] 약국영업/MD/마케팅/영업지원/해외담당자 모집|(주)와우바이오텍" data-deadline="~08.03(월)" data-isnew="1">
-          <td><span class="site-badge" style="background:#0066CC">사람인</span></td>
-          <td class="td-title"><span class="new-badge">NEW</span><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=list&rec_idx=54338992" target="_blank" class="job-title">[K뷰티] 약국영업/MD/마케팅/영업지원/해외담당자 모집</a><br><span class="kw-badge">그래픽 디자이너</span></td>
-          <td>(주)와우바이오텍</td>
-          <td><span class="chip" style="color:#1565c0;background:#e3f2fd">서울전체 외</span></td>
-          <td><span class="chip" style="color:#1b5e20;background:#c8e6c9">신입/경력</span></td>
-          <td><span class="chip chip-empty">미제공</span></td>
-          <td class="td-dead" data-deadline-cell>~08.03(월)</td>
-          <td style="white-space:nowrap;vertical-align:middle">
-            <button class="apply-btn" data-id="사람인|[K뷰티] 약국영업/MD/마케팅/영업지원/해외담당자 모집|(주)와우바이오텍" onclick="toggleApply(this)">지원하기</button>
-            <button class="bookmark-btn" data-id="사람인|[K뷰티] 약국영업/MD/마케팅/영업지원/해외담당자 모집|(주)와우바이오텍" onclick="toggleBookmark(this)" title="북마크">☆</button>
-            <button class="hide-btn" data-id="사람인|[K뷰티] 약국영업/MD/마케팅/영업지원/해외담당자 모집|(주)와우바이오텍" onclick="hideJob(this)" title="숨기기">✕</button>
-            <button class="memo-toggle-btn" data-id="사람인|[K뷰티] 약국영업/MD/마케팅/영업지원/해외담당자 모집|(주)와우바이오텍" onclick="toggleJobMemo(this)">메모</button>
-          </td>
-        </tr>
-        <tr class="job-memo-row" data-memo-for="사람인|[K뷰티] 약국영업/MD/마케팅/영업지원/해외담당자 모집|(주)와우바이오텍" style="display:none">
-          <td colspan="8" style="padding:4px 12px 8px 40px;background:#fafafa">
-            <textarea class="job-memo-ta" data-id="사람인|[K뷰티] 약국영업/MD/마케팅/영업지원/해외담당자 모집|(주)와우바이오텍" rows="2" placeholder="이 공고에 대한 메모를 남겨보세요..."
-              onblur="saveJobMemo(this)" style="width:100%;max-width:600px;border:1px solid #e2e5ea;border-radius:6px;padding:6px 8px;font-size:12px;font-family:inherit;resize:vertical;outline:none"></textarea>
-          </td>
-        </tr>
-        <tr data-site="사람인" data-keyword="그래픽 디자이너"
-            data-loc="서울" data-exp="신입" data-emp=""
-            data-id="사람인|단테미디어랩 경력 및 신입사원 채용(연출PD/2D그래픽 디자이너)|단테미디어랩" data-deadline="~07.31(금)" data-isnew="1">
-          <td><span class="site-badge" style="background:#0066CC">사람인</span></td>
-          <td class="td-title"><span class="new-badge">NEW</span><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=list&rec_idx=54409154" target="_blank" class="job-title">단테미디어랩 경력 및 신입사원 채용(연출PD/2D그래픽 디자이너)</a><br><span class="kw-badge">그래픽 디자이너</span></td>
-          <td>단테미디어랩</td>
-          <td><span class="chip" style="color:#1565c0;background:#e3f2fd">서울 서초구</span></td>
-          <td><span class="chip" style="color:#1b5e20;background:#c8e6c9">신입/경력</span></td>
-          <td><span class="chip chip-empty">미제공</span></td>
-          <td class="td-dead" data-deadline-cell>~07.31(금)</td>
-          <td style="white-space:nowrap;vertical-align:middle">
-            <button class="apply-btn" data-id="사람인|단테미디어랩 경력 및 신입사원 채용(연출PD/2D그래픽 디자이너)|단테미디어랩" onclick="toggleApply(this)">지원하기</button>
-            <button class="bookmark-btn" data-id="사람인|단테미디어랩 경력 및 신입사원 채용(연출PD/2D그래픽 디자이너)|단테미디어랩" onclick="toggleBookmark(this)" title="북마크">☆</button>
-            <button class="hide-btn" data-id="사람인|단테미디어랩 경력 및 신입사원 채용(연출PD/2D그래픽 디자이너)|단테미디어랩" onclick="hideJob(this)" title="숨기기">✕</button>
-            <button class="memo-toggle-btn" data-id="사람인|단테미디어랩 경력 및 신입사원 채용(연출PD/2D그래픽 디자이너)|단테미디어랩" onclick="toggleJobMemo(this)">메모</button>
-          </td>
-        </tr>
-        <tr class="job-memo-row" data-memo-for="사람인|단테미디어랩 경력 및 신입사원 채용(연출PD/2D그래픽 디자이너)|단테미디어랩" style="display:none">
-          <td colspan="8" style="padding:4px 12px 8px 40px;background:#fafafa">
-            <textarea class="job-memo-ta" data-id="사람인|단테미디어랩 경력 및 신입사원 채용(연출PD/2D그래픽 디자이너)|단테미디어랩" rows="2" placeholder="이 공고에 대한 메모를 남겨보세요..."
-              onblur="saveJobMemo(this)" style="width:100%;max-width:600px;border:1px solid #e2e5ea;border-radius:6px;padding:6px 8px;font-size:12px;font-family:inherit;resize:vertical;outline:none"></textarea>
-          </td>
-        </tr>
-        <tr data-site="사람인" data-keyword="그래픽 디자이너"
-            data-loc="서울" data-exp="신입" data-emp=""
             data-id="사람인|디자인, 설계, 전략사업 신입/경력 모집|(주)플레이잼" data-deadline="~08.12(수)" data-isnew="1">
           <td><span class="site-badge" style="background:#0066CC">사람인</span></td>
           <td class="td-title"><span class="new-badge">NEW</span><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=list&rec_idx=54460721" target="_blank" class="job-title">디자인, 설계, 전략사업 신입/경력 모집</a><br><span class="kw-badge">그래픽 디자이너</span></td>
@@ -680,6 +634,29 @@
         <tr class="job-memo-row" data-memo-for="사람인|디자인, 설계, 전략사업 신입/경력 모집|(주)플레이잼" style="display:none">
           <td colspan="8" style="padding:4px 12px 8px 40px;background:#fafafa">
             <textarea class="job-memo-ta" data-id="사람인|디자인, 설계, 전략사업 신입/경력 모집|(주)플레이잼" rows="2" placeholder="이 공고에 대한 메모를 남겨보세요..."
+              onblur="saveJobMemo(this)" style="width:100%;max-width:600px;border:1px solid #e2e5ea;border-radius:6px;padding:6px 8px;font-size:12px;font-family:inherit;resize:vertical;outline:none"></textarea>
+          </td>
+        </tr>
+        <tr data-site="사람인" data-keyword="그래픽 디자이너"
+            data-loc="서울" data-exp="신입" data-emp=""
+            data-id="사람인|토스플레이스 자회사 [iShopCARE] 대규모 채용｜ 영업·마케팅·전략|(주)아이샵케어" data-deadline="~07.31(금)" data-isnew="0">
+          <td><span class="site-badge" style="background:#0066CC">사람인</span></td>
+          <td class="td-title"><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=list&rec_idx=54320096" target="_blank" class="job-title">토스플레이스 자회사 [iShopCARE] 대규모 채용｜ 영업·마케팅·전략·CX·물류·AS·MD  外</a><br><span class="kw-badge">그래픽 디자이너</span></td>
+          <td>(주)아이샵케어</td>
+          <td><span class="chip" style="color:#1565c0;background:#e3f2fd">서울 강남구 외</span></td>
+          <td><span class="chip" style="color:#1b5e20;background:#c8e6c9">신입/경력</span></td>
+          <td><span class="chip chip-empty">미제공</span></td>
+          <td class="td-dead" data-deadline-cell>~07.31(금)</td>
+          <td style="white-space:nowrap;vertical-align:middle">
+            <button class="apply-btn" data-id="사람인|토스플레이스 자회사 [iShopCARE] 대규모 채용｜ 영업·마케팅·전략|(주)아이샵케어" onclick="toggleApply(this)">지원하기</button>
+            <button class="bookmark-btn" data-id="사람인|토스플레이스 자회사 [iShopCARE] 대규모 채용｜ 영업·마케팅·전략|(주)아이샵케어" onclick="toggleBookmark(this)" title="북마크">☆</button>
+            <button class="hide-btn" data-id="사람인|토스플레이스 자회사 [iShopCARE] 대규모 채용｜ 영업·마케팅·전략|(주)아이샵케어" onclick="hideJob(this)" title="숨기기">✕</button>
+            <button class="memo-toggle-btn" data-id="사람인|토스플레이스 자회사 [iShopCARE] 대규모 채용｜ 영업·마케팅·전략|(주)아이샵케어" onclick="toggleJobMemo(this)">메모</button>
+          </td>
+        </tr>
+        <tr class="job-memo-row" data-memo-for="사람인|토스플레이스 자회사 [iShopCARE] 대규모 채용｜ 영업·마케팅·전략|(주)아이샵케어" style="display:none">
+          <td colspan="8" style="padding:4px 12px 8px 40px;background:#fafafa">
+            <textarea class="job-memo-ta" data-id="사람인|토스플레이스 자회사 [iShopCARE] 대규모 채용｜ 영업·마케팅·전략|(주)아이샵케어" rows="2" placeholder="이 공고에 대한 메모를 남겨보세요..."
               onblur="saveJobMemo(this)" style="width:100%;max-width:600px;border:1px solid #e2e5ea;border-radius:6px;padding:6px 8px;font-size:12px;font-family:inherit;resize:vertical;outline:none"></textarea>
           </td>
         </tr>
@@ -708,6 +685,75 @@
         </tr>
         <tr data-site="사람인" data-keyword="그래픽 디자이너"
             data-loc="서울" data-exp="신입" data-emp=""
+            data-id="사람인|[K뷰티] 약국영업/MD/마케팅/영업지원/해외담당자 모집|(주)와우바이오텍" data-deadline="~08.03(월)" data-isnew="1">
+          <td><span class="site-badge" style="background:#0066CC">사람인</span></td>
+          <td class="td-title"><span class="new-badge">NEW</span><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=list&rec_idx=54338992" target="_blank" class="job-title">[K뷰티] 약국영업/MD/마케팅/영업지원/해외담당자 모집</a><br><span class="kw-badge">그래픽 디자이너</span></td>
+          <td>(주)와우바이오텍</td>
+          <td><span class="chip" style="color:#1565c0;background:#e3f2fd">서울전체 외</span></td>
+          <td><span class="chip" style="color:#1b5e20;background:#c8e6c9">신입/경력</span></td>
+          <td><span class="chip chip-empty">미제공</span></td>
+          <td class="td-dead" data-deadline-cell>~08.03(월)</td>
+          <td style="white-space:nowrap;vertical-align:middle">
+            <button class="apply-btn" data-id="사람인|[K뷰티] 약국영업/MD/마케팅/영업지원/해외담당자 모집|(주)와우바이오텍" onclick="toggleApply(this)">지원하기</button>
+            <button class="bookmark-btn" data-id="사람인|[K뷰티] 약국영업/MD/마케팅/영업지원/해외담당자 모집|(주)와우바이오텍" onclick="toggleBookmark(this)" title="북마크">☆</button>
+            <button class="hide-btn" data-id="사람인|[K뷰티] 약국영업/MD/마케팅/영업지원/해외담당자 모집|(주)와우바이오텍" onclick="hideJob(this)" title="숨기기">✕</button>
+            <button class="memo-toggle-btn" data-id="사람인|[K뷰티] 약국영업/MD/마케팅/영업지원/해외담당자 모집|(주)와우바이오텍" onclick="toggleJobMemo(this)">메모</button>
+          </td>
+        </tr>
+        <tr class="job-memo-row" data-memo-for="사람인|[K뷰티] 약국영업/MD/마케팅/영업지원/해외담당자 모집|(주)와우바이오텍" style="display:none">
+          <td colspan="8" style="padding:4px 12px 8px 40px;background:#fafafa">
+            <textarea class="job-memo-ta" data-id="사람인|[K뷰티] 약국영업/MD/마케팅/영업지원/해외담당자 모집|(주)와우바이오텍" rows="2" placeholder="이 공고에 대한 메모를 남겨보세요..."
+              onblur="saveJobMemo(this)" style="width:100%;max-width:600px;border:1px solid #e2e5ea;border-radius:6px;padding:6px 8px;font-size:12px;font-family:inherit;resize:vertical;outline:none"></textarea>
+          </td>
+        </tr>
+        <tr data-site="사람인" data-keyword="그래픽 디자이너"
+            data-loc="서울" data-exp="신입" data-emp=""
+            data-id="사람인|[리포데이] 마케팅/영상/컨텐츠/인플루언서/영업 담당자 모집|(주)와우바이오텍" data-deadline="~08.03(월)" data-isnew="1">
+          <td><span class="site-badge" style="background:#0066CC">사람인</span></td>
+          <td class="td-title"><span class="new-badge">NEW</span><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=list&rec_idx=54339115" target="_blank" class="job-title">[리포데이] 마케팅/영상/컨텐츠/인플루언서/영업 담당자 모집</a><br><span class="kw-badge">그래픽 디자이너</span></td>
+          <td>(주)와우바이오텍</td>
+          <td><span class="chip" style="color:#1565c0;background:#e3f2fd">서울전체 외</span></td>
+          <td><span class="chip" style="color:#1b5e20;background:#c8e6c9">신입/경력</span></td>
+          <td><span class="chip chip-empty">미제공</span></td>
+          <td class="td-dead" data-deadline-cell>~08.03(월)</td>
+          <td style="white-space:nowrap;vertical-align:middle">
+            <button class="apply-btn" data-id="사람인|[리포데이] 마케팅/영상/컨텐츠/인플루언서/영업 담당자 모집|(주)와우바이오텍" onclick="toggleApply(this)">지원하기</button>
+            <button class="bookmark-btn" data-id="사람인|[리포데이] 마케팅/영상/컨텐츠/인플루언서/영업 담당자 모집|(주)와우바이오텍" onclick="toggleBookmark(this)" title="북마크">☆</button>
+            <button class="hide-btn" data-id="사람인|[리포데이] 마케팅/영상/컨텐츠/인플루언서/영업 담당자 모집|(주)와우바이오텍" onclick="hideJob(this)" title="숨기기">✕</button>
+            <button class="memo-toggle-btn" data-id="사람인|[리포데이] 마케팅/영상/컨텐츠/인플루언서/영업 담당자 모집|(주)와우바이오텍" onclick="toggleJobMemo(this)">메모</button>
+          </td>
+        </tr>
+        <tr class="job-memo-row" data-memo-for="사람인|[리포데이] 마케팅/영상/컨텐츠/인플루언서/영업 담당자 모집|(주)와우바이오텍" style="display:none">
+          <td colspan="8" style="padding:4px 12px 8px 40px;background:#fafafa">
+            <textarea class="job-memo-ta" data-id="사람인|[리포데이] 마케팅/영상/컨텐츠/인플루언서/영업 담당자 모집|(주)와우바이오텍" rows="2" placeholder="이 공고에 대한 메모를 남겨보세요..."
+              onblur="saveJobMemo(this)" style="width:100%;max-width:600px;border:1px solid #e2e5ea;border-radius:6px;padding:6px 8px;font-size:12px;font-family:inherit;resize:vertical;outline:none"></textarea>
+          </td>
+        </tr>
+        <tr data-site="사람인" data-keyword="그래픽 디자이너"
+            data-loc="서울" data-exp="신입" data-emp=""
+            data-id="사람인|2026년 하반기 계약사원 채용|(주)KT&G" data-deadline="D-7" data-isnew="1">
+          <td><span class="site-badge" style="background:#0066CC">사람인</span></td>
+          <td class="td-title"><span class="new-badge">NEW</span><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=list&rec_idx=54476592" target="_blank" class="job-title">2026년 하반기 계약사원 채용</a><br><span class="kw-badge">그래픽 디자이너</span></td>
+          <td>(주)KT&G</td>
+          <td><span class="chip" style="color:#1565c0;background:#e3f2fd">서울전체 외</span></td>
+          <td><span class="chip" style="color:#1b5e20;background:#c8e6c9">신입/경력</span></td>
+          <td><span class="chip chip-empty">미제공</span></td>
+          <td class="td-dead" data-deadline-cell>D-7</td>
+          <td style="white-space:nowrap;vertical-align:middle">
+            <button class="apply-btn" data-id="사람인|2026년 하반기 계약사원 채용|(주)KT&G" onclick="toggleApply(this)">지원하기</button>
+            <button class="bookmark-btn" data-id="사람인|2026년 하반기 계약사원 채용|(주)KT&G" onclick="toggleBookmark(this)" title="북마크">☆</button>
+            <button class="hide-btn" data-id="사람인|2026년 하반기 계약사원 채용|(주)KT&G" onclick="hideJob(this)" title="숨기기">✕</button>
+            <button class="memo-toggle-btn" data-id="사람인|2026년 하반기 계약사원 채용|(주)KT&G" onclick="toggleJobMemo(this)">메모</button>
+          </td>
+        </tr>
+        <tr class="job-memo-row" data-memo-for="사람인|2026년 하반기 계약사원 채용|(주)KT&G" style="display:none">
+          <td colspan="8" style="padding:4px 12px 8px 40px;background:#fafafa">
+            <textarea class="job-memo-ta" data-id="사람인|2026년 하반기 계약사원 채용|(주)KT&G" rows="2" placeholder="이 공고에 대한 메모를 남겨보세요..."
+              onblur="saveJobMemo(this)" style="width:100%;max-width:600px;border:1px solid #e2e5ea;border-radius:6px;padding:6px 8px;font-size:12px;font-family:inherit;resize:vertical;outline:none"></textarea>
+          </td>
+        </tr>
+        <tr data-site="사람인" data-keyword="그래픽 디자이너"
+            data-loc="서울" data-exp="신입" data-emp=""
             data-id="사람인|각 부문별 신입/경력 채용|㈜람스타일컴퍼니" data-deadline="~08.02(일)" data-isnew="1">
           <td><span class="site-badge" style="background:#0066CC">사람인</span></td>
           <td class="td-title"><span class="new-badge">NEW</span><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=list&rec_idx=54471266" target="_blank" class="job-title">각 부문별 신입/경력 채용</a><br><span class="kw-badge">그래픽 디자이너</span></td>
@@ -731,37 +777,14 @@
         </tr>
         <tr data-site="사람인" data-keyword="그래픽 디자이너"
             data-loc="서울" data-exp="신입" data-emp=""
-            data-id="사람인|2026년 하반기 계약사원 채용|(주)KT&G" data-deadline="~07.28(화)" data-isnew="1">
-          <td><span class="site-badge" style="background:#0066CC">사람인</span></td>
-          <td class="td-title"><span class="new-badge">NEW</span><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=list&rec_idx=54476592" target="_blank" class="job-title">2026년 하반기 계약사원 채용</a><br><span class="kw-badge">그래픽 디자이너</span></td>
-          <td>(주)KT&G</td>
-          <td><span class="chip" style="color:#1565c0;background:#e3f2fd">서울전체 외</span></td>
-          <td><span class="chip" style="color:#1b5e20;background:#c8e6c9">신입/경력</span></td>
-          <td><span class="chip chip-empty">미제공</span></td>
-          <td class="td-dead" data-deadline-cell>~07.28(화)</td>
-          <td style="white-space:nowrap;vertical-align:middle">
-            <button class="apply-btn" data-id="사람인|2026년 하반기 계약사원 채용|(주)KT&G" onclick="toggleApply(this)">지원하기</button>
-            <button class="bookmark-btn" data-id="사람인|2026년 하반기 계약사원 채용|(주)KT&G" onclick="toggleBookmark(this)" title="북마크">☆</button>
-            <button class="hide-btn" data-id="사람인|2026년 하반기 계약사원 채용|(주)KT&G" onclick="hideJob(this)" title="숨기기">✕</button>
-            <button class="memo-toggle-btn" data-id="사람인|2026년 하반기 계약사원 채용|(주)KT&G" onclick="toggleJobMemo(this)">메모</button>
-          </td>
-        </tr>
-        <tr class="job-memo-row" data-memo-for="사람인|2026년 하반기 계약사원 채용|(주)KT&G" style="display:none">
-          <td colspan="8" style="padding:4px 12px 8px 40px;background:#fafafa">
-            <textarea class="job-memo-ta" data-id="사람인|2026년 하반기 계약사원 채용|(주)KT&G" rows="2" placeholder="이 공고에 대한 메모를 남겨보세요..."
-              onblur="saveJobMemo(this)" style="width:100%;max-width:600px;border:1px solid #e2e5ea;border-radius:6px;padding:6px 8px;font-size:12px;font-family:inherit;resize:vertical;outline:none"></textarea>
-          </td>
-        </tr>
-        <tr data-site="사람인" data-keyword="그래픽 디자이너"
-            data-loc="서울" data-exp="신입" data-emp=""
-            data-id="사람인|[헤이딜러] 테크베이 채용|㈜피알앤디테크베이" data-deadline="D-4" data-isnew="1">
+            data-id="사람인|[헤이딜러] 테크베이 채용|㈜피알앤디테크베이" data-deadline="D-3" data-isnew="1">
           <td><span class="site-badge" style="background:#0066CC">사람인</span></td>
           <td class="td-title"><span class="new-badge">NEW</span><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=list&rec_idx=54384961" target="_blank" class="job-title">[헤이딜러] 테크베이 채용</a><br><span class="kw-badge">그래픽 디자이너</span></td>
           <td>㈜피알앤디테크베이</td>
           <td><span class="chip" style="color:#1565c0;background:#e3f2fd">서울전체 외</span></td>
           <td><span class="chip" style="color:#1b5e20;background:#c8e6c9">신입/경력</span></td>
           <td><span class="chip chip-empty">미제공</span></td>
-          <td class="td-dead" data-deadline-cell>D-4</td>
+          <td class="td-dead" data-deadline-cell>D-3</td>
           <td style="white-space:nowrap;vertical-align:middle">
             <button class="apply-btn" data-id="사람인|[헤이딜러] 테크베이 채용|㈜피알앤디테크베이" onclick="toggleApply(this)">지원하기</button>
             <button class="bookmark-btn" data-id="사람인|[헤이딜러] 테크베이 채용|㈜피알앤디테크베이" onclick="toggleBookmark(this)" title="북마크">☆</button>
@@ -776,25 +799,25 @@
           </td>
         </tr>
         <tr data-site="사람인" data-keyword="그래픽 디자이너"
-            data-loc="서울" data-exp="5년 이상" data-emp=""
-            data-id="사람인|웹디자인 (라이팅 담당)|(주)에스피코리아" data-deadline="~08.12(수)" data-isnew="1">
+            data-loc="서울" data-exp="2년 이상" data-emp=""
+            data-id="사람인|여행상품 홍보 마케터 (경력)|(주)링켄리브" data-deadline="~08.13(목)" data-isnew="1">
           <td><span class="site-badge" style="background:#0066CC">사람인</span></td>
-          <td class="td-title"><span class="new-badge">NEW</span><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=list&rec_idx=54442032" target="_blank" class="job-title">웹디자인 (라이팅 담당)</a><br><span class="kw-badge">그래픽 디자이너</span></td>
-          <td>(주)에스피코리아</td>
-          <td><span class="chip" style="color:#1565c0;background:#e3f2fd">서울 강서구 외</span></td>
-          <td><span class="chip" style="color:#bf360c;background:#fbe9e7">5년</span></td>
+          <td class="td-title"><span class="new-badge">NEW</span><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=list&rec_idx=54470779" target="_blank" class="job-title">여행상품 홍보 마케터 (경력)</a><br><span class="kw-badge">그래픽 디자이너</span></td>
+          <td>(주)링켄리브</td>
+          <td><span class="chip" style="color:#1565c0;background:#e3f2fd">서울 강남구 외</span></td>
+          <td><span class="chip" style="color:#bf360c;background:#fbe9e7">2년</span></td>
           <td><span class="chip chip-empty">미제공</span></td>
-          <td class="td-dead" data-deadline-cell>~08.12(수)</td>
+          <td class="td-dead" data-deadline-cell>~08.13(목)</td>
           <td style="white-space:nowrap;vertical-align:middle">
-            <button class="apply-btn" data-id="사람인|웹디자인 (라이팅 담당)|(주)에스피코리아" onclick="toggleApply(this)">지원하기</button>
-            <button class="bookmark-btn" data-id="사람인|웹디자인 (라이팅 담당)|(주)에스피코리아" onclick="toggleBookmark(this)" title="북마크">☆</button>
-            <button class="hide-btn" data-id="사람인|웹디자인 (라이팅 담당)|(주)에스피코리아" onclick="hideJob(this)" title="숨기기">✕</button>
-            <button class="memo-toggle-btn" data-id="사람인|웹디자인 (라이팅 담당)|(주)에스피코리아" onclick="toggleJobMemo(this)">메모</button>
+            <button class="apply-btn" data-id="사람인|여행상품 홍보 마케터 (경력)|(주)링켄리브" onclick="toggleApply(this)">지원하기</button>
+            <button class="bookmark-btn" data-id="사람인|여행상품 홍보 마케터 (경력)|(주)링켄리브" onclick="toggleBookmark(this)" title="북마크">☆</button>
+            <button class="hide-btn" data-id="사람인|여행상품 홍보 마케터 (경력)|(주)링켄리브" onclick="hideJob(this)" title="숨기기">✕</button>
+            <button class="memo-toggle-btn" data-id="사람인|여행상품 홍보 마케터 (경력)|(주)링켄리브" onclick="toggleJobMemo(this)">메모</button>
           </td>
         </tr>
-        <tr class="job-memo-row" data-memo-for="사람인|웹디자인 (라이팅 담당)|(주)에스피코리아" style="display:none">
+        <tr class="job-memo-row" data-memo-for="사람인|여행상품 홍보 마케터 (경력)|(주)링켄리브" style="display:none">
           <td colspan="8" style="padding:4px 12px 8px 40px;background:#fafafa">
-            <textarea class="job-memo-ta" data-id="사람인|웹디자인 (라이팅 담당)|(주)에스피코리아" rows="2" placeholder="이 공고에 대한 메모를 남겨보세요..."
+            <textarea class="job-memo-ta" data-id="사람인|여행상품 홍보 마케터 (경력)|(주)링켄리브" rows="2" placeholder="이 공고에 대한 메모를 남겨보세요..."
               onblur="saveJobMemo(this)" style="width:100%;max-width:600px;border:1px solid #e2e5ea;border-radius:6px;padding:6px 8px;font-size:12px;font-family:inherit;resize:vertical;outline:none"></textarea>
           </td>
         </tr>
@@ -822,102 +845,355 @@
           </td>
         </tr>
         <tr data-site="사람인" data-keyword="그래픽 디자이너"
-            data-loc="서울" data-exp="1년 이상" data-emp=""
-            data-id="사람인|[헤트라스]패키지 디자인 담당|(주)쑥쑥컴퍼니" data-deadline="~08.10(월)" data-isnew="1">
+            data-loc="서울" data-exp="신입" data-emp=""
+            data-id="사람인|TA (테크니컬 아티스트)|(주)에스피코리아" data-deadline="~08.19(수)" data-isnew="1">
           <td><span class="site-badge" style="background:#0066CC">사람인</span></td>
-          <td class="td-title"><span class="new-badge">NEW</span><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=list&rec_idx=54391061" target="_blank" class="job-title">[헤트라스]패키지 디자인 담당</a><br><span class="kw-badge">그래픽 디자이너</span></td>
-          <td>(주)쑥쑥컴퍼니</td>
-          <td><span class="chip" style="color:#1565c0;background:#e3f2fd">서울전체 외</span></td>
-          <td><span class="chip" style="color:#bf360c;background:#fbe9e7">1년</span></td>
+          <td class="td-title"><span class="new-badge">NEW</span><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=list&rec_idx=54499154" target="_blank" class="job-title">TA (테크니컬 아티스트)</a><br><span class="kw-badge">그래픽 디자이너</span></td>
+          <td>(주)에스피코리아</td>
+          <td><span class="chip" style="color:#1565c0;background:#e3f2fd">서울 강서구 외</span></td>
+          <td><span class="chip" style="color:#1b5e20;background:#c8e6c9">신입/경력</span></td>
           <td><span class="chip chip-empty">미제공</span></td>
-          <td class="td-dead" data-deadline-cell>~08.10(월)</td>
+          <td class="td-dead" data-deadline-cell>~08.19(수)</td>
           <td style="white-space:nowrap;vertical-align:middle">
-            <button class="apply-btn" data-id="사람인|[헤트라스]패키지 디자인 담당|(주)쑥쑥컴퍼니" onclick="toggleApply(this)">지원하기</button>
-            <button class="bookmark-btn" data-id="사람인|[헤트라스]패키지 디자인 담당|(주)쑥쑥컴퍼니" onclick="toggleBookmark(this)" title="북마크">☆</button>
-            <button class="hide-btn" data-id="사람인|[헤트라스]패키지 디자인 담당|(주)쑥쑥컴퍼니" onclick="hideJob(this)" title="숨기기">✕</button>
-            <button class="memo-toggle-btn" data-id="사람인|[헤트라스]패키지 디자인 담당|(주)쑥쑥컴퍼니" onclick="toggleJobMemo(this)">메모</button>
+            <button class="apply-btn" data-id="사람인|TA (테크니컬 아티스트)|(주)에스피코리아" onclick="toggleApply(this)">지원하기</button>
+            <button class="bookmark-btn" data-id="사람인|TA (테크니컬 아티스트)|(주)에스피코리아" onclick="toggleBookmark(this)" title="북마크">☆</button>
+            <button class="hide-btn" data-id="사람인|TA (테크니컬 아티스트)|(주)에스피코리아" onclick="hideJob(this)" title="숨기기">✕</button>
+            <button class="memo-toggle-btn" data-id="사람인|TA (테크니컬 아티스트)|(주)에스피코리아" onclick="toggleJobMemo(this)">메모</button>
           </td>
         </tr>
-        <tr class="job-memo-row" data-memo-for="사람인|[헤트라스]패키지 디자인 담당|(주)쑥쑥컴퍼니" style="display:none">
+        <tr class="job-memo-row" data-memo-for="사람인|TA (테크니컬 아티스트)|(주)에스피코리아" style="display:none">
           <td colspan="8" style="padding:4px 12px 8px 40px;background:#fafafa">
-            <textarea class="job-memo-ta" data-id="사람인|[헤트라스]패키지 디자인 담당|(주)쑥쑥컴퍼니" rows="2" placeholder="이 공고에 대한 메모를 남겨보세요..."
+            <textarea class="job-memo-ta" data-id="사람인|TA (테크니컬 아티스트)|(주)에스피코리아" rows="2" placeholder="이 공고에 대한 메모를 남겨보세요..."
+              onblur="saveJobMemo(this)" style="width:100%;max-width:600px;border:1px solid #e2e5ea;border-radius:6px;padding:6px 8px;font-size:12px;font-family:inherit;resize:vertical;outline:none"></textarea>
+          </td>
+        </tr>
+        <tr data-site="사람인" data-keyword="마케터"
+            data-loc="서울" data-exp="신입" data-emp=""
+            data-id="사람인|일룸 직영점 영업전문직 공채|㈜일룸" data-deadline="D-5" data-isnew="1">
+          <td><span class="site-badge" style="background:#0066CC">사람인</span></td>
+          <td class="td-title"><span class="new-badge">NEW</span><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=list&rec_idx=54415464" target="_blank" class="job-title">일룸 직영점 영업전문직 공채</a><br><span class="kw-badge">마케터</span></td>
+          <td>㈜일룸</td>
+          <td><span class="chip" style="color:#1565c0;background:#e3f2fd">서울전체 외</span></td>
+          <td><span class="chip" style="color:#1b5e20;background:#c8e6c9">신입/경력</span></td>
+          <td><span class="chip chip-empty">미제공</span></td>
+          <td class="td-dead" data-deadline-cell>D-5</td>
+          <td style="white-space:nowrap;vertical-align:middle">
+            <button class="apply-btn" data-id="사람인|일룸 직영점 영업전문직 공채|㈜일룸" onclick="toggleApply(this)">지원하기</button>
+            <button class="bookmark-btn" data-id="사람인|일룸 직영점 영업전문직 공채|㈜일룸" onclick="toggleBookmark(this)" title="북마크">☆</button>
+            <button class="hide-btn" data-id="사람인|일룸 직영점 영업전문직 공채|㈜일룸" onclick="hideJob(this)" title="숨기기">✕</button>
+            <button class="memo-toggle-btn" data-id="사람인|일룸 직영점 영업전문직 공채|㈜일룸" onclick="toggleJobMemo(this)">메모</button>
+          </td>
+        </tr>
+        <tr class="job-memo-row" data-memo-for="사람인|일룸 직영점 영업전문직 공채|㈜일룸" style="display:none">
+          <td colspan="8" style="padding:4px 12px 8px 40px;background:#fafafa">
+            <textarea class="job-memo-ta" data-id="사람인|일룸 직영점 영업전문직 공채|㈜일룸" rows="2" placeholder="이 공고에 대한 메모를 남겨보세요..."
+              onblur="saveJobMemo(this)" style="width:100%;max-width:600px;border:1px solid #e2e5ea;border-radius:6px;padding:6px 8px;font-size:12px;font-family:inherit;resize:vertical;outline:none"></textarea>
+          </td>
+        </tr>
+        <tr data-site="사람인" data-keyword="마케터"
+            data-loc="서울" data-exp="신입" data-emp=""
+            data-id="사람인|2026 신입&경력 대규모 채용|(주)바이앤셀파트너스" data-deadline="~07.31(금)" data-isnew="1">
+          <td><span class="site-badge" style="background:#0066CC">사람인</span></td>
+          <td class="td-title"><span class="new-badge">NEW</span><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=list&rec_idx=53215423" target="_blank" class="job-title">2026 신입&경력 대규모 채용</a><br><span class="kw-badge">마케터</span></td>
+          <td>(주)바이앤셀파트너스</td>
+          <td><span class="chip" style="color:#1565c0;background:#e3f2fd">서울전체 외</span></td>
+          <td><span class="chip" style="color:#1b5e20;background:#c8e6c9">신입/경력</span></td>
+          <td><span class="chip chip-empty">미제공</span></td>
+          <td class="td-dead" data-deadline-cell>~07.31(금)</td>
+          <td style="white-space:nowrap;vertical-align:middle">
+            <button class="apply-btn" data-id="사람인|2026 신입&경력 대규모 채용|(주)바이앤셀파트너스" onclick="toggleApply(this)">지원하기</button>
+            <button class="bookmark-btn" data-id="사람인|2026 신입&경력 대규모 채용|(주)바이앤셀파트너스" onclick="toggleBookmark(this)" title="북마크">☆</button>
+            <button class="hide-btn" data-id="사람인|2026 신입&경력 대규모 채용|(주)바이앤셀파트너스" onclick="hideJob(this)" title="숨기기">✕</button>
+            <button class="memo-toggle-btn" data-id="사람인|2026 신입&경력 대규모 채용|(주)바이앤셀파트너스" onclick="toggleJobMemo(this)">메모</button>
+          </td>
+        </tr>
+        <tr class="job-memo-row" data-memo-for="사람인|2026 신입&경력 대규모 채용|(주)바이앤셀파트너스" style="display:none">
+          <td colspan="8" style="padding:4px 12px 8px 40px;background:#fafafa">
+            <textarea class="job-memo-ta" data-id="사람인|2026 신입&경력 대규모 채용|(주)바이앤셀파트너스" rows="2" placeholder="이 공고에 대한 메모를 남겨보세요..."
+              onblur="saveJobMemo(this)" style="width:100%;max-width:600px;border:1px solid #e2e5ea;border-radius:6px;padding:6px 8px;font-size:12px;font-family:inherit;resize:vertical;outline:none"></textarea>
+          </td>
+        </tr>
+        <tr data-site="사람인" data-keyword="마케터"
+            data-loc="서울" data-exp="신입" data-emp=""
+            data-id="사람인|롯데 LIFT 1기 모집|대한상공회의소" data-deadline="D-5" data-isnew="1">
+          <td><span class="site-badge" style="background:#0066CC">사람인</span></td>
+          <td class="td-title"><span class="new-badge">NEW</span><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=list&rec_idx=54223915" target="_blank" class="job-title">롯데 LIFT 1기 모집</a><br><span class="kw-badge">마케터</span></td>
+          <td>대한상공회의소</td>
+          <td><span class="chip" style="color:#1565c0;background:#e3f2fd">서울전체 외</span></td>
+          <td><span class="chip" style="color:#1b5e20;background:#c8e6c9">신입/경력</span></td>
+          <td><span class="chip chip-empty">미제공</span></td>
+          <td class="td-dead" data-deadline-cell>D-5</td>
+          <td style="white-space:nowrap;vertical-align:middle">
+            <button class="apply-btn" data-id="사람인|롯데 LIFT 1기 모집|대한상공회의소" onclick="toggleApply(this)">지원하기</button>
+            <button class="bookmark-btn" data-id="사람인|롯데 LIFT 1기 모집|대한상공회의소" onclick="toggleBookmark(this)" title="북마크">☆</button>
+            <button class="hide-btn" data-id="사람인|롯데 LIFT 1기 모집|대한상공회의소" onclick="hideJob(this)" title="숨기기">✕</button>
+            <button class="memo-toggle-btn" data-id="사람인|롯데 LIFT 1기 모집|대한상공회의소" onclick="toggleJobMemo(this)">메모</button>
+          </td>
+        </tr>
+        <tr class="job-memo-row" data-memo-for="사람인|롯데 LIFT 1기 모집|대한상공회의소" style="display:none">
+          <td colspan="8" style="padding:4px 12px 8px 40px;background:#fafafa">
+            <textarea class="job-memo-ta" data-id="사람인|롯데 LIFT 1기 모집|대한상공회의소" rows="2" placeholder="이 공고에 대한 메모를 남겨보세요..."
+              onblur="saveJobMemo(this)" style="width:100%;max-width:600px;border:1px solid #e2e5ea;border-radius:6px;padding:6px 8px;font-size:12px;font-family:inherit;resize:vertical;outline:none"></textarea>
+          </td>
+        </tr>
+        <tr data-site="사람인" data-keyword="마케터"
+            data-loc="서울" data-exp="신입" data-emp=""
+            data-id="사람인|소화기 내과 영업팀 신입/경력 채용|㈜지인씨앤티" data-deadline="~07.31(금)" data-isnew="1">
+          <td><span class="site-badge" style="background:#0066CC">사람인</span></td>
+          <td class="td-title"><span class="new-badge">NEW</span><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=list&rec_idx=54322325" target="_blank" class="job-title">소화기 내과 영업팀 신입/경력 채용</a><br><span class="kw-badge">마케터</span></td>
+          <td>㈜지인씨앤티</td>
+          <td><span class="chip" style="color:#1565c0;background:#e3f2fd">서울 강동구 외</span></td>
+          <td><span class="chip" style="color:#1b5e20;background:#c8e6c9">신입</span></td>
+          <td><span class="chip chip-empty">미제공</span></td>
+          <td class="td-dead" data-deadline-cell>~07.31(금)</td>
+          <td style="white-space:nowrap;vertical-align:middle">
+            <button class="apply-btn" data-id="사람인|소화기 내과 영업팀 신입/경력 채용|㈜지인씨앤티" onclick="toggleApply(this)">지원하기</button>
+            <button class="bookmark-btn" data-id="사람인|소화기 내과 영업팀 신입/경력 채용|㈜지인씨앤티" onclick="toggleBookmark(this)" title="북마크">☆</button>
+            <button class="hide-btn" data-id="사람인|소화기 내과 영업팀 신입/경력 채용|㈜지인씨앤티" onclick="hideJob(this)" title="숨기기">✕</button>
+            <button class="memo-toggle-btn" data-id="사람인|소화기 내과 영업팀 신입/경력 채용|㈜지인씨앤티" onclick="toggleJobMemo(this)">메모</button>
+          </td>
+        </tr>
+        <tr class="job-memo-row" data-memo-for="사람인|소화기 내과 영업팀 신입/경력 채용|㈜지인씨앤티" style="display:none">
+          <td colspan="8" style="padding:4px 12px 8px 40px;background:#fafafa">
+            <textarea class="job-memo-ta" data-id="사람인|소화기 내과 영업팀 신입/경력 채용|㈜지인씨앤티" rows="2" placeholder="이 공고에 대한 메모를 남겨보세요..."
+              onblur="saveJobMemo(this)" style="width:100%;max-width:600px;border:1px solid #e2e5ea;border-radius:6px;padding:6px 8px;font-size:12px;font-family:inherit;resize:vertical;outline:none"></textarea>
+          </td>
+        </tr>
+        <tr data-site="사람인" data-keyword="마케터"
+            data-loc="서울" data-exp="신입" data-emp=""
+            data-id="사람인|온라인 MD/AMD 채용|㈜순수식품" data-deadline="~08.12(수)" data-isnew="1">
+          <td><span class="site-badge" style="background:#0066CC">사람인</span></td>
+          <td class="td-title"><span class="new-badge">NEW</span><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=list&rec_idx=54385297" target="_blank" class="job-title">온라인 MD/AMD 채용</a><br><span class="kw-badge">마케터</span></td>
+          <td>㈜순수식품</td>
+          <td><span class="chip" style="color:#1565c0;background:#e3f2fd">서울전체 외</span></td>
+          <td><span class="chip" style="color:#1b5e20;background:#c8e6c9">신입/경력</span></td>
+          <td><span class="chip chip-empty">미제공</span></td>
+          <td class="td-dead" data-deadline-cell>~08.12(수)</td>
+          <td style="white-space:nowrap;vertical-align:middle">
+            <button class="apply-btn" data-id="사람인|온라인 MD/AMD 채용|㈜순수식품" onclick="toggleApply(this)">지원하기</button>
+            <button class="bookmark-btn" data-id="사람인|온라인 MD/AMD 채용|㈜순수식품" onclick="toggleBookmark(this)" title="북마크">☆</button>
+            <button class="hide-btn" data-id="사람인|온라인 MD/AMD 채용|㈜순수식품" onclick="hideJob(this)" title="숨기기">✕</button>
+            <button class="memo-toggle-btn" data-id="사람인|온라인 MD/AMD 채용|㈜순수식품" onclick="toggleJobMemo(this)">메모</button>
+          </td>
+        </tr>
+        <tr class="job-memo-row" data-memo-for="사람인|온라인 MD/AMD 채용|㈜순수식품" style="display:none">
+          <td colspan="8" style="padding:4px 12px 8px 40px;background:#fafafa">
+            <textarea class="job-memo-ta" data-id="사람인|온라인 MD/AMD 채용|㈜순수식품" rows="2" placeholder="이 공고에 대한 메모를 남겨보세요..."
+              onblur="saveJobMemo(this)" style="width:100%;max-width:600px;border:1px solid #e2e5ea;border-radius:6px;padding:6px 8px;font-size:12px;font-family:inherit;resize:vertical;outline:none"></textarea>
+          </td>
+        </tr>
+        <tr data-site="사람인" data-keyword="마케터"
+            data-loc="서울" data-exp="신입" data-emp=""
+            data-id="사람인|의료기기 연구원 채용|(주)성진하이텍" data-deadline="~07.31(금)" data-isnew="1">
+          <td><span class="site-badge" style="background:#0066CC">사람인</span></td>
+          <td class="td-title"><span class="new-badge">NEW</span><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=list&rec_idx=54446111" target="_blank" class="job-title">의료기기 연구원 채용</a><br><span class="kw-badge">마케터</span></td>
+          <td>(주)성진하이텍</td>
+          <td><span class="chip" style="color:#1565c0;background:#e3f2fd">서울전체 외</span></td>
+          <td><span class="chip" style="color:#1b5e20;background:#c8e6c9">신입/경력</span></td>
+          <td><span class="chip chip-empty">미제공</span></td>
+          <td class="td-dead" data-deadline-cell>~07.31(금)</td>
+          <td style="white-space:nowrap;vertical-align:middle">
+            <button class="apply-btn" data-id="사람인|의료기기 연구원 채용|(주)성진하이텍" onclick="toggleApply(this)">지원하기</button>
+            <button class="bookmark-btn" data-id="사람인|의료기기 연구원 채용|(주)성진하이텍" onclick="toggleBookmark(this)" title="북마크">☆</button>
+            <button class="hide-btn" data-id="사람인|의료기기 연구원 채용|(주)성진하이텍" onclick="hideJob(this)" title="숨기기">✕</button>
+            <button class="memo-toggle-btn" data-id="사람인|의료기기 연구원 채용|(주)성진하이텍" onclick="toggleJobMemo(this)">메모</button>
+          </td>
+        </tr>
+        <tr class="job-memo-row" data-memo-for="사람인|의료기기 연구원 채용|(주)성진하이텍" style="display:none">
+          <td colspan="8" style="padding:4px 12px 8px 40px;background:#fafafa">
+            <textarea class="job-memo-ta" data-id="사람인|의료기기 연구원 채용|(주)성진하이텍" rows="2" placeholder="이 공고에 대한 메모를 남겨보세요..."
+              onblur="saveJobMemo(this)" style="width:100%;max-width:600px;border:1px solid #e2e5ea;border-radius:6px;padding:6px 8px;font-size:12px;font-family:inherit;resize:vertical;outline:none"></textarea>
+          </td>
+        </tr>
+        <tr data-site="사람인" data-keyword="마케터"
+            data-loc="서울" data-exp="신입" data-emp=""
+            data-id="사람인|[직영] 최선어학원 영어선생님/ 마타수학 수학선생님 채용|㈜DYB최선어학원" data-deadline="~08.13(목)" data-isnew="1">
+          <td><span class="site-badge" style="background:#0066CC">사람인</span></td>
+          <td class="td-title"><span class="new-badge">NEW</span><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=list&rec_idx=54461830" target="_blank" class="job-title">[직영] 최선어학원 영어선생님/ 마타수학 수학선생님 채용</a><br><span class="kw-badge">마케터</span></td>
+          <td>㈜DYB최선어학원</td>
+          <td><span class="chip" style="color:#1565c0;background:#e3f2fd">서울 강남구 외</span></td>
+          <td><span class="chip" style="color:#1b5e20;background:#c8e6c9">신입/경력</span></td>
+          <td><span class="chip chip-empty">미제공</span></td>
+          <td class="td-dead" data-deadline-cell>~08.13(목)</td>
+          <td style="white-space:nowrap;vertical-align:middle">
+            <button class="apply-btn" data-id="사람인|[직영] 최선어학원 영어선생님/ 마타수학 수학선생님 채용|㈜DYB최선어학원" onclick="toggleApply(this)">지원하기</button>
+            <button class="bookmark-btn" data-id="사람인|[직영] 최선어학원 영어선생님/ 마타수학 수학선생님 채용|㈜DYB최선어학원" onclick="toggleBookmark(this)" title="북마크">☆</button>
+            <button class="hide-btn" data-id="사람인|[직영] 최선어학원 영어선생님/ 마타수학 수학선생님 채용|㈜DYB최선어학원" onclick="hideJob(this)" title="숨기기">✕</button>
+            <button class="memo-toggle-btn" data-id="사람인|[직영] 최선어학원 영어선생님/ 마타수학 수학선생님 채용|㈜DYB최선어학원" onclick="toggleJobMemo(this)">메모</button>
+          </td>
+        </tr>
+        <tr class="job-memo-row" data-memo-for="사람인|[직영] 최선어학원 영어선생님/ 마타수학 수학선생님 채용|㈜DYB최선어학원" style="display:none">
+          <td colspan="8" style="padding:4px 12px 8px 40px;background:#fafafa">
+            <textarea class="job-memo-ta" data-id="사람인|[직영] 최선어학원 영어선생님/ 마타수학 수학선생님 채용|㈜DYB최선어학원" rows="2" placeholder="이 공고에 대한 메모를 남겨보세요..."
+              onblur="saveJobMemo(this)" style="width:100%;max-width:600px;border:1px solid #e2e5ea;border-radius:6px;padding:6px 8px;font-size:12px;font-family:inherit;resize:vertical;outline:none"></textarea>
+          </td>
+        </tr>
+        <tr data-site="사람인" data-keyword="마케터"
+            data-loc="서울" data-exp="신입" data-emp=""
+            data-id="사람인|[신입/경력] 해외영업 정규직 채용 공고 (영어)|㈜그랑에스피오" data-deadline="~07.29(수)" data-isnew="1">
+          <td><span class="site-badge" style="background:#0066CC">사람인</span></td>
+          <td class="td-title"><span class="new-badge">NEW</span><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=list&rec_idx=54452097" target="_blank" class="job-title">[신입/경력] 해외영업 정규직 채용 공고 (영어)</a><br><span class="kw-badge">마케터</span></td>
+          <td>㈜그랑에스피오</td>
+          <td><span class="chip" style="color:#1565c0;background:#e3f2fd">서울 강남구</span></td>
+          <td><span class="chip" style="color:#1b5e20;background:#c8e6c9">신입/경력</span></td>
+          <td><span class="chip chip-empty">미제공</span></td>
+          <td class="td-dead" data-deadline-cell>~07.29(수)</td>
+          <td style="white-space:nowrap;vertical-align:middle">
+            <button class="apply-btn" data-id="사람인|[신입/경력] 해외영업 정규직 채용 공고 (영어)|㈜그랑에스피오" onclick="toggleApply(this)">지원하기</button>
+            <button class="bookmark-btn" data-id="사람인|[신입/경력] 해외영업 정규직 채용 공고 (영어)|㈜그랑에스피오" onclick="toggleBookmark(this)" title="북마크">☆</button>
+            <button class="hide-btn" data-id="사람인|[신입/경력] 해외영업 정규직 채용 공고 (영어)|㈜그랑에스피오" onclick="hideJob(this)" title="숨기기">✕</button>
+            <button class="memo-toggle-btn" data-id="사람인|[신입/경력] 해외영업 정규직 채용 공고 (영어)|㈜그랑에스피오" onclick="toggleJobMemo(this)">메모</button>
+          </td>
+        </tr>
+        <tr class="job-memo-row" data-memo-for="사람인|[신입/경력] 해외영업 정규직 채용 공고 (영어)|㈜그랑에스피오" style="display:none">
+          <td colspan="8" style="padding:4px 12px 8px 40px;background:#fafafa">
+            <textarea class="job-memo-ta" data-id="사람인|[신입/경력] 해외영업 정규직 채용 공고 (영어)|㈜그랑에스피오" rows="2" placeholder="이 공고에 대한 메모를 남겨보세요..."
+              onblur="saveJobMemo(this)" style="width:100%;max-width:600px;border:1px solid #e2e5ea;border-radius:6px;padding:6px 8px;font-size:12px;font-family:inherit;resize:vertical;outline:none"></textarea>
+          </td>
+        </tr>
+        <tr data-site="사람인" data-keyword="마케터"
+            data-loc="서울" data-exp="신입" data-emp=""
+            data-id="사람인|[신입/경력] 대학병원 의료기기 영업사원 (서울 및 지방근무자)|(주)아시안메드" data-deadline="D-3" data-isnew="1">
+          <td><span class="site-badge" style="background:#0066CC">사람인</span></td>
+          <td class="td-title"><span class="new-badge">NEW</span><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=list&rec_idx=54457913" target="_blank" class="job-title">[신입/경력] 대학병원 의료기기 영업사원 (서울 및 지방근무자)</a><br><span class="kw-badge">마케터</span></td>
+          <td>(주)아시안메드</td>
+          <td><span class="chip" style="color:#1565c0;background:#e3f2fd">서울 강남구 외</span></td>
+          <td><span class="chip" style="color:#1b5e20;background:#c8e6c9">신입/경력</span></td>
+          <td><span class="chip chip-empty">미제공</span></td>
+          <td class="td-dead" data-deadline-cell>D-3</td>
+          <td style="white-space:nowrap;vertical-align:middle">
+            <button class="apply-btn" data-id="사람인|[신입/경력] 대학병원 의료기기 영업사원 (서울 및 지방근무자)|(주)아시안메드" onclick="toggleApply(this)">지원하기</button>
+            <button class="bookmark-btn" data-id="사람인|[신입/경력] 대학병원 의료기기 영업사원 (서울 및 지방근무자)|(주)아시안메드" onclick="toggleBookmark(this)" title="북마크">☆</button>
+            <button class="hide-btn" data-id="사람인|[신입/경력] 대학병원 의료기기 영업사원 (서울 및 지방근무자)|(주)아시안메드" onclick="hideJob(this)" title="숨기기">✕</button>
+            <button class="memo-toggle-btn" data-id="사람인|[신입/경력] 대학병원 의료기기 영업사원 (서울 및 지방근무자)|(주)아시안메드" onclick="toggleJobMemo(this)">메모</button>
+          </td>
+        </tr>
+        <tr class="job-memo-row" data-memo-for="사람인|[신입/경력] 대학병원 의료기기 영업사원 (서울 및 지방근무자)|(주)아시안메드" style="display:none">
+          <td colspan="8" style="padding:4px 12px 8px 40px;background:#fafafa">
+            <textarea class="job-memo-ta" data-id="사람인|[신입/경력] 대학병원 의료기기 영업사원 (서울 및 지방근무자)|(주)아시안메드" rows="2" placeholder="이 공고에 대한 메모를 남겨보세요..."
+              onblur="saveJobMemo(this)" style="width:100%;max-width:600px;border:1px solid #e2e5ea;border-radius:6px;padding:6px 8px;font-size:12px;font-family:inherit;resize:vertical;outline:none"></textarea>
+          </td>
+        </tr>
+        <tr data-site="사람인" data-keyword="마케터"
+            data-loc="서울" data-exp="신입" data-emp=""
+            data-id="사람인|해외영업본부 무역팀 채용|㈜현일랩메이트" data-deadline="D-5" data-isnew="1">
+          <td><span class="site-badge" style="background:#0066CC">사람인</span></td>
+          <td class="td-title"><span class="new-badge">NEW</span><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=list&rec_idx=54434252" target="_blank" class="job-title">해외영업본부 무역팀 채용</a><br><span class="kw-badge">마케터</span></td>
+          <td>㈜현일랩메이트</td>
+          <td><span class="chip" style="color:#1565c0;background:#e3f2fd">서울전체 외</span></td>
+          <td><span class="chip" style="color:#1b5e20;background:#c8e6c9">신입/경력</span></td>
+          <td><span class="chip chip-empty">미제공</span></td>
+          <td class="td-dead" data-deadline-cell>D-5</td>
+          <td style="white-space:nowrap;vertical-align:middle">
+            <button class="apply-btn" data-id="사람인|해외영업본부 무역팀 채용|㈜현일랩메이트" onclick="toggleApply(this)">지원하기</button>
+            <button class="bookmark-btn" data-id="사람인|해외영업본부 무역팀 채용|㈜현일랩메이트" onclick="toggleBookmark(this)" title="북마크">☆</button>
+            <button class="hide-btn" data-id="사람인|해외영업본부 무역팀 채용|㈜현일랩메이트" onclick="hideJob(this)" title="숨기기">✕</button>
+            <button class="memo-toggle-btn" data-id="사람인|해외영업본부 무역팀 채용|㈜현일랩메이트" onclick="toggleJobMemo(this)">메모</button>
+          </td>
+        </tr>
+        <tr class="job-memo-row" data-memo-for="사람인|해외영업본부 무역팀 채용|㈜현일랩메이트" style="display:none">
+          <td colspan="8" style="padding:4px 12px 8px 40px;background:#fafafa">
+            <textarea class="job-memo-ta" data-id="사람인|해외영업본부 무역팀 채용|㈜현일랩메이트" rows="2" placeholder="이 공고에 대한 메모를 남겨보세요..."
               onblur="saveJobMemo(this)" style="width:100%;max-width:600px;border:1px solid #e2e5ea;border-radius:6px;padding:6px 8px;font-size:12px;font-family:inherit;resize:vertical;outline:none"></textarea>
           </td>
         </tr>
         <tr data-site="사람인" data-keyword="마케터"
             data-loc="서울" data-exp="경력" data-emp=""
-            data-id="사람인|제조/품질/시설 엔지니어/연구|큐니티(Qnity)" data-deadline="D-6" data-isnew="1">
+            data-id="사람인|각 분야 경력 채용|(주)윤성에프앤씨" data-deadline="D-5" data-isnew="1">
           <td><span class="site-badge" style="background:#0066CC">사람인</span></td>
-          <td class="td-title"><span class="new-badge">NEW</span><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=list&rec_idx=54488909" target="_blank" class="job-title">제조/품질/시설 엔지니어/연구</a><br><span class="kw-badge">마케터</span></td>
-          <td>큐니티(Qnity)</td>
-          <td><span class="chip" style="color:#1565c0;background:#e3f2fd">서울 강남구 외</span></td>
+          <td class="td-title"><span class="new-badge">NEW</span><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=list&rec_idx=54246070" target="_blank" class="job-title">각 분야 경력 채용</a><br><span class="kw-badge">마케터</span></td>
+          <td>(주)윤성에프앤씨</td>
+          <td><span class="chip" style="color:#1565c0;background:#e3f2fd">서울전체 외</span></td>
           <td><span class="chip" style="color:#bf360c;background:#fbe9e7">경력</span></td>
-          <td><span class="chip chip-empty">미제공</span></td>
-          <td class="td-dead" data-deadline-cell>D-6</td>
-          <td style="white-space:nowrap;vertical-align:middle">
-            <button class="apply-btn" data-id="사람인|제조/품질/시설 엔지니어/연구|큐니티(Qnity)" onclick="toggleApply(this)">지원하기</button>
-            <button class="bookmark-btn" data-id="사람인|제조/품질/시설 엔지니어/연구|큐니티(Qnity)" onclick="toggleBookmark(this)" title="북마크">☆</button>
-            <button class="hide-btn" data-id="사람인|제조/품질/시설 엔지니어/연구|큐니티(Qnity)" onclick="hideJob(this)" title="숨기기">✕</button>
-            <button class="memo-toggle-btn" data-id="사람인|제조/품질/시설 엔지니어/연구|큐니티(Qnity)" onclick="toggleJobMemo(this)">메모</button>
-          </td>
-        </tr>
-        <tr class="job-memo-row" data-memo-for="사람인|제조/품질/시설 엔지니어/연구|큐니티(Qnity)" style="display:none">
-          <td colspan="8" style="padding:4px 12px 8px 40px;background:#fafafa">
-            <textarea class="job-memo-ta" data-id="사람인|제조/품질/시설 엔지니어/연구|큐니티(Qnity)" rows="2" placeholder="이 공고에 대한 메모를 남겨보세요..."
-              onblur="saveJobMemo(this)" style="width:100%;max-width:600px;border:1px solid #e2e5ea;border-radius:6px;padding:6px 8px;font-size:12px;font-family:inherit;resize:vertical;outline:none"></textarea>
-          </td>
-        </tr>
-        <tr data-site="사람인" data-keyword="마케터"
-            data-loc="서울" data-exp="신입" data-emp=""
-            data-id="사람인|온라인 MD(입점몰)부문|주식회사 더메종" data-deadline="D-5" data-isnew="1">
-          <td><span class="site-badge" style="background:#0066CC">사람인</span></td>
-          <td class="td-title"><span class="new-badge">NEW</span><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=list&rec_idx=54278552" target="_blank" class="job-title">온라인 MD(입점몰)부문</a><br><span class="kw-badge">마케터</span></td>
-          <td>주식회사 더메종</td>
-          <td><span class="chip" style="color:#1565c0;background:#e3f2fd">서울 성동구</span></td>
-          <td><span class="chip" style="color:#1b5e20;background:#c8e6c9">신입/경력</span></td>
           <td><span class="chip chip-empty">미제공</span></td>
           <td class="td-dead" data-deadline-cell>D-5</td>
           <td style="white-space:nowrap;vertical-align:middle">
-            <button class="apply-btn" data-id="사람인|온라인 MD(입점몰)부문|주식회사 더메종" onclick="toggleApply(this)">지원하기</button>
-            <button class="bookmark-btn" data-id="사람인|온라인 MD(입점몰)부문|주식회사 더메종" onclick="toggleBookmark(this)" title="북마크">☆</button>
-            <button class="hide-btn" data-id="사람인|온라인 MD(입점몰)부문|주식회사 더메종" onclick="hideJob(this)" title="숨기기">✕</button>
-            <button class="memo-toggle-btn" data-id="사람인|온라인 MD(입점몰)부문|주식회사 더메종" onclick="toggleJobMemo(this)">메모</button>
+            <button class="apply-btn" data-id="사람인|각 분야 경력 채용|(주)윤성에프앤씨" onclick="toggleApply(this)">지원하기</button>
+            <button class="bookmark-btn" data-id="사람인|각 분야 경력 채용|(주)윤성에프앤씨" onclick="toggleBookmark(this)" title="북마크">☆</button>
+            <button class="hide-btn" data-id="사람인|각 분야 경력 채용|(주)윤성에프앤씨" onclick="hideJob(this)" title="숨기기">✕</button>
+            <button class="memo-toggle-btn" data-id="사람인|각 분야 경력 채용|(주)윤성에프앤씨" onclick="toggleJobMemo(this)">메모</button>
           </td>
         </tr>
-        <tr class="job-memo-row" data-memo-for="사람인|온라인 MD(입점몰)부문|주식회사 더메종" style="display:none">
+        <tr class="job-memo-row" data-memo-for="사람인|각 분야 경력 채용|(주)윤성에프앤씨" style="display:none">
           <td colspan="8" style="padding:4px 12px 8px 40px;background:#fafafa">
-            <textarea class="job-memo-ta" data-id="사람인|온라인 MD(입점몰)부문|주식회사 더메종" rows="2" placeholder="이 공고에 대한 메모를 남겨보세요..."
+            <textarea class="job-memo-ta" data-id="사람인|각 분야 경력 채용|(주)윤성에프앤씨" rows="2" placeholder="이 공고에 대한 메모를 남겨보세요..."
               onblur="saveJobMemo(this)" style="width:100%;max-width:600px;border:1px solid #e2e5ea;border-radius:6px;padding:6px 8px;font-size:12px;font-family:inherit;resize:vertical;outline:none"></textarea>
           </td>
         </tr>
         <tr data-site="사람인" data-keyword="마케터"
-            data-loc="서울" data-exp="신입" data-emp=""
-            data-id="사람인|[아우디 공식딜러사]각 부문채용(영업/서비스/계출/마케팅/인사)|케이씨씨오토리움(주)" data-deadline="~08.09(일)" data-isnew="1">
+            data-loc="서울" data-exp="3년 이상" data-emp=""
+            data-id="사람인|Global B2B Sales & Marketer|주식회사네오심플릭스" data-deadline="~08.11(화)" data-isnew="1">
           <td><span class="site-badge" style="background:#0066CC">사람인</span></td>
-          <td class="td-title"><span class="new-badge">NEW</span><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=list&rec_idx=54427880" target="_blank" class="job-title">[아우디 공식딜러사]각 부문채용(영업/서비스/계출/마케팅/인사)</a><br><span class="kw-badge">마케터</span></td>
-          <td>케이씨씨오토리움(주)</td>
-          <td><span class="chip" style="color:#1565c0;background:#e3f2fd">서울 강남구 외</span></td>
-          <td><span class="chip" style="color:#1b5e20;background:#c8e6c9">신입/경력</span></td>
+          <td class="td-title"><span class="new-badge">NEW</span><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=list&rec_idx=54446122" target="_blank" class="job-title">Global B2B Sales & Marketer</a><br><span class="kw-badge">마케터</span></td>
+          <td>주식회사네오심플릭스</td>
+          <td><span class="chip" style="color:#1565c0;background:#e3f2fd">서울 강남구</span></td>
+          <td><span class="chip" style="color:#bf360c;background:#fbe9e7">3년</span></td>
           <td><span class="chip chip-empty">미제공</span></td>
-          <td class="td-dead" data-deadline-cell>~08.09(일)</td>
+          <td class="td-dead" data-deadline-cell>~08.11(화)</td>
           <td style="white-space:nowrap;vertical-align:middle">
-            <button class="apply-btn" data-id="사람인|[아우디 공식딜러사]각 부문채용(영업/서비스/계출/마케팅/인사)|케이씨씨오토리움(주)" onclick="toggleApply(this)">지원하기</button>
-            <button class="bookmark-btn" data-id="사람인|[아우디 공식딜러사]각 부문채용(영업/서비스/계출/마케팅/인사)|케이씨씨오토리움(주)" onclick="toggleBookmark(this)" title="북마크">☆</button>
-            <button class="hide-btn" data-id="사람인|[아우디 공식딜러사]각 부문채용(영업/서비스/계출/마케팅/인사)|케이씨씨오토리움(주)" onclick="hideJob(this)" title="숨기기">✕</button>
-            <button class="memo-toggle-btn" data-id="사람인|[아우디 공식딜러사]각 부문채용(영업/서비스/계출/마케팅/인사)|케이씨씨오토리움(주)" onclick="toggleJobMemo(this)">메모</button>
+            <button class="apply-btn" data-id="사람인|Global B2B Sales & Marketer|주식회사네오심플릭스" onclick="toggleApply(this)">지원하기</button>
+            <button class="bookmark-btn" data-id="사람인|Global B2B Sales & Marketer|주식회사네오심플릭스" onclick="toggleBookmark(this)" title="북마크">☆</button>
+            <button class="hide-btn" data-id="사람인|Global B2B Sales & Marketer|주식회사네오심플릭스" onclick="hideJob(this)" title="숨기기">✕</button>
+            <button class="memo-toggle-btn" data-id="사람인|Global B2B Sales & Marketer|주식회사네오심플릭스" onclick="toggleJobMemo(this)">메모</button>
           </td>
         </tr>
-        <tr class="job-memo-row" data-memo-for="사람인|[아우디 공식딜러사]각 부문채용(영업/서비스/계출/마케팅/인사)|케이씨씨오토리움(주)" style="display:none">
+        <tr class="job-memo-row" data-memo-for="사람인|Global B2B Sales & Marketer|주식회사네오심플릭스" style="display:none">
           <td colspan="8" style="padding:4px 12px 8px 40px;background:#fafafa">
-            <textarea class="job-memo-ta" data-id="사람인|[아우디 공식딜러사]각 부문채용(영업/서비스/계출/마케팅/인사)|케이씨씨오토리움(주)" rows="2" placeholder="이 공고에 대한 메모를 남겨보세요..."
+            <textarea class="job-memo-ta" data-id="사람인|Global B2B Sales & Marketer|주식회사네오심플릭스" rows="2" placeholder="이 공고에 대한 메모를 남겨보세요..."
               onblur="saveJobMemo(this)" style="width:100%;max-width:600px;border:1px solid #e2e5ea;border-radius:6px;padding:6px 8px;font-size:12px;font-family:inherit;resize:vertical;outline:none"></textarea>
           </td>
         </tr>
         <tr data-site="사람인" data-keyword="마케터"
+            data-loc="서울" data-exp="5년 이상" data-emp=""
+            data-id="사람인|제약 BM (5~9년) 채용|(주)바로팜" data-deadline="~08.13(목)" data-isnew="1">
+          <td><span class="site-badge" style="background:#0066CC">사람인</span></td>
+          <td class="td-title"><span class="new-badge">NEW</span><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=list&rec_idx=54474970" target="_blank" class="job-title">제약 BM (5~9년) 채용</a><br><span class="kw-badge">마케터</span></td>
+          <td>(주)바로팜</td>
+          <td><span class="chip" style="color:#1565c0;background:#e3f2fd">서울 강남구 외</span></td>
+          <td><span class="chip" style="color:#bf360c;background:#fbe9e7">5년</span></td>
+          <td><span class="chip chip-empty">미제공</span></td>
+          <td class="td-dead" data-deadline-cell>~08.13(목)</td>
+          <td style="white-space:nowrap;vertical-align:middle">
+            <button class="apply-btn" data-id="사람인|제약 BM (5~9년) 채용|(주)바로팜" onclick="toggleApply(this)">지원하기</button>
+            <button class="bookmark-btn" data-id="사람인|제약 BM (5~9년) 채용|(주)바로팜" onclick="toggleBookmark(this)" title="북마크">☆</button>
+            <button class="hide-btn" data-id="사람인|제약 BM (5~9년) 채용|(주)바로팜" onclick="hideJob(this)" title="숨기기">✕</button>
+            <button class="memo-toggle-btn" data-id="사람인|제약 BM (5~9년) 채용|(주)바로팜" onclick="toggleJobMemo(this)">메모</button>
+          </td>
+        </tr>
+        <tr class="job-memo-row" data-memo-for="사람인|제약 BM (5~9년) 채용|(주)바로팜" style="display:none">
+          <td colspan="8" style="padding:4px 12px 8px 40px;background:#fafafa">
+            <textarea class="job-memo-ta" data-id="사람인|제약 BM (5~9년) 채용|(주)바로팜" rows="2" placeholder="이 공고에 대한 메모를 남겨보세요..."
+              onblur="saveJobMemo(this)" style="width:100%;max-width:600px;border:1px solid #e2e5ea;border-radius:6px;padding:6px 8px;font-size:12px;font-family:inherit;resize:vertical;outline:none"></textarea>
+          </td>
+        </tr>
+        <tr data-site="사람인" data-keyword="마케터"
+            data-loc="서울" data-exp="3년 이상" data-emp=""
+            data-id="사람인|영업팀[중남미/중동매니저RM]|(주)알에프메디컬" data-deadline="~08.13(목)" data-isnew="1">
+          <td><span class="site-badge" style="background:#0066CC">사람인</span></td>
+          <td class="td-title"><span class="new-badge">NEW</span><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=list&rec_idx=54472244" target="_blank" class="job-title">영업팀[중남미/중동매니저RM]</a><br><span class="kw-badge">마케터</span></td>
+          <td>(주)알에프메디컬</td>
+          <td><span class="chip" style="color:#1565c0;background:#e3f2fd">서울 구로구 외</span></td>
+          <td><span class="chip" style="color:#bf360c;background:#fbe9e7">3년</span></td>
+          <td><span class="chip chip-empty">미제공</span></td>
+          <td class="td-dead" data-deadline-cell>~08.13(목)</td>
+          <td style="white-space:nowrap;vertical-align:middle">
+            <button class="apply-btn" data-id="사람인|영업팀[중남미/중동매니저RM]|(주)알에프메디컬" onclick="toggleApply(this)">지원하기</button>
+            <button class="bookmark-btn" data-id="사람인|영업팀[중남미/중동매니저RM]|(주)알에프메디컬" onclick="toggleBookmark(this)" title="북마크">☆</button>
+            <button class="hide-btn" data-id="사람인|영업팀[중남미/중동매니저RM]|(주)알에프메디컬" onclick="hideJob(this)" title="숨기기">✕</button>
+            <button class="memo-toggle-btn" data-id="사람인|영업팀[중남미/중동매니저RM]|(주)알에프메디컬" onclick="toggleJobMemo(this)">메모</button>
+          </td>
+        </tr>
+        <tr class="job-memo-row" data-memo-for="사람인|영업팀[중남미/중동매니저RM]|(주)알에프메디컬" style="display:none">
+          <td colspan="8" style="padding:4px 12px 8px 40px;background:#fafafa">
+            <textarea class="job-memo-ta" data-id="사람인|영업팀[중남미/중동매니저RM]|(주)알에프메디컬" rows="2" placeholder="이 공고에 대한 메모를 남겨보세요..."
+              onblur="saveJobMemo(this)" style="width:100%;max-width:600px;border:1px solid #e2e5ea;border-radius:6px;padding:6px 8px;font-size:12px;font-family:inherit;resize:vertical;outline:none"></textarea>
+          </td>
+        </tr>
+        <tr data-site="사람인" data-keyword="브랜드 디자이너"
             data-loc="서울" data-exp="경력무관" data-emp=""
             data-id="사람인|인하우스 퍼포먼스 마케터|(주)와이트라이브" data-deadline="~09.12(토)" data-isnew="1">
           <td><span class="site-badge" style="background:#0066CC">사람인</span></td>
-          <td class="td-title"><span class="new-badge">NEW</span><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=list&rec_idx=54476906" target="_blank" class="job-title">인하우스 퍼포먼스 마케터</a><br><span class="kw-badge">마케터</span></td>
+          <td class="td-title"><span class="new-badge">NEW</span><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=list&rec_idx=54476906" target="_blank" class="job-title">인하우스 퍼포먼스 마케터</a><br><span class="kw-badge">브랜드 디자이너</span></td>
           <td>(주)와이트라이브</td>
           <td><span class="chip" style="color:#1565c0;background:#e3f2fd">서울 강서구 외</span></td>
           <td><span class="chip" style="color:#4a148c;background:#e1bee7">경력무관</span></td>
@@ -936,80 +1212,34 @@
               onblur="saveJobMemo(this)" style="width:100%;max-width:600px;border:1px solid #e2e5ea;border-radius:6px;padding:6px 8px;font-size:12px;font-family:inherit;resize:vertical;outline:none"></textarea>
           </td>
         </tr>
-        <tr data-site="사람인" data-keyword="마케터"
-            data-loc="서울" data-exp="경력무관" data-emp=""
-            data-id="사람인|[뷰티] 브랜드매니저(상품기획, BM) 채용|(주)엘씨드인터내셔널" data-deadline="~08.15(토)" data-isnew="1">
+        <tr data-site="사람인" data-keyword="브랜드 디자이너"
+            data-loc="서울" data-exp="2년 이상" data-emp=""
+            data-id="사람인|[코드그라피] 마케터 경력 채용|(주)콘크리트웍스" data-deadline="~09.13(일)" data-isnew="1">
           <td><span class="site-badge" style="background:#0066CC">사람인</span></td>
-          <td class="td-title"><span class="new-badge">NEW</span><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=list&rec_idx=54487499" target="_blank" class="job-title">[뷰티] 브랜드매니저(상품기획, BM) 채용</a><br><span class="kw-badge">마케터</span></td>
-          <td>(주)엘씨드인터내셔널</td>
-          <td><span class="chip" style="color:#1565c0;background:#e3f2fd">서울 강남구</span></td>
-          <td><span class="chip" style="color:#4a148c;background:#e1bee7">경력무관</span></td>
+          <td class="td-title"><span class="new-badge">NEW</span><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=list&rec_idx=54451114" target="_blank" class="job-title">[코드그라피] 마케터 경력 채용</a><br><span class="kw-badge">브랜드 디자이너</span></td>
+          <td>(주)콘크리트웍스</td>
+          <td><span class="chip" style="color:#1565c0;background:#e3f2fd">서울 성동구</span></td>
+          <td><span class="chip" style="color:#bf360c;background:#fbe9e7">2년</span></td>
           <td><span class="chip chip-empty">미제공</span></td>
-          <td class="td-dead" data-deadline-cell>~08.15(토)</td>
+          <td class="td-dead" data-deadline-cell>~09.13(일)</td>
           <td style="white-space:nowrap;vertical-align:middle">
-            <button class="apply-btn" data-id="사람인|[뷰티] 브랜드매니저(상품기획, BM) 채용|(주)엘씨드인터내셔널" onclick="toggleApply(this)">지원하기</button>
-            <button class="bookmark-btn" data-id="사람인|[뷰티] 브랜드매니저(상품기획, BM) 채용|(주)엘씨드인터내셔널" onclick="toggleBookmark(this)" title="북마크">☆</button>
-            <button class="hide-btn" data-id="사람인|[뷰티] 브랜드매니저(상품기획, BM) 채용|(주)엘씨드인터내셔널" onclick="hideJob(this)" title="숨기기">✕</button>
-            <button class="memo-toggle-btn" data-id="사람인|[뷰티] 브랜드매니저(상품기획, BM) 채용|(주)엘씨드인터내셔널" onclick="toggleJobMemo(this)">메모</button>
+            <button class="apply-btn" data-id="사람인|[코드그라피] 마케터 경력 채용|(주)콘크리트웍스" onclick="toggleApply(this)">지원하기</button>
+            <button class="bookmark-btn" data-id="사람인|[코드그라피] 마케터 경력 채용|(주)콘크리트웍스" onclick="toggleBookmark(this)" title="북마크">☆</button>
+            <button class="hide-btn" data-id="사람인|[코드그라피] 마케터 경력 채용|(주)콘크리트웍스" onclick="hideJob(this)" title="숨기기">✕</button>
+            <button class="memo-toggle-btn" data-id="사람인|[코드그라피] 마케터 경력 채용|(주)콘크리트웍스" onclick="toggleJobMemo(this)">메모</button>
           </td>
         </tr>
-        <tr class="job-memo-row" data-memo-for="사람인|[뷰티] 브랜드매니저(상품기획, BM) 채용|(주)엘씨드인터내셔널" style="display:none">
+        <tr class="job-memo-row" data-memo-for="사람인|[코드그라피] 마케터 경력 채용|(주)콘크리트웍스" style="display:none">
           <td colspan="8" style="padding:4px 12px 8px 40px;background:#fafafa">
-            <textarea class="job-memo-ta" data-id="사람인|[뷰티] 브랜드매니저(상품기획, BM) 채용|(주)엘씨드인터내셔널" rows="2" placeholder="이 공고에 대한 메모를 남겨보세요..."
+            <textarea class="job-memo-ta" data-id="사람인|[코드그라피] 마케터 경력 채용|(주)콘크리트웍스" rows="2" placeholder="이 공고에 대한 메모를 남겨보세요..."
               onblur="saveJobMemo(this)" style="width:100%;max-width:600px;border:1px solid #e2e5ea;border-radius:6px;padding:6px 8px;font-size:12px;font-family:inherit;resize:vertical;outline:none"></textarea>
           </td>
         </tr>
-        <tr data-site="사람인" data-keyword="마케터"
-            data-loc="서울" data-exp="4년 이상" data-emp=""
-            data-id="사람인|[대리급]크리에이티브 에이전시 기획팀 경력직 채용(BTL/MICE/EVE|(주)써클커넥션" data-deadline="내일마감" data-isnew="1">
-          <td><span class="site-badge" style="background:#0066CC">사람인</span></td>
-          <td class="td-title"><span class="new-badge">NEW</span><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=list&rec_idx=54172651" target="_blank" class="job-title">[대리급]크리에이티브 에이전시 기획팀 경력직 채용(BTL/MICE/EVENT)</a><br><span class="kw-badge">마케터</span></td>
-          <td>(주)써클커넥션</td>
-          <td><span class="chip" style="color:#1565c0;background:#e3f2fd">서울 강남구</span></td>
-          <td><span class="chip" style="color:#bf360c;background:#fbe9e7">4년</span></td>
-          <td><span class="chip chip-empty">미제공</span></td>
-          <td class="td-dead" data-deadline-cell>내일마감</td>
-          <td style="white-space:nowrap;vertical-align:middle">
-            <button class="apply-btn" data-id="사람인|[대리급]크리에이티브 에이전시 기획팀 경력직 채용(BTL/MICE/EVE|(주)써클커넥션" onclick="toggleApply(this)">지원하기</button>
-            <button class="bookmark-btn" data-id="사람인|[대리급]크리에이티브 에이전시 기획팀 경력직 채용(BTL/MICE/EVE|(주)써클커넥션" onclick="toggleBookmark(this)" title="북마크">☆</button>
-            <button class="hide-btn" data-id="사람인|[대리급]크리에이티브 에이전시 기획팀 경력직 채용(BTL/MICE/EVE|(주)써클커넥션" onclick="hideJob(this)" title="숨기기">✕</button>
-            <button class="memo-toggle-btn" data-id="사람인|[대리급]크리에이티브 에이전시 기획팀 경력직 채용(BTL/MICE/EVE|(주)써클커넥션" onclick="toggleJobMemo(this)">메모</button>
-          </td>
-        </tr>
-        <tr class="job-memo-row" data-memo-for="사람인|[대리급]크리에이티브 에이전시 기획팀 경력직 채용(BTL/MICE/EVE|(주)써클커넥션" style="display:none">
-          <td colspan="8" style="padding:4px 12px 8px 40px;background:#fafafa">
-            <textarea class="job-memo-ta" data-id="사람인|[대리급]크리에이티브 에이전시 기획팀 경력직 채용(BTL/MICE/EVE|(주)써클커넥션" rows="2" placeholder="이 공고에 대한 메모를 남겨보세요..."
-              onblur="saveJobMemo(this)" style="width:100%;max-width:600px;border:1px solid #e2e5ea;border-radius:6px;padding:6px 8px;font-size:12px;font-family:inherit;resize:vertical;outline:none"></textarea>
-          </td>
-        </tr>
-        <tr data-site="사람인" data-keyword="마케터"
-            data-loc="서울" data-exp="경력" data-emp=""
-            data-id="사람인|각 분야 경력 채용|(주)윤성에프앤씨" data-deadline="D-6" data-isnew="1">
-          <td><span class="site-badge" style="background:#0066CC">사람인</span></td>
-          <td class="td-title"><span class="new-badge">NEW</span><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=list&rec_idx=54246070" target="_blank" class="job-title">각 분야 경력 채용</a><br><span class="kw-badge">마케터</span></td>
-          <td>(주)윤성에프앤씨</td>
-          <td><span class="chip" style="color:#1565c0;background:#e3f2fd">서울전체 외</span></td>
-          <td><span class="chip" style="color:#bf360c;background:#fbe9e7">경력</span></td>
-          <td><span class="chip chip-empty">미제공</span></td>
-          <td class="td-dead" data-deadline-cell>D-6</td>
-          <td style="white-space:nowrap;vertical-align:middle">
-            <button class="apply-btn" data-id="사람인|각 분야 경력 채용|(주)윤성에프앤씨" onclick="toggleApply(this)">지원하기</button>
-            <button class="bookmark-btn" data-id="사람인|각 분야 경력 채용|(주)윤성에프앤씨" onclick="toggleBookmark(this)" title="북마크">☆</button>
-            <button class="hide-btn" data-id="사람인|각 분야 경력 채용|(주)윤성에프앤씨" onclick="hideJob(this)" title="숨기기">✕</button>
-            <button class="memo-toggle-btn" data-id="사람인|각 분야 경력 채용|(주)윤성에프앤씨" onclick="toggleJobMemo(this)">메모</button>
-          </td>
-        </tr>
-        <tr class="job-memo-row" data-memo-for="사람인|각 분야 경력 채용|(주)윤성에프앤씨" style="display:none">
-          <td colspan="8" style="padding:4px 12px 8px 40px;background:#fafafa">
-            <textarea class="job-memo-ta" data-id="사람인|각 분야 경력 채용|(주)윤성에프앤씨" rows="2" placeholder="이 공고에 대한 메모를 남겨보세요..."
-              onblur="saveJobMemo(this)" style="width:100%;max-width:600px;border:1px solid #e2e5ea;border-radius:6px;padding:6px 8px;font-size:12px;font-family:inherit;resize:vertical;outline:none"></textarea>
-          </td>
-        </tr>
-        <tr data-site="사람인" data-keyword="마케터"
+        <tr data-site="사람인" data-keyword="브랜드 디자이너"
             data-loc="서울" data-exp="신입" data-emp=""
             data-id="사람인|7월 부문별 신입/경력 채용|㈜에프앤코" data-deadline="~07.31(금)" data-isnew="1">
           <td><span class="site-badge" style="background:#0066CC">사람인</span></td>
-          <td class="td-title"><span class="new-badge">NEW</span><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=list&rec_idx=54488365" target="_blank" class="job-title">7월 부문별 신입/경력 채용</a><br><span class="kw-badge">마케터</span></td>
+          <td class="td-title"><span class="new-badge">NEW</span><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=list&rec_idx=54488365" target="_blank" class="job-title">7월 부문별 신입/경력 채용</a><br><span class="kw-badge">브랜드 디자이너</span></td>
           <td>㈜에프앤코</td>
           <td><span class="chip" style="color:#1565c0;background:#e3f2fd">서울전체 외</span></td>
           <td><span class="chip" style="color:#1b5e20;background:#c8e6c9">신입/경력</span></td>
@@ -1028,118 +1258,26 @@
               onblur="saveJobMemo(this)" style="width:100%;max-width:600px;border:1px solid #e2e5ea;border-radius:6px;padding:6px 8px;font-size:12px;font-family:inherit;resize:vertical;outline:none"></textarea>
           </td>
         </tr>
-        <tr data-site="사람인" data-keyword="마케터"
-            data-loc="서울" data-exp="신입" data-emp=""
-            data-id="사람인|일룸 직영점 영업전문직 공채|㈜일룸" data-deadline="D-6" data-isnew="1">
-          <td><span class="site-badge" style="background:#0066CC">사람인</span></td>
-          <td class="td-title"><span class="new-badge">NEW</span><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=list&rec_idx=54415464" target="_blank" class="job-title">일룸 직영점 영업전문직 공채</a><br><span class="kw-badge">마케터</span></td>
-          <td>㈜일룸</td>
-          <td><span class="chip" style="color:#1565c0;background:#e3f2fd">서울전체 외</span></td>
-          <td><span class="chip" style="color:#1b5e20;background:#c8e6c9">신입/경력</span></td>
-          <td><span class="chip chip-empty">미제공</span></td>
-          <td class="td-dead" data-deadline-cell>D-6</td>
-          <td style="white-space:nowrap;vertical-align:middle">
-            <button class="apply-btn" data-id="사람인|일룸 직영점 영업전문직 공채|㈜일룸" onclick="toggleApply(this)">지원하기</button>
-            <button class="bookmark-btn" data-id="사람인|일룸 직영점 영업전문직 공채|㈜일룸" onclick="toggleBookmark(this)" title="북마크">☆</button>
-            <button class="hide-btn" data-id="사람인|일룸 직영점 영업전문직 공채|㈜일룸" onclick="hideJob(this)" title="숨기기">✕</button>
-            <button class="memo-toggle-btn" data-id="사람인|일룸 직영점 영업전문직 공채|㈜일룸" onclick="toggleJobMemo(this)">메모</button>
-          </td>
-        </tr>
-        <tr class="job-memo-row" data-memo-for="사람인|일룸 직영점 영업전문직 공채|㈜일룸" style="display:none">
-          <td colspan="8" style="padding:4px 12px 8px 40px;background:#fafafa">
-            <textarea class="job-memo-ta" data-id="사람인|일룸 직영점 영업전문직 공채|㈜일룸" rows="2" placeholder="이 공고에 대한 메모를 남겨보세요..."
-              onblur="saveJobMemo(this)" style="width:100%;max-width:600px;border:1px solid #e2e5ea;border-radius:6px;padding:6px 8px;font-size:12px;font-family:inherit;resize:vertical;outline:none"></textarea>
-          </td>
-        </tr>
-        <tr data-site="사람인" data-keyword="마케터"
-            data-loc="서울" data-exp="8년 이상" data-emp=""
-            data-id="사람인|Senior AI Agent Builder|팔레트(주)" data-deadline="~08.17(월)" data-isnew="1">
-          <td><span class="site-badge" style="background:#0066CC">사람인</span></td>
-          <td class="td-title"><span class="new-badge">NEW</span><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=list&rec_idx=54486953" target="_blank" class="job-title">Senior AI Agent Builder</a><br><span class="kw-badge">마케터</span></td>
-          <td>팔레트(주)</td>
-          <td><span class="chip" style="color:#1565c0;background:#e3f2fd">서울 강남구 외</span></td>
-          <td><span class="chip" style="color:#bf360c;background:#fbe9e7">8년</span></td>
-          <td><span class="chip chip-empty">미제공</span></td>
-          <td class="td-dead" data-deadline-cell>~08.17(월)</td>
-          <td style="white-space:nowrap;vertical-align:middle">
-            <button class="apply-btn" data-id="사람인|Senior AI Agent Builder|팔레트(주)" onclick="toggleApply(this)">지원하기</button>
-            <button class="bookmark-btn" data-id="사람인|Senior AI Agent Builder|팔레트(주)" onclick="toggleBookmark(this)" title="북마크">☆</button>
-            <button class="hide-btn" data-id="사람인|Senior AI Agent Builder|팔레트(주)" onclick="hideJob(this)" title="숨기기">✕</button>
-            <button class="memo-toggle-btn" data-id="사람인|Senior AI Agent Builder|팔레트(주)" onclick="toggleJobMemo(this)">메모</button>
-          </td>
-        </tr>
-        <tr class="job-memo-row" data-memo-for="사람인|Senior AI Agent Builder|팔레트(주)" style="display:none">
-          <td colspan="8" style="padding:4px 12px 8px 40px;background:#fafafa">
-            <textarea class="job-memo-ta" data-id="사람인|Senior AI Agent Builder|팔레트(주)" rows="2" placeholder="이 공고에 대한 메모를 남겨보세요..."
-              onblur="saveJobMemo(this)" style="width:100%;max-width:600px;border:1px solid #e2e5ea;border-radius:6px;padding:6px 8px;font-size:12px;font-family:inherit;resize:vertical;outline:none"></textarea>
-          </td>
-        </tr>
-        <tr data-site="사람인" data-keyword="마케터"
-            data-loc="서울" data-exp="3년 이상" data-emp=""
-            data-id="사람인|브랜드&서비스 마케팅 경력|(주)유디아이디" data-deadline="~08.14(금)" data-isnew="1">
-          <td><span class="site-badge" style="background:#0066CC">사람인</span></td>
-          <td class="td-title"><span class="new-badge">NEW</span><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=list&rec_idx=54470183" target="_blank" class="job-title">브랜드&서비스 마케팅 경력</a><br><span class="kw-badge">마케터</span></td>
-          <td>(주)유디아이디</td>
-          <td><span class="chip" style="color:#1565c0;background:#e3f2fd">서울전체 외</span></td>
-          <td><span class="chip" style="color:#bf360c;background:#fbe9e7">3년</span></td>
-          <td><span class="chip chip-empty">미제공</span></td>
-          <td class="td-dead" data-deadline-cell>~08.14(금)</td>
-          <td style="white-space:nowrap;vertical-align:middle">
-            <button class="apply-btn" data-id="사람인|브랜드&서비스 마케팅 경력|(주)유디아이디" onclick="toggleApply(this)">지원하기</button>
-            <button class="bookmark-btn" data-id="사람인|브랜드&서비스 마케팅 경력|(주)유디아이디" onclick="toggleBookmark(this)" title="북마크">☆</button>
-            <button class="hide-btn" data-id="사람인|브랜드&서비스 마케팅 경력|(주)유디아이디" onclick="hideJob(this)" title="숨기기">✕</button>
-            <button class="memo-toggle-btn" data-id="사람인|브랜드&서비스 마케팅 경력|(주)유디아이디" onclick="toggleJobMemo(this)">메모</button>
-          </td>
-        </tr>
-        <tr class="job-memo-row" data-memo-for="사람인|브랜드&서비스 마케팅 경력|(주)유디아이디" style="display:none">
-          <td colspan="8" style="padding:4px 12px 8px 40px;background:#fafafa">
-            <textarea class="job-memo-ta" data-id="사람인|브랜드&서비스 마케팅 경력|(주)유디아이디" rows="2" placeholder="이 공고에 대한 메모를 남겨보세요..."
-              onblur="saveJobMemo(this)" style="width:100%;max-width:600px;border:1px solid #e2e5ea;border-radius:6px;padding:6px 8px;font-size:12px;font-family:inherit;resize:vertical;outline:none"></textarea>
-          </td>
-        </tr>
-        <tr data-site="사람인" data-keyword="마케터"
-            data-loc="서울" data-exp="경력" data-emp=""
-            data-id="사람인|콘텐츠 크리에이터 채용|(주)룩캐스트" data-deadline="~08.15(토)" data-isnew="1">
-          <td><span class="site-badge" style="background:#0066CC">사람인</span></td>
-          <td class="td-title"><span class="new-badge">NEW</span><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=list&rec_idx=54483950" target="_blank" class="job-title">콘텐츠 크리에이터 채용</a><br><span class="kw-badge">마케터</span></td>
-          <td>(주)룩캐스트</td>
-          <td><span class="chip" style="color:#1565c0;background:#e3f2fd">서울 중구</span></td>
-          <td><span class="chip" style="color:#bf360c;background:#fbe9e7">경력</span></td>
-          <td><span class="chip chip-empty">미제공</span></td>
-          <td class="td-dead" data-deadline-cell>~08.15(토)</td>
-          <td style="white-space:nowrap;vertical-align:middle">
-            <button class="apply-btn" data-id="사람인|콘텐츠 크리에이터 채용|(주)룩캐스트" onclick="toggleApply(this)">지원하기</button>
-            <button class="bookmark-btn" data-id="사람인|콘텐츠 크리에이터 채용|(주)룩캐스트" onclick="toggleBookmark(this)" title="북마크">☆</button>
-            <button class="hide-btn" data-id="사람인|콘텐츠 크리에이터 채용|(주)룩캐스트" onclick="hideJob(this)" title="숨기기">✕</button>
-            <button class="memo-toggle-btn" data-id="사람인|콘텐츠 크리에이터 채용|(주)룩캐스트" onclick="toggleJobMemo(this)">메모</button>
-          </td>
-        </tr>
-        <tr class="job-memo-row" data-memo-for="사람인|콘텐츠 크리에이터 채용|(주)룩캐스트" style="display:none">
-          <td colspan="8" style="padding:4px 12px 8px 40px;background:#fafafa">
-            <textarea class="job-memo-ta" data-id="사람인|콘텐츠 크리에이터 채용|(주)룩캐스트" rows="2" placeholder="이 공고에 대한 메모를 남겨보세요..."
-              onblur="saveJobMemo(this)" style="width:100%;max-width:600px;border:1px solid #e2e5ea;border-radius:6px;padding:6px 8px;font-size:12px;font-family:inherit;resize:vertical;outline:none"></textarea>
-          </td>
-        </tr>
         <tr data-site="사람인" data-keyword="브랜드 디자이너"
             data-loc="서울" data-exp="신입" data-emp=""
-            data-id="사람인|토스플레이스 자회사 [iShopCARE] 대규모 채용｜ 영업·마케팅·전략|(주)아이샵케어" data-deadline="~07.31(금)" data-isnew="0">
+            data-id="사람인|On 부문별 신입/경력 공개채용|온코리아(유)" data-deadline="~08.29(토)" data-isnew="1">
           <td><span class="site-badge" style="background:#0066CC">사람인</span></td>
-          <td class="td-title"><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=list&rec_idx=54320096" target="_blank" class="job-title">토스플레이스 자회사 [iShopCARE] 대규모 채용｜ 영업·마케팅·전략·CX·물류·AS·MD  外</a><br><span class="kw-badge">브랜드 디자이너</span></td>
-          <td>(주)아이샵케어</td>
-          <td><span class="chip" style="color:#1565c0;background:#e3f2fd">서울 강남구 외</span></td>
+          <td class="td-title"><span class="new-badge">NEW</span><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=list&rec_idx=54474475" target="_blank" class="job-title">On 부문별 신입/경력 공개채용</a><br><span class="kw-badge">브랜드 디자이너</span></td>
+          <td>온코리아(유)</td>
+          <td><span class="chip" style="color:#1565c0;background:#e3f2fd">서울전체 외</span></td>
           <td><span class="chip" style="color:#1b5e20;background:#c8e6c9">신입/경력</span></td>
           <td><span class="chip chip-empty">미제공</span></td>
-          <td class="td-dead" data-deadline-cell>~07.31(금)</td>
+          <td class="td-dead" data-deadline-cell>~08.29(토)</td>
           <td style="white-space:nowrap;vertical-align:middle">
-            <button class="apply-btn" data-id="사람인|토스플레이스 자회사 [iShopCARE] 대규모 채용｜ 영업·마케팅·전략|(주)아이샵케어" onclick="toggleApply(this)">지원하기</button>
-            <button class="bookmark-btn" data-id="사람인|토스플레이스 자회사 [iShopCARE] 대규모 채용｜ 영업·마케팅·전략|(주)아이샵케어" onclick="toggleBookmark(this)" title="북마크">☆</button>
-            <button class="hide-btn" data-id="사람인|토스플레이스 자회사 [iShopCARE] 대규모 채용｜ 영업·마케팅·전략|(주)아이샵케어" onclick="hideJob(this)" title="숨기기">✕</button>
-            <button class="memo-toggle-btn" data-id="사람인|토스플레이스 자회사 [iShopCARE] 대규모 채용｜ 영업·마케팅·전략|(주)아이샵케어" onclick="toggleJobMemo(this)">메모</button>
+            <button class="apply-btn" data-id="사람인|On 부문별 신입/경력 공개채용|온코리아(유)" onclick="toggleApply(this)">지원하기</button>
+            <button class="bookmark-btn" data-id="사람인|On 부문별 신입/경력 공개채용|온코리아(유)" onclick="toggleBookmark(this)" title="북마크">☆</button>
+            <button class="hide-btn" data-id="사람인|On 부문별 신입/경력 공개채용|온코리아(유)" onclick="hideJob(this)" title="숨기기">✕</button>
+            <button class="memo-toggle-btn" data-id="사람인|On 부문별 신입/경력 공개채용|온코리아(유)" onclick="toggleJobMemo(this)">메모</button>
           </td>
         </tr>
-        <tr class="job-memo-row" data-memo-for="사람인|토스플레이스 자회사 [iShopCARE] 대규모 채용｜ 영업·마케팅·전략|(주)아이샵케어" style="display:none">
+        <tr class="job-memo-row" data-memo-for="사람인|On 부문별 신입/경력 공개채용|온코리아(유)" style="display:none">
           <td colspan="8" style="padding:4px 12px 8px 40px;background:#fafafa">
-            <textarea class="job-memo-ta" data-id="사람인|토스플레이스 자회사 [iShopCARE] 대규모 채용｜ 영업·마케팅·전략|(주)아이샵케어" rows="2" placeholder="이 공고에 대한 메모를 남겨보세요..."
+            <textarea class="job-memo-ta" data-id="사람인|On 부문별 신입/경력 공개채용|온코리아(유)" rows="2" placeholder="이 공고에 대한 메모를 남겨보세요..."
               onblur="saveJobMemo(this)" style="width:100%;max-width:600px;border:1px solid #e2e5ea;border-radius:6px;padding:6px 8px;font-size:12px;font-family:inherit;resize:vertical;outline:none"></textarea>
           </td>
         </tr>
@@ -1167,140 +1305,117 @@
           </td>
         </tr>
         <tr data-site="사람인" data-keyword="브랜드 디자이너"
-            data-loc="서울" data-exp="신입" data-emp=""
-            data-id="사람인|컨셉스토어영업/자사몰기획/외부몰MD/VMD/AI디자인/웹디자인/백화점영업|(주)에싸" data-deadline="~07.29(수)" data-isnew="1">
+            data-loc="서울" data-exp="4년 이상" data-emp=""
+            data-id="사람인|[대리급]크리에이티브 에이전시 기획팀 경력직 채용(BTL/MICE/EVE|(주)써클커넥션" data-deadline="오늘마감" data-isnew="1">
           <td><span class="site-badge" style="background:#0066CC">사람인</span></td>
-          <td class="td-title"><span class="new-badge">NEW</span><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=list&rec_idx=54482054" target="_blank" class="job-title">컨셉스토어영업/자사몰기획/외부몰MD/VMD/AI디자인/웹디자인/백화점영업/개발지원</a><br><span class="kw-badge">브랜드 디자이너</span></td>
-          <td>(주)에싸</td>
-          <td><span class="chip" style="color:#1565c0;background:#e3f2fd">서울 강남구 외</span></td>
-          <td><span class="chip" style="color:#1b5e20;background:#c8e6c9">신입/경력</span></td>
+          <td class="td-title"><span class="new-badge">NEW</span><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=list&rec_idx=54172651" target="_blank" class="job-title">[대리급]크리에이티브 에이전시 기획팀 경력직 채용(BTL/MICE/EVENT)</a><br><span class="kw-badge">브랜드 디자이너</span></td>
+          <td>(주)써클커넥션</td>
+          <td><span class="chip" style="color:#1565c0;background:#e3f2fd">서울 강남구</span></td>
+          <td><span class="chip" style="color:#bf360c;background:#fbe9e7">4년</span></td>
           <td><span class="chip chip-empty">미제공</span></td>
-          <td class="td-dead" data-deadline-cell>~07.29(수)</td>
+          <td class="td-dead" data-deadline-cell>오늘마감</td>
           <td style="white-space:nowrap;vertical-align:middle">
-            <button class="apply-btn" data-id="사람인|컨셉스토어영업/자사몰기획/외부몰MD/VMD/AI디자인/웹디자인/백화점영업|(주)에싸" onclick="toggleApply(this)">지원하기</button>
-            <button class="bookmark-btn" data-id="사람인|컨셉스토어영업/자사몰기획/외부몰MD/VMD/AI디자인/웹디자인/백화점영업|(주)에싸" onclick="toggleBookmark(this)" title="북마크">☆</button>
-            <button class="hide-btn" data-id="사람인|컨셉스토어영업/자사몰기획/외부몰MD/VMD/AI디자인/웹디자인/백화점영업|(주)에싸" onclick="hideJob(this)" title="숨기기">✕</button>
-            <button class="memo-toggle-btn" data-id="사람인|컨셉스토어영업/자사몰기획/외부몰MD/VMD/AI디자인/웹디자인/백화점영업|(주)에싸" onclick="toggleJobMemo(this)">메모</button>
+            <button class="apply-btn" data-id="사람인|[대리급]크리에이티브 에이전시 기획팀 경력직 채용(BTL/MICE/EVE|(주)써클커넥션" onclick="toggleApply(this)">지원하기</button>
+            <button class="bookmark-btn" data-id="사람인|[대리급]크리에이티브 에이전시 기획팀 경력직 채용(BTL/MICE/EVE|(주)써클커넥션" onclick="toggleBookmark(this)" title="북마크">☆</button>
+            <button class="hide-btn" data-id="사람인|[대리급]크리에이티브 에이전시 기획팀 경력직 채용(BTL/MICE/EVE|(주)써클커넥션" onclick="hideJob(this)" title="숨기기">✕</button>
+            <button class="memo-toggle-btn" data-id="사람인|[대리급]크리에이티브 에이전시 기획팀 경력직 채용(BTL/MICE/EVE|(주)써클커넥션" onclick="toggleJobMemo(this)">메모</button>
           </td>
         </tr>
-        <tr class="job-memo-row" data-memo-for="사람인|컨셉스토어영업/자사몰기획/외부몰MD/VMD/AI디자인/웹디자인/백화점영업|(주)에싸" style="display:none">
+        <tr class="job-memo-row" data-memo-for="사람인|[대리급]크리에이티브 에이전시 기획팀 경력직 채용(BTL/MICE/EVE|(주)써클커넥션" style="display:none">
           <td colspan="8" style="padding:4px 12px 8px 40px;background:#fafafa">
-            <textarea class="job-memo-ta" data-id="사람인|컨셉스토어영업/자사몰기획/외부몰MD/VMD/AI디자인/웹디자인/백화점영업|(주)에싸" rows="2" placeholder="이 공고에 대한 메모를 남겨보세요..."
+            <textarea class="job-memo-ta" data-id="사람인|[대리급]크리에이티브 에이전시 기획팀 경력직 채용(BTL/MICE/EVE|(주)써클커넥션" rows="2" placeholder="이 공고에 대한 메모를 남겨보세요..."
               onblur="saveJobMemo(this)" style="width:100%;max-width:600px;border:1px solid #e2e5ea;border-radius:6px;padding:6px 8px;font-size:12px;font-family:inherit;resize:vertical;outline:none"></textarea>
           </td>
         </tr>
         <tr data-site="사람인" data-keyword="브랜드 디자이너"
             data-loc="서울" data-exp="신입" data-emp=""
-            data-id="사람인|마틸라 온라인 MD [신입]|주식회사 더메종" data-deadline="D-2" data-isnew="1">
+            data-id="사람인|각 부문별 신입/경력 채용|㈜뷰니스" data-deadline="~08.16(일)" data-isnew="1">
           <td><span class="site-badge" style="background:#0066CC">사람인</span></td>
-          <td class="td-title"><span class="new-badge">NEW</span><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=list&rec_idx=54243907" target="_blank" class="job-title">마틸라 온라인 MD [신입]</a><br><span class="kw-badge">브랜드 디자이너</span></td>
-          <td>주식회사 더메종</td>
-          <td><span class="chip" style="color:#1565c0;background:#e3f2fd">서울 성동구</span></td>
-          <td><span class="chip" style="color:#1b5e20;background:#c8e6c9">신입</span></td>
-          <td><span class="chip chip-empty">미제공</span></td>
-          <td class="td-dead" data-deadline-cell>D-2</td>
-          <td style="white-space:nowrap;vertical-align:middle">
-            <button class="apply-btn" data-id="사람인|마틸라 온라인 MD [신입]|주식회사 더메종" onclick="toggleApply(this)">지원하기</button>
-            <button class="bookmark-btn" data-id="사람인|마틸라 온라인 MD [신입]|주식회사 더메종" onclick="toggleBookmark(this)" title="북마크">☆</button>
-            <button class="hide-btn" data-id="사람인|마틸라 온라인 MD [신입]|주식회사 더메종" onclick="hideJob(this)" title="숨기기">✕</button>
-            <button class="memo-toggle-btn" data-id="사람인|마틸라 온라인 MD [신입]|주식회사 더메종" onclick="toggleJobMemo(this)">메모</button>
-          </td>
-        </tr>
-        <tr class="job-memo-row" data-memo-for="사람인|마틸라 온라인 MD [신입]|주식회사 더메종" style="display:none">
-          <td colspan="8" style="padding:4px 12px 8px 40px;background:#fafafa">
-            <textarea class="job-memo-ta" data-id="사람인|마틸라 온라인 MD [신입]|주식회사 더메종" rows="2" placeholder="이 공고에 대한 메모를 남겨보세요..."
-              onblur="saveJobMemo(this)" style="width:100%;max-width:600px;border:1px solid #e2e5ea;border-radius:6px;padding:6px 8px;font-size:12px;font-family:inherit;resize:vertical;outline:none"></textarea>
-          </td>
-        </tr>
-        <tr data-site="사람인" data-keyword="브랜드 디자이너"
-            data-loc="서울" data-exp="신입" data-emp=""
-            data-id="사람인|하반기 부문별 수시채용|㈜이디야" data-deadline="D-4" data-isnew="1">
-          <td><span class="site-badge" style="background:#0066CC">사람인</span></td>
-          <td class="td-title"><span class="new-badge">NEW</span><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=list&rec_idx=54450829" target="_blank" class="job-title">하반기 부문별 수시채용</a><br><span class="kw-badge">브랜드 디자이너</span></td>
-          <td>㈜이디야</td>
-          <td><span class="chip" style="color:#1565c0;background:#e3f2fd">서울 강남구 외</span></td>
+          <td class="td-title"><span class="new-badge">NEW</span><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=list&rec_idx=54487937" target="_blank" class="job-title">각 부문별 신입/경력 채용</a><br><span class="kw-badge">브랜드 디자이너</span></td>
+          <td>㈜뷰니스</td>
+          <td><span class="chip" style="color:#1565c0;background:#e3f2fd">서울전체 외</span></td>
           <td><span class="chip" style="color:#1b5e20;background:#c8e6c9">신입/경력</span></td>
           <td><span class="chip chip-empty">미제공</span></td>
-          <td class="td-dead" data-deadline-cell>D-4</td>
+          <td class="td-dead" data-deadline-cell>~08.16(일)</td>
           <td style="white-space:nowrap;vertical-align:middle">
-            <button class="apply-btn" data-id="사람인|하반기 부문별 수시채용|㈜이디야" onclick="toggleApply(this)">지원하기</button>
-            <button class="bookmark-btn" data-id="사람인|하반기 부문별 수시채용|㈜이디야" onclick="toggleBookmark(this)" title="북마크">☆</button>
-            <button class="hide-btn" data-id="사람인|하반기 부문별 수시채용|㈜이디야" onclick="hideJob(this)" title="숨기기">✕</button>
-            <button class="memo-toggle-btn" data-id="사람인|하반기 부문별 수시채용|㈜이디야" onclick="toggleJobMemo(this)">메모</button>
+            <button class="apply-btn" data-id="사람인|각 부문별 신입/경력 채용|㈜뷰니스" onclick="toggleApply(this)">지원하기</button>
+            <button class="bookmark-btn" data-id="사람인|각 부문별 신입/경력 채용|㈜뷰니스" onclick="toggleBookmark(this)" title="북마크">☆</button>
+            <button class="hide-btn" data-id="사람인|각 부문별 신입/경력 채용|㈜뷰니스" onclick="hideJob(this)" title="숨기기">✕</button>
+            <button class="memo-toggle-btn" data-id="사람인|각 부문별 신입/경력 채용|㈜뷰니스" onclick="toggleJobMemo(this)">메모</button>
           </td>
         </tr>
-        <tr class="job-memo-row" data-memo-for="사람인|하반기 부문별 수시채용|㈜이디야" style="display:none">
+        <tr class="job-memo-row" data-memo-for="사람인|각 부문별 신입/경력 채용|㈜뷰니스" style="display:none">
           <td colspan="8" style="padding:4px 12px 8px 40px;background:#fafafa">
-            <textarea class="job-memo-ta" data-id="사람인|하반기 부문별 수시채용|㈜이디야" rows="2" placeholder="이 공고에 대한 메모를 남겨보세요..."
+            <textarea class="job-memo-ta" data-id="사람인|각 부문별 신입/경력 채용|㈜뷰니스" rows="2" placeholder="이 공고에 대한 메모를 남겨보세요..."
               onblur="saveJobMemo(this)" style="width:100%;max-width:600px;border:1px solid #e2e5ea;border-radius:6px;padding:6px 8px;font-size:12px;font-family:inherit;resize:vertical;outline:none"></textarea>
           </td>
         </tr>
         <tr data-site="사람인" data-keyword="브랜드 디자이너"
             data-loc="서울" data-exp="5년 이상" data-emp=""
-            data-id="사람인|서비스 기획자 채용|(주)델레오코리아" data-deadline="~08.10(월)" data-isnew="1">
+            data-id="사람인|전시공간 디자이너 5년 이상|(주)에어로예성" data-deadline="~08.10(월)" data-isnew="1">
           <td><span class="site-badge" style="background:#0066CC">사람인</span></td>
-          <td class="td-title"><span class="new-badge">NEW</span><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=list&rec_idx=54421761" target="_blank" class="job-title">서비스 기획자 채용</a><br><span class="kw-badge">브랜드 디자이너</span></td>
-          <td>(주)델레오코리아</td>
+          <td class="td-title"><span class="new-badge">NEW</span><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=list&rec_idx=54432812" target="_blank" class="job-title">전시공간 디자이너 5년 이상</a><br><span class="kw-badge">브랜드 디자이너</span></td>
+          <td>(주)에어로예성</td>
           <td><span class="chip" style="color:#1565c0;background:#e3f2fd">서울 강남구</span></td>
           <td><span class="chip" style="color:#bf360c;background:#fbe9e7">5년</span></td>
           <td><span class="chip chip-empty">미제공</span></td>
           <td class="td-dead" data-deadline-cell>~08.10(월)</td>
           <td style="white-space:nowrap;vertical-align:middle">
-            <button class="apply-btn" data-id="사람인|서비스 기획자 채용|(주)델레오코리아" onclick="toggleApply(this)">지원하기</button>
-            <button class="bookmark-btn" data-id="사람인|서비스 기획자 채용|(주)델레오코리아" onclick="toggleBookmark(this)" title="북마크">☆</button>
-            <button class="hide-btn" data-id="사람인|서비스 기획자 채용|(주)델레오코리아" onclick="hideJob(this)" title="숨기기">✕</button>
-            <button class="memo-toggle-btn" data-id="사람인|서비스 기획자 채용|(주)델레오코리아" onclick="toggleJobMemo(this)">메모</button>
+            <button class="apply-btn" data-id="사람인|전시공간 디자이너 5년 이상|(주)에어로예성" onclick="toggleApply(this)">지원하기</button>
+            <button class="bookmark-btn" data-id="사람인|전시공간 디자이너 5년 이상|(주)에어로예성" onclick="toggleBookmark(this)" title="북마크">☆</button>
+            <button class="hide-btn" data-id="사람인|전시공간 디자이너 5년 이상|(주)에어로예성" onclick="hideJob(this)" title="숨기기">✕</button>
+            <button class="memo-toggle-btn" data-id="사람인|전시공간 디자이너 5년 이상|(주)에어로예성" onclick="toggleJobMemo(this)">메모</button>
           </td>
         </tr>
-        <tr class="job-memo-row" data-memo-for="사람인|서비스 기획자 채용|(주)델레오코리아" style="display:none">
+        <tr class="job-memo-row" data-memo-for="사람인|전시공간 디자이너 5년 이상|(주)에어로예성" style="display:none">
           <td colspan="8" style="padding:4px 12px 8px 40px;background:#fafafa">
-            <textarea class="job-memo-ta" data-id="사람인|서비스 기획자 채용|(주)델레오코리아" rows="2" placeholder="이 공고에 대한 메모를 남겨보세요..."
+            <textarea class="job-memo-ta" data-id="사람인|전시공간 디자이너 5년 이상|(주)에어로예성" rows="2" placeholder="이 공고에 대한 메모를 남겨보세요..."
               onblur="saveJobMemo(this)" style="width:100%;max-width:600px;border:1px solid #e2e5ea;border-radius:6px;padding:6px 8px;font-size:12px;font-family:inherit;resize:vertical;outline:none"></textarea>
           </td>
         </tr>
         <tr data-site="사람인" data-keyword="브랜드 디자이너"
-            data-loc="서울" data-exp="신입" data-emp=""
-            data-id="사람인|상품 콘텐츠 기획자 경력 채용|(주)비티와이플러스" data-deadline="~08.14(금)" data-isnew="1">
+            data-loc="서울" data-exp="5년 이상" data-emp=""
+            data-id="사람인|[프롬리에] 국내영업 파트장(팀장) (5년 이상)|이닛컴퍼니(주)" data-deadline="~08.18(화)" data-isnew="1">
           <td><span class="site-badge" style="background:#0066CC">사람인</span></td>
-          <td class="td-title"><span class="new-badge">NEW</span><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=list&rec_idx=54489573" target="_blank" class="job-title">상품 콘텐츠 기획자 경력 채용</a><br><span class="kw-badge">브랜드 디자이너</span></td>
-          <td>(주)비티와이플러스</td>
-          <td><span class="chip" style="color:#1565c0;background:#e3f2fd">서울전체 외</span></td>
-          <td><span class="chip" style="color:#1b5e20;background:#c8e6c9">신입/경력</span></td>
-          <td><span class="chip chip-empty">미제공</span></td>
-          <td class="td-dead" data-deadline-cell>~08.14(금)</td>
-          <td style="white-space:nowrap;vertical-align:middle">
-            <button class="apply-btn" data-id="사람인|상품 콘텐츠 기획자 경력 채용|(주)비티와이플러스" onclick="toggleApply(this)">지원하기</button>
-            <button class="bookmark-btn" data-id="사람인|상품 콘텐츠 기획자 경력 채용|(주)비티와이플러스" onclick="toggleBookmark(this)" title="북마크">☆</button>
-            <button class="hide-btn" data-id="사람인|상품 콘텐츠 기획자 경력 채용|(주)비티와이플러스" onclick="hideJob(this)" title="숨기기">✕</button>
-            <button class="memo-toggle-btn" data-id="사람인|상품 콘텐츠 기획자 경력 채용|(주)비티와이플러스" onclick="toggleJobMemo(this)">메모</button>
-          </td>
-        </tr>
-        <tr class="job-memo-row" data-memo-for="사람인|상품 콘텐츠 기획자 경력 채용|(주)비티와이플러스" style="display:none">
-          <td colspan="8" style="padding:4px 12px 8px 40px;background:#fafafa">
-            <textarea class="job-memo-ta" data-id="사람인|상품 콘텐츠 기획자 경력 채용|(주)비티와이플러스" rows="2" placeholder="이 공고에 대한 메모를 남겨보세요..."
-              onblur="saveJobMemo(this)" style="width:100%;max-width:600px;border:1px solid #e2e5ea;border-radius:6px;padding:6px 8px;font-size:12px;font-family:inherit;resize:vertical;outline:none"></textarea>
-          </td>
-        </tr>
-        <tr data-site="사람인" data-keyword="브랜드 디자이너"
-            data-loc="서울" data-exp="신입" data-emp=""
-            data-id="사람인|펫코본 콘텐츠 디자이너 영입|(주)비케이네스트" data-deadline="~08.18(화)" data-isnew="1">
-          <td><span class="site-badge" style="background:#0066CC">사람인</span></td>
-          <td class="td-title"><span class="new-badge">NEW</span><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=list&rec_idx=54484398" target="_blank" class="job-title">펫코본 콘텐츠 디자이너 영입</a><br><span class="kw-badge">브랜드 디자이너</span></td>
-          <td>(주)비케이네스트</td>
-          <td><span class="chip" style="color:#1565c0;background:#e3f2fd">서울 강동구</span></td>
-          <td><span class="chip" style="color:#1b5e20;background:#c8e6c9">신입/경력</span></td>
+          <td class="td-title"><span class="new-badge">NEW</span><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=list&rec_idx=54488787" target="_blank" class="job-title">[프롬리에] 국내영업 파트장(팀장) (5년 이상)</a><br><span class="kw-badge">브랜드 디자이너</span></td>
+          <td>이닛컴퍼니(주)</td>
+          <td><span class="chip" style="color:#1565c0;background:#e3f2fd">서울 강동구 외</span></td>
+          <td><span class="chip" style="color:#bf360c;background:#fbe9e7">5년</span></td>
           <td><span class="chip chip-empty">미제공</span></td>
           <td class="td-dead" data-deadline-cell>~08.18(화)</td>
           <td style="white-space:nowrap;vertical-align:middle">
-            <button class="apply-btn" data-id="사람인|펫코본 콘텐츠 디자이너 영입|(주)비케이네스트" onclick="toggleApply(this)">지원하기</button>
-            <button class="bookmark-btn" data-id="사람인|펫코본 콘텐츠 디자이너 영입|(주)비케이네스트" onclick="toggleBookmark(this)" title="북마크">☆</button>
-            <button class="hide-btn" data-id="사람인|펫코본 콘텐츠 디자이너 영입|(주)비케이네스트" onclick="hideJob(this)" title="숨기기">✕</button>
-            <button class="memo-toggle-btn" data-id="사람인|펫코본 콘텐츠 디자이너 영입|(주)비케이네스트" onclick="toggleJobMemo(this)">메모</button>
+            <button class="apply-btn" data-id="사람인|[프롬리에] 국내영업 파트장(팀장) (5년 이상)|이닛컴퍼니(주)" onclick="toggleApply(this)">지원하기</button>
+            <button class="bookmark-btn" data-id="사람인|[프롬리에] 국내영업 파트장(팀장) (5년 이상)|이닛컴퍼니(주)" onclick="toggleBookmark(this)" title="북마크">☆</button>
+            <button class="hide-btn" data-id="사람인|[프롬리에] 국내영업 파트장(팀장) (5년 이상)|이닛컴퍼니(주)" onclick="hideJob(this)" title="숨기기">✕</button>
+            <button class="memo-toggle-btn" data-id="사람인|[프롬리에] 국내영업 파트장(팀장) (5년 이상)|이닛컴퍼니(주)" onclick="toggleJobMemo(this)">메모</button>
           </td>
         </tr>
-        <tr class="job-memo-row" data-memo-for="사람인|펫코본 콘텐츠 디자이너 영입|(주)비케이네스트" style="display:none">
+        <tr class="job-memo-row" data-memo-for="사람인|[프롬리에] 국내영업 파트장(팀장) (5년 이상)|이닛컴퍼니(주)" style="display:none">
           <td colspan="8" style="padding:4px 12px 8px 40px;background:#fafafa">
-            <textarea class="job-memo-ta" data-id="사람인|펫코본 콘텐츠 디자이너 영입|(주)비케이네스트" rows="2" placeholder="이 공고에 대한 메모를 남겨보세요..."
+            <textarea class="job-memo-ta" data-id="사람인|[프롬리에] 국내영업 파트장(팀장) (5년 이상)|이닛컴퍼니(주)" rows="2" placeholder="이 공고에 대한 메모를 남겨보세요..."
+              onblur="saveJobMemo(this)" style="width:100%;max-width:600px;border:1px solid #e2e5ea;border-radius:6px;padding:6px 8px;font-size:12px;font-family:inherit;resize:vertical;outline:none"></textarea>
+          </td>
+        </tr>
+        <tr data-site="사람인" data-keyword="브랜드 디자이너"
+            data-loc="서울" data-exp="2년 이상" data-emp=""
+            data-id="사람인|그래픽 디자이너|(주)골든웨일즈" data-deadline="~08.11(화)" data-isnew="1">
+          <td><span class="site-badge" style="background:#0066CC">사람인</span></td>
+          <td class="td-title"><span class="new-badge">NEW</span><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=list&rec_idx=54449056" target="_blank" class="job-title">그래픽 디자이너</a><br><span class="kw-badge">브랜드 디자이너</span></td>
+          <td>(주)골든웨일즈</td>
+          <td><span class="chip" style="color:#1565c0;background:#e3f2fd">서울 광진구 외</span></td>
+          <td><span class="chip" style="color:#bf360c;background:#fbe9e7">2년</span></td>
+          <td><span class="chip chip-empty">미제공</span></td>
+          <td class="td-dead" data-deadline-cell>~08.11(화)</td>
+          <td style="white-space:nowrap;vertical-align:middle">
+            <button class="apply-btn" data-id="사람인|그래픽 디자이너|(주)골든웨일즈" onclick="toggleApply(this)">지원하기</button>
+            <button class="bookmark-btn" data-id="사람인|그래픽 디자이너|(주)골든웨일즈" onclick="toggleBookmark(this)" title="북마크">☆</button>
+            <button class="hide-btn" data-id="사람인|그래픽 디자이너|(주)골든웨일즈" onclick="hideJob(this)" title="숨기기">✕</button>
+            <button class="memo-toggle-btn" data-id="사람인|그래픽 디자이너|(주)골든웨일즈" onclick="toggleJobMemo(this)">메모</button>
+          </td>
+        </tr>
+        <tr class="job-memo-row" data-memo-for="사람인|그래픽 디자이너|(주)골든웨일즈" style="display:none">
+          <td colspan="8" style="padding:4px 12px 8px 40px;background:#fafafa">
+            <textarea class="job-memo-ta" data-id="사람인|그래픽 디자이너|(주)골든웨일즈" rows="2" placeholder="이 공고에 대한 메모를 남겨보세요..."
               onblur="saveJobMemo(this)" style="width:100%;max-width:600px;border:1px solid #e2e5ea;border-radius:6px;padding:6px 8px;font-size:12px;font-family:inherit;resize:vertical;outline:none"></textarea>
           </td>
         </tr>
@@ -1351,71 +1466,25 @@
           </td>
         </tr>
         <tr data-site="사람인" data-keyword="웹디자이너"
-            data-loc="서울" data-exp="신입" data-emp=""
-            data-id="사람인|각 부문별 신입/경력 채용|㈜뷰니스" data-deadline="~08.16(일)" data-isnew="1">
+            data-loc="서울" data-exp="8년 이상" data-emp=""
+            data-id="사람인|Senior AI Agent Builder|팔레트(주)" data-deadline="~08.17(월)" data-isnew="1">
           <td><span class="site-badge" style="background:#0066CC">사람인</span></td>
-          <td class="td-title"><span class="new-badge">NEW</span><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=list&rec_idx=54487937" target="_blank" class="job-title">각 부문별 신입/경력 채용</a><br><span class="kw-badge">웹디자이너</span></td>
-          <td>㈜뷰니스</td>
-          <td><span class="chip" style="color:#1565c0;background:#e3f2fd">서울전체 외</span></td>
-          <td><span class="chip" style="color:#1b5e20;background:#c8e6c9">신입/경력</span></td>
-          <td><span class="chip chip-empty">미제공</span></td>
-          <td class="td-dead" data-deadline-cell>~08.16(일)</td>
-          <td style="white-space:nowrap;vertical-align:middle">
-            <button class="apply-btn" data-id="사람인|각 부문별 신입/경력 채용|㈜뷰니스" onclick="toggleApply(this)">지원하기</button>
-            <button class="bookmark-btn" data-id="사람인|각 부문별 신입/경력 채용|㈜뷰니스" onclick="toggleBookmark(this)" title="북마크">☆</button>
-            <button class="hide-btn" data-id="사람인|각 부문별 신입/경력 채용|㈜뷰니스" onclick="hideJob(this)" title="숨기기">✕</button>
-            <button class="memo-toggle-btn" data-id="사람인|각 부문별 신입/경력 채용|㈜뷰니스" onclick="toggleJobMemo(this)">메모</button>
-          </td>
-        </tr>
-        <tr class="job-memo-row" data-memo-for="사람인|각 부문별 신입/경력 채용|㈜뷰니스" style="display:none">
-          <td colspan="8" style="padding:4px 12px 8px 40px;background:#fafafa">
-            <textarea class="job-memo-ta" data-id="사람인|각 부문별 신입/경력 채용|㈜뷰니스" rows="2" placeholder="이 공고에 대한 메모를 남겨보세요..."
-              onblur="saveJobMemo(this)" style="width:100%;max-width:600px;border:1px solid #e2e5ea;border-radius:6px;padding:6px 8px;font-size:12px;font-family:inherit;resize:vertical;outline:none"></textarea>
-          </td>
-        </tr>
-        <tr data-site="사람인" data-keyword="웹디자이너"
-            data-loc="서울" data-exp="3년 이상" data-emp=""
-            data-id="사람인|웹 퍼블리셔|(주)위버케어" data-deadline="~08.11(화)" data-isnew="1">
-          <td><span class="site-badge" style="background:#0066CC">사람인</span></td>
-          <td class="td-title"><span class="new-badge">NEW</span><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=list&rec_idx=54417436" target="_blank" class="job-title">웹 퍼블리셔</a><br><span class="kw-badge">웹디자이너</span></td>
-          <td>(주)위버케어</td>
+          <td class="td-title"><span class="new-badge">NEW</span><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=list&rec_idx=54486953" target="_blank" class="job-title">Senior AI Agent Builder</a><br><span class="kw-badge">웹디자이너</span></td>
+          <td>팔레트(주)</td>
           <td><span class="chip" style="color:#1565c0;background:#e3f2fd">서울 강남구 외</span></td>
-          <td><span class="chip" style="color:#bf360c;background:#fbe9e7">3년</span></td>
+          <td><span class="chip" style="color:#bf360c;background:#fbe9e7">8년</span></td>
           <td><span class="chip chip-empty">미제공</span></td>
-          <td class="td-dead" data-deadline-cell>~08.11(화)</td>
+          <td class="td-dead" data-deadline-cell>~08.17(월)</td>
           <td style="white-space:nowrap;vertical-align:middle">
-            <button class="apply-btn" data-id="사람인|웹 퍼블리셔|(주)위버케어" onclick="toggleApply(this)">지원하기</button>
-            <button class="bookmark-btn" data-id="사람인|웹 퍼블리셔|(주)위버케어" onclick="toggleBookmark(this)" title="북마크">☆</button>
-            <button class="hide-btn" data-id="사람인|웹 퍼블리셔|(주)위버케어" onclick="hideJob(this)" title="숨기기">✕</button>
-            <button class="memo-toggle-btn" data-id="사람인|웹 퍼블리셔|(주)위버케어" onclick="toggleJobMemo(this)">메모</button>
+            <button class="apply-btn" data-id="사람인|Senior AI Agent Builder|팔레트(주)" onclick="toggleApply(this)">지원하기</button>
+            <button class="bookmark-btn" data-id="사람인|Senior AI Agent Builder|팔레트(주)" onclick="toggleBookmark(this)" title="북마크">☆</button>
+            <button class="hide-btn" data-id="사람인|Senior AI Agent Builder|팔레트(주)" onclick="hideJob(this)" title="숨기기">✕</button>
+            <button class="memo-toggle-btn" data-id="사람인|Senior AI Agent Builder|팔레트(주)" onclick="toggleJobMemo(this)">메모</button>
           </td>
         </tr>
-        <tr class="job-memo-row" data-memo-for="사람인|웹 퍼블리셔|(주)위버케어" style="display:none">
+        <tr class="job-memo-row" data-memo-for="사람인|Senior AI Agent Builder|팔레트(주)" style="display:none">
           <td colspan="8" style="padding:4px 12px 8px 40px;background:#fafafa">
-            <textarea class="job-memo-ta" data-id="사람인|웹 퍼블리셔|(주)위버케어" rows="2" placeholder="이 공고에 대한 메모를 남겨보세요..."
-              onblur="saveJobMemo(this)" style="width:100%;max-width:600px;border:1px solid #e2e5ea;border-radius:6px;padding:6px 8px;font-size:12px;font-family:inherit;resize:vertical;outline:none"></textarea>
-          </td>
-        </tr>
-        <tr data-site="사람인" data-keyword="웹디자이너"
-            data-loc="서울" data-exp="5년 이상" data-emp=""
-            data-id="사람인|이너뷰티 온라인 디자이너|(주)에이지엣랩스" data-deadline="~08.14(금)" data-isnew="1">
-          <td><span class="site-badge" style="background:#0066CC">사람인</span></td>
-          <td class="td-title"><span class="new-badge">NEW</span><a href="https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=list&rec_idx=54483055" target="_blank" class="job-title">이너뷰티 온라인 디자이너</a><br><span class="kw-badge">웹디자이너</span></td>
-          <td>(주)에이지엣랩스</td>
-          <td><span class="chip" style="color:#1565c0;background:#e3f2fd">서울 동대문구 외</span></td>
-          <td><span class="chip" style="color:#bf360c;background:#fbe9e7">5년</span></td>
-          <td><span class="chip chip-empty">미제공</span></td>
-          <td class="td-dead" data-deadline-cell>~08.14(금)</td>
-          <td style="white-space:nowrap;vertical-align:middle">
-            <button class="apply-btn" data-id="사람인|이너뷰티 온라인 디자이너|(주)에이지엣랩스" onclick="toggleApply(this)">지원하기</button>
-            <button class="bookmark-btn" data-id="사람인|이너뷰티 온라인 디자이너|(주)에이지엣랩스" onclick="toggleBookmark(this)" title="북마크">☆</button>
-            <button class="hide-btn" data-id="사람인|이너뷰티 온라인 디자이너|(주)에이지엣랩스" onclick="hideJob(this)" title="숨기기">✕</button>
-            <button class="memo-toggle-btn" data-id="사람인|이너뷰티 온라인 디자이너|(주)에이지엣랩스" onclick="toggleJobMemo(this)">메모</button>
-          </td>
-        </tr>
-        <tr class="job-memo-row" data-memo-for="사람인|이너뷰티 온라인 디자이너|(주)에이지엣랩스" style="display:none">
-          <td colspan="8" style="padding:4px 12px 8px 40px;background:#fafafa">
-            <textarea class="job-memo-ta" data-id="사람인|이너뷰티 온라인 디자이너|(주)에이지엣랩스" rows="2" placeholder="이 공고에 대한 메모를 남겨보세요..."
+            <textarea class="job-memo-ta" data-id="사람인|Senior AI Agent Builder|팔레트(주)" rows="2" placeholder="이 공고에 대한 메모를 남겨보세요..."
               onblur="saveJobMemo(this)" style="width:100%;max-width:600px;border:1px solid #e2e5ea;border-radius:6px;padding:6px 8px;font-size:12px;font-family:inherit;resize:vertical;outline:none"></textarea>
           </td>
         </tr></tbody>
@@ -1555,7 +1624,7 @@
 
 <script>
 // ── 공고 데이터 ──
-const JOBS = [{"id": "사람인|디자이너/프로모션 및 운영 정규직 채용|(주)씨티티디", "site": "사람인", "title": "디자이너/프로모션 및 운영 정규직 채용", "company": "(주)씨티티디", "location": "서울전체 외", "experience": "신입/경력", "employment_type": "", "deadline": "~08.05(수)", "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=list&rec_idx=54391005", "keyword": "UI/UX 디자이너"}, {"id": "사람인|2026년 신입/경력 수시채용|㈜파마리서치", "site": "사람인", "title": "2026년 신입/경력 수시채용", "company": "㈜파마리서치", "location": "서울전체 외", "experience": "신입/경력", "employment_type": "", "deadline": "상시채용", "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=list&rec_idx=53078923", "keyword": "UI/UX 디자이너"}, {"id": "사람인|각 부문 신입/경력 채용|㈜폴라리스오피스", "site": "사람인", "title": "각 부문 신입/경력 채용", "company": "㈜폴라리스오피스", "location": "서울전체 외", "experience": "신입/경력", "employment_type": "", "deadline": "~07.31(금)", "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=list&rec_idx=54483631", "keyword": "UI/UX 디자이너"}, {"id": "사람인|자사몰 카페24 MD|(주)리터니티", "site": "사람인", "title": "자사몰 카페24 MD", "company": "(주)리터니티", "location": "서울전체 외", "experience": "1년", "employment_type": "", "deadline": "~08.12(수)", "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=list&rec_idx=54462124", "keyword": "UI/UX 디자이너"}, {"id": "사람인|디자인팀 경력직 채용|(주)아이알큐더스", "site": "사람인", "title": "디자인팀 경력직 채용", "company": "(주)아이알큐더스", "location": "서울 영등포구", "experience": "2년", "employment_type": "", "deadline": "~08.14(금)", "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=list&rec_idx=54486581", "keyword": "UI/UX 디자이너"}, {"id": "사람인|웹 콘텐츠 디자인 Sr. 매니저|(주)더파운더즈", "site": "사람인", "title": "웹 콘텐츠 디자인 Sr. 매니저", "company": "(주)더파운더즈", "location": "서울 강남구 외", "experience": "5년", "employment_type": "", "deadline": "~08.10(월)", "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=list&rec_idx=54418007", "keyword": "UI/UX 디자이너"}, {"id": "사람인|[히디프] 웹 디자이너|(주)메디테라피", "site": "사람인", "title": "[히디프] 웹 디자이너", "company": "(주)메디테라피", "location": "서울 강남구 외", "experience": "5년", "employment_type": "", "deadline": "~08.10(월)", "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=list&rec_idx=54340551", "keyword": "UI/UX 디자이너"}, {"id": "사람인|PM (Lead)|에이온비주식회사", "site": "사람인", "title": "PM (Lead)", "company": "에이온비주식회사", "location": "서울 강남구 외", "experience": "5년", "employment_type": "", "deadline": "~08.12(수)", "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=list&rec_idx=54461343", "keyword": "UI/UX 디자이너"}, {"id": "사람인|Product Designer(UX/UI)|에이온비주식회사", "site": "사람인", "title": "Product Designer(UX/UI)", "company": "에이온비주식회사", "location": "서울 강남구 외", "experience": "3년", "employment_type": "", "deadline": "~08.12(수)", "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=list&rec_idx=54461625", "keyword": "UI/UX 디자이너"}, {"id": "사람인|[더블러버스] 브랜드 디자이너|(주)메디쿼터스", "site": "사람인", "title": "[더블러버스] 브랜드 디자이너", "company": "(주)메디쿼터스", "location": "서울 강남구", "experience": "3년", "employment_type": "", "deadline": "~08.16(일)", "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=list&rec_idx=54485287", "keyword": "UI/UX 디자이너"}, {"id": "사람인|프로덕트디자이너|풀림", "site": "사람인", "title": "프로덕트디자이너", "company": "풀림", "location": "서울 강남구", "experience": "신입/경력", "employment_type": "", "deadline": "~08.14(금)", "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=list&rec_idx=54489640", "keyword": "UI/UX 디자이너"}, {"id": "사람인|상세페이지 기획자,스토리텔링|(주)이펙터", "site": "사람인", "title": "상세페이지 기획자,스토리텔링", "company": "(주)이펙터", "location": "서울 강남구", "experience": "신입/경력", "employment_type": "", "deadline": "~08.14(금)", "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=list&rec_idx=54488375", "keyword": "UI/UX 디자이너"}, {"id": "사람인|통학차량 서비스 디자인/UX|(주)스쿨버스", "site": "사람인", "title": "통학차량 서비스 디자인/UX", "company": "(주)스쿨버스", "location": "서울 강서구 외", "experience": "1년", "employment_type": "", "deadline": "~08.11(화)", "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=list&rec_idx=54447183", "keyword": "UI/UX 디자이너"}, {"id": "사람인|[커머스] 콘텐츠 디자이너|풀림", "site": "사람인", "title": "[커머스] 콘텐츠 디자이너", "company": "풀림", "location": "서울 강남구", "experience": "신입/경력", "employment_type": "", "deadline": "~08.14(금)", "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=list&rec_idx=54489481", "keyword": "UI/UX 디자이너"}, {"id": "사람인|[리포데이] 마케팅/영상/컨텐츠/인플루언서/영업 담당자 모집|(주)와우바이오텍", "site": "사람인", "title": "[리포데이] 마케팅/영상/컨텐츠/인플루언서/영업 담당자 모집", "company": "(주)와우바이오텍", "location": "서울전체 외", "experience": "신입/경력", "employment_type": "", "deadline": "~08.03(월)", "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=list&rec_idx=54339115", "keyword": "그래픽 디자이너"}, {"id": "사람인|[K뷰티] 약국영업/MD/마케팅/영업지원/해외담당자 모집|(주)와우바이오텍", "site": "사람인", "title": "[K뷰티] 약국영업/MD/마케팅/영업지원/해외담당자 모집", "company": "(주)와우바이오텍", "location": "서울전체 외", "experience": "신입/경력", "employment_type": "", "deadline": "~08.03(월)", "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=list&rec_idx=54338992", "keyword": "그래픽 디자이너"}, {"id": "사람인|단테미디어랩 경력 및 신입사원 채용(연출PD/2D그래픽 디자이너)|단테미디어랩", "site": "사람인", "title": "단테미디어랩 경력 및 신입사원 채용(연출PD/2D그래픽 디자이너)", "company": "단테미디어랩", "location": "서울 서초구", "experience": "신입/경력", "employment_type": "", "deadline": "~07.31(금)", "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=list&rec_idx=54409154", "keyword": "그래픽 디자이너"}, {"id": "사람인|디자인, 설계, 전략사업 신입/경력 모집|(주)플레이잼", "site": "사람인", "title": "디자인, 설계, 전략사업 신입/경력 모집", "company": "(주)플레이잼", "location": "서울 강남구 외", "experience": "신입/경력", "employment_type": "", "deadline": "~08.12(수)", "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=list&rec_idx=54460721", "keyword": "그래픽 디자이너"}, {"id": "사람인|AE/디자이너/PD/모션그래퍼|㈜마스몬스터", "site": "사람인", "title": "AE/디자이너/PD/모션그래퍼", "company": "㈜마스몬스터", "location": "서울 강남구 외", "experience": "신입/경력", "employment_type": "", "deadline": "~08.16(일)", "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=list&rec_idx=54213150", "keyword": "그래픽 디자이너"}, {"id": "사람인|각 부문별 신입/경력 채용|㈜람스타일컴퍼니", "site": "사람인", "title": "각 부문별 신입/경력 채용", "company": "㈜람스타일컴퍼니", "location": "서울 강남구 외", "experience": "신입/경력", "employment_type": "", "deadline": "~08.02(일)", "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=list&rec_idx=54471266", "keyword": "그래픽 디자이너"}, {"id": "사람인|2026년 하반기 계약사원 채용|(주)KT&G", "site": "사람인", "title": "2026년 하반기 계약사원 채용", "company": "(주)KT&G", "location": "서울전체 외", "experience": "신입/경력", "employment_type": "", "deadline": "~07.28(화)", "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=list&rec_idx=54476592", "keyword": "그래픽 디자이너"}, {"id": "사람인|[헤이딜러] 테크베이 채용|㈜피알앤디테크베이", "site": "사람인", "title": "[헤이딜러] 테크베이 채용", "company": "㈜피알앤디테크베이", "location": "서울전체 외", "experience": "신입/경력", "employment_type": "", "deadline": "D-4", "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=list&rec_idx=54384961", "keyword": "그래픽 디자이너"}, {"id": "사람인|웹디자인 (라이팅 담당)|(주)에스피코리아", "site": "사람인", "title": "웹디자인 (라이팅 담당)", "company": "(주)에스피코리아", "location": "서울 강서구 외", "experience": "5년", "employment_type": "", "deadline": "~08.12(수)", "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=list&rec_idx=54442032", "keyword": "그래픽 디자이너"}, {"id": "사람인|인테리어 설계 CAD 경력 채용|(주)은산디자인", "site": "사람인", "title": "인테리어 설계 CAD 경력 채용", "company": "(주)은산디자인", "location": "서울 광진구 외", "experience": "5년", "employment_type": "", "deadline": "~08.11(화)", "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=list&rec_idx=54450409", "keyword": "그래픽 디자이너"}, {"id": "사람인|[헤트라스]패키지 디자인 담당|(주)쑥쑥컴퍼니", "site": "사람인", "title": "[헤트라스]패키지 디자인 담당", "company": "(주)쑥쑥컴퍼니", "location": "서울전체 외", "experience": "1년", "employment_type": "", "deadline": "~08.10(월)", "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=list&rec_idx=54391061", "keyword": "그래픽 디자이너"}, {"id": "사람인|제조/품질/시설 엔지니어/연구|큐니티(Qnity)", "site": "사람인", "title": "제조/품질/시설 엔지니어/연구", "company": "큐니티(Qnity)", "location": "서울 강남구 외", "experience": "경력", "employment_type": "", "deadline": "D-6", "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=list&rec_idx=54488909", "keyword": "마케터"}, {"id": "사람인|온라인 MD(입점몰)부문|주식회사 더메종", "site": "사람인", "title": "온라인 MD(입점몰)부문", "company": "주식회사 더메종", "location": "서울 성동구", "experience": "신입/경력", "employment_type": "", "deadline": "D-5", "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=list&rec_idx=54278552", "keyword": "마케터"}, {"id": "사람인|[아우디 공식딜러사]각 부문채용(영업/서비스/계출/마케팅/인사)|케이씨씨오토리움(주)", "site": "사람인", "title": "[아우디 공식딜러사]각 부문채용(영업/서비스/계출/마케팅/인사)", "company": "케이씨씨오토리움(주)", "location": "서울 강남구 외", "experience": "신입/경력", "employment_type": "", "deadline": "~08.09(일)", "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=list&rec_idx=54427880", "keyword": "마케터"}, {"id": "사람인|인하우스 퍼포먼스 마케터|(주)와이트라이브", "site": "사람인", "title": "인하우스 퍼포먼스 마케터", "company": "(주)와이트라이브", "location": "서울 강서구 외", "experience": "경력무관", "employment_type": "", "deadline": "~09.12(토)", "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=list&rec_idx=54476906", "keyword": "마케터"}, {"id": "사람인|[뷰티] 브랜드매니저(상품기획, BM) 채용|(주)엘씨드인터내셔널", "site": "사람인", "title": "[뷰티] 브랜드매니저(상품기획, BM) 채용", "company": "(주)엘씨드인터내셔널", "location": "서울 강남구", "experience": "경력무관", "employment_type": "", "deadline": "~08.15(토)", "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=list&rec_idx=54487499", "keyword": "마케터"}, {"id": "사람인|[대리급]크리에이티브 에이전시 기획팀 경력직 채용(BTL/MICE/EVE|(주)써클커넥션", "site": "사람인", "title": "[대리급]크리에이티브 에이전시 기획팀 경력직 채용(BTL/MICE/EVENT)", "company": "(주)써클커넥션", "location": "서울 강남구", "experience": "4년", "employment_type": "", "deadline": "내일마감", "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=list&rec_idx=54172651", "keyword": "마케터"}, {"id": "사람인|각 분야 경력 채용|(주)윤성에프앤씨", "site": "사람인", "title": "각 분야 경력 채용", "company": "(주)윤성에프앤씨", "location": "서울전체 외", "experience": "경력", "employment_type": "", "deadline": "D-6", "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=list&rec_idx=54246070", "keyword": "마케터"}, {"id": "사람인|7월 부문별 신입/경력 채용|㈜에프앤코", "site": "사람인", "title": "7월 부문별 신입/경력 채용", "company": "㈜에프앤코", "location": "서울전체 외", "experience": "신입/경력", "employment_type": "", "deadline": "~07.31(금)", "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=list&rec_idx=54488365", "keyword": "마케터"}, {"id": "사람인|일룸 직영점 영업전문직 공채|㈜일룸", "site": "사람인", "title": "일룸 직영점 영업전문직 공채", "company": "㈜일룸", "location": "서울전체 외", "experience": "신입/경력", "employment_type": "", "deadline": "D-6", "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=list&rec_idx=54415464", "keyword": "마케터"}, {"id": "사람인|Senior AI Agent Builder|팔레트(주)", "site": "사람인", "title": "Senior AI Agent Builder", "company": "팔레트(주)", "location": "서울 강남구 외", "experience": "8년", "employment_type": "", "deadline": "~08.17(월)", "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=list&rec_idx=54486953", "keyword": "마케터"}, {"id": "사람인|브랜드&서비스 마케팅 경력|(주)유디아이디", "site": "사람인", "title": "브랜드&서비스 마케팅 경력", "company": "(주)유디아이디", "location": "서울전체 외", "experience": "3년", "employment_type": "", "deadline": "~08.14(금)", "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=list&rec_idx=54470183", "keyword": "마케터"}, {"id": "사람인|콘텐츠 크리에이터 채용|(주)룩캐스트", "site": "사람인", "title": "콘텐츠 크리에이터 채용", "company": "(주)룩캐스트", "location": "서울 중구", "experience": "경력", "employment_type": "", "deadline": "~08.15(토)", "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=list&rec_idx=54483950", "keyword": "마케터"}, {"id": "사람인|토스플레이스 자회사 [iShopCARE] 대규모 채용｜ 영업·마케팅·전략|(주)아이샵케어", "site": "사람인", "title": "토스플레이스 자회사 [iShopCARE] 대규모 채용｜ 영업·마케팅·전략·CX·물류·AS·MD  外", "company": "(주)아이샵케어", "location": "서울 강남구 외", "experience": "신입/경력", "employment_type": "", "deadline": "~07.31(금)", "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=list&rec_idx=54320096", "keyword": "브랜드 디자이너"}, {"id": "사람인|온라인 MD/비주얼 디자이너|㈜포이닉스", "site": "사람인", "title": "온라인 MD/비주얼 디자이너", "company": "㈜포이닉스", "location": "서울전체 외", "experience": "3년", "employment_type": "", "deadline": "~07.31(금)", "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=list&rec_idx=54448243", "keyword": "브랜드 디자이너"}, {"id": "사람인|컨셉스토어영업/자사몰기획/외부몰MD/VMD/AI디자인/웹디자인/백화점영업|(주)에싸", "site": "사람인", "title": "컨셉스토어영업/자사몰기획/외부몰MD/VMD/AI디자인/웹디자인/백화점영업/개발지원", "company": "(주)에싸", "location": "서울 강남구 외", "experience": "신입/경력", "employment_type": "", "deadline": "~07.29(수)", "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=list&rec_idx=54482054", "keyword": "브랜드 디자이너"}, {"id": "사람인|마틸라 온라인 MD [신입]|주식회사 더메종", "site": "사람인", "title": "마틸라 온라인 MD [신입]", "company": "주식회사 더메종", "location": "서울 성동구", "experience": "신입", "employment_type": "", "deadline": "D-2", "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=list&rec_idx=54243907", "keyword": "브랜드 디자이너"}, {"id": "사람인|하반기 부문별 수시채용|㈜이디야", "site": "사람인", "title": "하반기 부문별 수시채용", "company": "㈜이디야", "location": "서울 강남구 외", "experience": "신입/경력", "employment_type": "", "deadline": "D-4", "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=list&rec_idx=54450829", "keyword": "브랜드 디자이너"}, {"id": "사람인|서비스 기획자 채용|(주)델레오코리아", "site": "사람인", "title": "서비스 기획자 채용", "company": "(주)델레오코리아", "location": "서울 강남구", "experience": "5년", "employment_type": "", "deadline": "~08.10(월)", "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=list&rec_idx=54421761", "keyword": "브랜드 디자이너"}, {"id": "사람인|상품 콘텐츠 기획자 경력 채용|(주)비티와이플러스", "site": "사람인", "title": "상품 콘텐츠 기획자 경력 채용", "company": "(주)비티와이플러스", "location": "서울전체 외", "experience": "신입/경력", "employment_type": "", "deadline": "~08.14(금)", "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=list&rec_idx=54489573", "keyword": "브랜드 디자이너"}, {"id": "사람인|펫코본 콘텐츠 디자이너 영입|(주)비케이네스트", "site": "사람인", "title": "펫코본 콘텐츠 디자이너 영입", "company": "(주)비케이네스트", "location": "서울 강동구", "experience": "신입/경력", "employment_type": "", "deadline": "~08.18(화)", "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=list&rec_idx=54484398", "keyword": "브랜드 디자이너"}, {"id": "사람인|[HKN] - 크리에이티브 웹 디자이너 (정식채용)|주식회사 에이치케이엔", "site": "사람인", "title": "[HKN] - 크리에이티브 웹 디자이너 (정식채용)", "company": "주식회사 에이치케이엔", "location": "서울 강남구 외", "experience": "경력무관", "employment_type": "", "deadline": "~08.29(토)", "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=list&rec_idx=54327233", "keyword": "웹디자이너"}, {"id": "사람인|수학/영어 교육 분야|아이헤이트플라잉버그스(주)", "site": "사람인", "title": "수학/영어 교육 분야", "company": "아이헤이트플라잉버그스(주)", "location": "서울 강남구 외", "experience": "경력무관", "employment_type": "", "deadline": "~08.05(수)", "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=list&rec_idx=54364237", "keyword": "웹디자이너"}, {"id": "사람인|각 부문별 신입/경력 채용|㈜뷰니스", "site": "사람인", "title": "각 부문별 신입/경력 채용", "company": "㈜뷰니스", "location": "서울전체 외", "experience": "신입/경력", "employment_type": "", "deadline": "~08.16(일)", "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=list&rec_idx=54487937", "keyword": "웹디자이너"}, {"id": "사람인|웹 퍼블리셔|(주)위버케어", "site": "사람인", "title": "웹 퍼블리셔", "company": "(주)위버케어", "location": "서울 강남구 외", "experience": "3년", "employment_type": "", "deadline": "~08.11(화)", "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=list&rec_idx=54417436", "keyword": "웹디자이너"}, {"id": "사람인|이너뷰티 온라인 디자이너|(주)에이지엣랩스", "site": "사람인", "title": "이너뷰티 온라인 디자이너", "company": "(주)에이지엣랩스", "location": "서울 동대문구 외", "experience": "5년", "employment_type": "", "deadline": "~08.14(금)", "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=list&rec_idx=54483055", "keyword": "웹디자이너"}];
+const JOBS = [{"id": "사람인|각 부문 신입/경력 채용|㈜폴라리스오피스", "site": "사람인", "title": "각 부문 신입/경력 채용", "company": "㈜폴라리스오피스", "location": "서울전체 외", "experience": "신입/경력", "employment_type": "", "deadline": "~07.31(금)", "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=list&rec_idx=54483631", "keyword": "UI/UX 디자이너"}, {"id": "사람인|디자이너/프로모션 및 운영 정규직 채용|(주)씨티티디", "site": "사람인", "title": "디자이너/프로모션 및 운영 정규직 채용", "company": "(주)씨티티디", "location": "서울전체 외", "experience": "신입/경력", "employment_type": "", "deadline": "~08.05(수)", "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=list&rec_idx=54391005", "keyword": "UI/UX 디자이너"}, {"id": "사람인|2026년 신입 및 경력 채용|(주)디알텍", "site": "사람인", "title": "2026년 신입 및 경력 채용", "company": "(주)디알텍", "location": "서울전체 외", "experience": "신입/경력", "employment_type": "", "deadline": "~07.31(금)", "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=list&rec_idx=54325051", "keyword": "UI/UX 디자이너"}, {"id": "사람인|2026년 신입/경력 수시채용|㈜파마리서치", "site": "사람인", "title": "2026년 신입/경력 수시채용", "company": "㈜파마리서치", "location": "서울전체 외", "experience": "신입/경력", "employment_type": "", "deadline": "상시채용", "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=list&rec_idx=53078923", "keyword": "UI/UX 디자이너"}, {"id": "사람인|[히디프] 웹 디자이너|(주)메디테라피", "site": "사람인", "title": "[히디프] 웹 디자이너", "company": "(주)메디테라피", "location": "서울 강남구 외", "experience": "5년", "employment_type": "", "deadline": "~08.10(월)", "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=list&rec_idx=54340551", "keyword": "UI/UX 디자이너"}, {"id": "사람인|브랜드 디자이너 경력 채용|(주)완벽한우리들", "site": "사람인", "title": "브랜드 디자이너 경력 채용", "company": "(주)완벽한우리들", "location": "서울 금천구", "experience": "2년", "employment_type": "", "deadline": "~08.18(화)", "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=list&rec_idx=54508201", "keyword": "UI/UX 디자이너"}, {"id": "사람인|프로덕트디자이너|풀림", "site": "사람인", "title": "프로덕트디자이너", "company": "풀림", "location": "서울 강남구", "experience": "신입/경력", "employment_type": "", "deadline": "~08.14(금)", "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=list&rec_idx=54489640", "keyword": "UI/UX 디자이너"}, {"id": "사람인|자사몰 카페24 MD|(주)리터니티", "site": "사람인", "title": "자사몰 카페24 MD", "company": "(주)리터니티", "location": "서울전체 외", "experience": "1년", "employment_type": "", "deadline": "~08.12(수)", "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=list&rec_idx=54462124", "keyword": "UI/UX 디자이너"}, {"id": "사람인|온라인쇼핑몰 브랜드디자이너|주식회사어센트원", "site": "사람인", "title": "온라인쇼핑몰 브랜드디자이너", "company": "주식회사어센트원", "location": "서울전체 외", "experience": "1년", "employment_type": "", "deadline": "~08.18(화)", "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=list&rec_idx=54505941", "keyword": "UI/UX 디자이너"}, {"id": "사람인|통학차량 서비스 디자인/UX|(주)스쿨버스", "site": "사람인", "title": "통학차량 서비스 디자인/UX", "company": "(주)스쿨버스", "location": "서울 강서구 외", "experience": "1년", "employment_type": "", "deadline": "~08.11(화)", "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=list&rec_idx=54447183", "keyword": "UI/UX 디자이너"}, {"id": "사람인|[더블러버스] 브랜드 디자이너|(주)메디쿼터스", "site": "사람인", "title": "[더블러버스] 브랜드 디자이너", "company": "(주)메디쿼터스", "location": "서울 강남구", "experience": "3년", "employment_type": "", "deadline": "~08.16(일)", "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=list&rec_idx=54485287", "keyword": "UI/UX 디자이너"}, {"id": "사람인|웹 콘텐츠 디자인 Sr. 매니저|(주)더파운더즈", "site": "사람인", "title": "웹 콘텐츠 디자인 Sr. 매니저", "company": "(주)더파운더즈", "location": "서울 강남구 외", "experience": "5년", "employment_type": "", "deadline": "~08.10(월)", "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=list&rec_idx=54418007", "keyword": "UI/UX 디자이너"}, {"id": "사람인|상세페이지 기획자,스토리텔링|(주)이펙터", "site": "사람인", "title": "상세페이지 기획자,스토리텔링", "company": "(주)이펙터", "location": "서울 강남구", "experience": "신입/경력", "employment_type": "", "deadline": "~08.14(금)", "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=list&rec_idx=54488375", "keyword": "UI/UX 디자이너"}, {"id": "사람인|디자인팀 경력직 채용|(주)아이알큐더스", "site": "사람인", "title": "디자인팀 경력직 채용", "company": "(주)아이알큐더스", "location": "서울 영등포구", "experience": "2년", "employment_type": "", "deadline": "~08.14(금)", "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=list&rec_idx=54486581", "keyword": "UI/UX 디자이너"}, {"id": "사람인|[커머스] 콘텐츠 디자이너|풀림", "site": "사람인", "title": "[커머스] 콘텐츠 디자이너", "company": "풀림", "location": "서울 강남구", "experience": "신입/경력", "employment_type": "", "deadline": "~08.14(금)", "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=list&rec_idx=54489481", "keyword": "UI/UX 디자이너"}, {"id": "사람인|디자인, 설계, 전략사업 신입/경력 모집|(주)플레이잼", "site": "사람인", "title": "디자인, 설계, 전략사업 신입/경력 모집", "company": "(주)플레이잼", "location": "서울 강남구 외", "experience": "신입/경력", "employment_type": "", "deadline": "~08.12(수)", "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=list&rec_idx=54460721", "keyword": "그래픽 디자이너"}, {"id": "사람인|토스플레이스 자회사 [iShopCARE] 대규모 채용｜ 영업·마케팅·전략|(주)아이샵케어", "site": "사람인", "title": "토스플레이스 자회사 [iShopCARE] 대규모 채용｜ 영업·마케팅·전략·CX·물류·AS·MD  外", "company": "(주)아이샵케어", "location": "서울 강남구 외", "experience": "신입/경력", "employment_type": "", "deadline": "~07.31(금)", "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=list&rec_idx=54320096", "keyword": "그래픽 디자이너"}, {"id": "사람인|AE/디자이너/PD/모션그래퍼|㈜마스몬스터", "site": "사람인", "title": "AE/디자이너/PD/모션그래퍼", "company": "㈜마스몬스터", "location": "서울 강남구 외", "experience": "신입/경력", "employment_type": "", "deadline": "~08.16(일)", "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=list&rec_idx=54213150", "keyword": "그래픽 디자이너"}, {"id": "사람인|[K뷰티] 약국영업/MD/마케팅/영업지원/해외담당자 모집|(주)와우바이오텍", "site": "사람인", "title": "[K뷰티] 약국영업/MD/마케팅/영업지원/해외담당자 모집", "company": "(주)와우바이오텍", "location": "서울전체 외", "experience": "신입/경력", "employment_type": "", "deadline": "~08.03(월)", "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=list&rec_idx=54338992", "keyword": "그래픽 디자이너"}, {"id": "사람인|[리포데이] 마케팅/영상/컨텐츠/인플루언서/영업 담당자 모집|(주)와우바이오텍", "site": "사람인", "title": "[리포데이] 마케팅/영상/컨텐츠/인플루언서/영업 담당자 모집", "company": "(주)와우바이오텍", "location": "서울전체 외", "experience": "신입/경력", "employment_type": "", "deadline": "~08.03(월)", "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=list&rec_idx=54339115", "keyword": "그래픽 디자이너"}, {"id": "사람인|2026년 하반기 계약사원 채용|(주)KT&G", "site": "사람인", "title": "2026년 하반기 계약사원 채용", "company": "(주)KT&G", "location": "서울전체 외", "experience": "신입/경력", "employment_type": "", "deadline": "D-7", "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=list&rec_idx=54476592", "keyword": "그래픽 디자이너"}, {"id": "사람인|각 부문별 신입/경력 채용|㈜람스타일컴퍼니", "site": "사람인", "title": "각 부문별 신입/경력 채용", "company": "㈜람스타일컴퍼니", "location": "서울 강남구 외", "experience": "신입/경력", "employment_type": "", "deadline": "~08.02(일)", "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=list&rec_idx=54471266", "keyword": "그래픽 디자이너"}, {"id": "사람인|[헤이딜러] 테크베이 채용|㈜피알앤디테크베이", "site": "사람인", "title": "[헤이딜러] 테크베이 채용", "company": "㈜피알앤디테크베이", "location": "서울전체 외", "experience": "신입/경력", "employment_type": "", "deadline": "D-3", "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=list&rec_idx=54384961", "keyword": "그래픽 디자이너"}, {"id": "사람인|여행상품 홍보 마케터 (경력)|(주)링켄리브", "site": "사람인", "title": "여행상품 홍보 마케터 (경력)", "company": "(주)링켄리브", "location": "서울 강남구 외", "experience": "2년", "employment_type": "", "deadline": "~08.13(목)", "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=list&rec_idx=54470779", "keyword": "그래픽 디자이너"}, {"id": "사람인|인테리어 설계 CAD 경력 채용|(주)은산디자인", "site": "사람인", "title": "인테리어 설계 CAD 경력 채용", "company": "(주)은산디자인", "location": "서울 광진구 외", "experience": "5년", "employment_type": "", "deadline": "~08.11(화)", "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=list&rec_idx=54450409", "keyword": "그래픽 디자이너"}, {"id": "사람인|TA (테크니컬 아티스트)|(주)에스피코리아", "site": "사람인", "title": "TA (테크니컬 아티스트)", "company": "(주)에스피코리아", "location": "서울 강서구 외", "experience": "신입/경력", "employment_type": "", "deadline": "~08.19(수)", "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=list&rec_idx=54499154", "keyword": "그래픽 디자이너"}, {"id": "사람인|일룸 직영점 영업전문직 공채|㈜일룸", "site": "사람인", "title": "일룸 직영점 영업전문직 공채", "company": "㈜일룸", "location": "서울전체 외", "experience": "신입/경력", "employment_type": "", "deadline": "D-5", "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=list&rec_idx=54415464", "keyword": "마케터"}, {"id": "사람인|2026 신입&경력 대규모 채용|(주)바이앤셀파트너스", "site": "사람인", "title": "2026 신입&경력 대규모 채용", "company": "(주)바이앤셀파트너스", "location": "서울전체 외", "experience": "신입/경력", "employment_type": "", "deadline": "~07.31(금)", "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=list&rec_idx=53215423", "keyword": "마케터"}, {"id": "사람인|롯데 LIFT 1기 모집|대한상공회의소", "site": "사람인", "title": "롯데 LIFT 1기 모집", "company": "대한상공회의소", "location": "서울전체 외", "experience": "신입/경력", "employment_type": "", "deadline": "D-5", "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=list&rec_idx=54223915", "keyword": "마케터"}, {"id": "사람인|소화기 내과 영업팀 신입/경력 채용|㈜지인씨앤티", "site": "사람인", "title": "소화기 내과 영업팀 신입/경력 채용", "company": "㈜지인씨앤티", "location": "서울 강동구 외", "experience": "신입", "employment_type": "", "deadline": "~07.31(금)", "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=list&rec_idx=54322325", "keyword": "마케터"}, {"id": "사람인|온라인 MD/AMD 채용|㈜순수식품", "site": "사람인", "title": "온라인 MD/AMD 채용", "company": "㈜순수식품", "location": "서울전체 외", "experience": "신입/경력", "employment_type": "", "deadline": "~08.12(수)", "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=list&rec_idx=54385297", "keyword": "마케터"}, {"id": "사람인|의료기기 연구원 채용|(주)성진하이텍", "site": "사람인", "title": "의료기기 연구원 채용", "company": "(주)성진하이텍", "location": "서울전체 외", "experience": "신입/경력", "employment_type": "", "deadline": "~07.31(금)", "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=list&rec_idx=54446111", "keyword": "마케터"}, {"id": "사람인|[직영] 최선어학원 영어선생님/ 마타수학 수학선생님 채용|㈜DYB최선어학원", "site": "사람인", "title": "[직영] 최선어학원 영어선생님/ 마타수학 수학선생님 채용", "company": "㈜DYB최선어학원", "location": "서울 강남구 외", "experience": "신입/경력", "employment_type": "", "deadline": "~08.13(목)", "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=list&rec_idx=54461830", "keyword": "마케터"}, {"id": "사람인|[신입/경력] 해외영업 정규직 채용 공고 (영어)|㈜그랑에스피오", "site": "사람인", "title": "[신입/경력] 해외영업 정규직 채용 공고 (영어)", "company": "㈜그랑에스피오", "location": "서울 강남구", "experience": "신입/경력", "employment_type": "", "deadline": "~07.29(수)", "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=list&rec_idx=54452097", "keyword": "마케터"}, {"id": "사람인|[신입/경력] 대학병원 의료기기 영업사원 (서울 및 지방근무자)|(주)아시안메드", "site": "사람인", "title": "[신입/경력] 대학병원 의료기기 영업사원 (서울 및 지방근무자)", "company": "(주)아시안메드", "location": "서울 강남구 외", "experience": "신입/경력", "employment_type": "", "deadline": "D-3", "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=list&rec_idx=54457913", "keyword": "마케터"}, {"id": "사람인|해외영업본부 무역팀 채용|㈜현일랩메이트", "site": "사람인", "title": "해외영업본부 무역팀 채용", "company": "㈜현일랩메이트", "location": "서울전체 외", "experience": "신입/경력", "employment_type": "", "deadline": "D-5", "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=list&rec_idx=54434252", "keyword": "마케터"}, {"id": "사람인|각 분야 경력 채용|(주)윤성에프앤씨", "site": "사람인", "title": "각 분야 경력 채용", "company": "(주)윤성에프앤씨", "location": "서울전체 외", "experience": "경력", "employment_type": "", "deadline": "D-5", "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=list&rec_idx=54246070", "keyword": "마케터"}, {"id": "사람인|Global B2B Sales & Marketer|주식회사네오심플릭스", "site": "사람인", "title": "Global B2B Sales & Marketer", "company": "주식회사네오심플릭스", "location": "서울 강남구", "experience": "3년", "employment_type": "", "deadline": "~08.11(화)", "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=list&rec_idx=54446122", "keyword": "마케터"}, {"id": "사람인|제약 BM (5~9년) 채용|(주)바로팜", "site": "사람인", "title": "제약 BM (5~9년) 채용", "company": "(주)바로팜", "location": "서울 강남구 외", "experience": "5년", "employment_type": "", "deadline": "~08.13(목)", "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=list&rec_idx=54474970", "keyword": "마케터"}, {"id": "사람인|영업팀[중남미/중동매니저RM]|(주)알에프메디컬", "site": "사람인", "title": "영업팀[중남미/중동매니저RM]", "company": "(주)알에프메디컬", "location": "서울 구로구 외", "experience": "3년", "employment_type": "", "deadline": "~08.13(목)", "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=list&rec_idx=54472244", "keyword": "마케터"}, {"id": "사람인|인하우스 퍼포먼스 마케터|(주)와이트라이브", "site": "사람인", "title": "인하우스 퍼포먼스 마케터", "company": "(주)와이트라이브", "location": "서울 강서구 외", "experience": "경력무관", "employment_type": "", "deadline": "~09.12(토)", "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=list&rec_idx=54476906", "keyword": "브랜드 디자이너"}, {"id": "사람인|[코드그라피] 마케터 경력 채용|(주)콘크리트웍스", "site": "사람인", "title": "[코드그라피] 마케터 경력 채용", "company": "(주)콘크리트웍스", "location": "서울 성동구", "experience": "2년", "employment_type": "", "deadline": "~09.13(일)", "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=list&rec_idx=54451114", "keyword": "브랜드 디자이너"}, {"id": "사람인|7월 부문별 신입/경력 채용|㈜에프앤코", "site": "사람인", "title": "7월 부문별 신입/경력 채용", "company": "㈜에프앤코", "location": "서울전체 외", "experience": "신입/경력", "employment_type": "", "deadline": "~07.31(금)", "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=list&rec_idx=54488365", "keyword": "브랜드 디자이너"}, {"id": "사람인|On 부문별 신입/경력 공개채용|온코리아(유)", "site": "사람인", "title": "On 부문별 신입/경력 공개채용", "company": "온코리아(유)", "location": "서울전체 외", "experience": "신입/경력", "employment_type": "", "deadline": "~08.29(토)", "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=list&rec_idx=54474475", "keyword": "브랜드 디자이너"}, {"id": "사람인|온라인 MD/비주얼 디자이너|㈜포이닉스", "site": "사람인", "title": "온라인 MD/비주얼 디자이너", "company": "㈜포이닉스", "location": "서울전체 외", "experience": "3년", "employment_type": "", "deadline": "~07.31(금)", "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=list&rec_idx=54448243", "keyword": "브랜드 디자이너"}, {"id": "사람인|[대리급]크리에이티브 에이전시 기획팀 경력직 채용(BTL/MICE/EVE|(주)써클커넥션", "site": "사람인", "title": "[대리급]크리에이티브 에이전시 기획팀 경력직 채용(BTL/MICE/EVENT)", "company": "(주)써클커넥션", "location": "서울 강남구", "experience": "4년", "employment_type": "", "deadline": "오늘마감", "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=list&rec_idx=54172651", "keyword": "브랜드 디자이너"}, {"id": "사람인|각 부문별 신입/경력 채용|㈜뷰니스", "site": "사람인", "title": "각 부문별 신입/경력 채용", "company": "㈜뷰니스", "location": "서울전체 외", "experience": "신입/경력", "employment_type": "", "deadline": "~08.16(일)", "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=list&rec_idx=54487937", "keyword": "브랜드 디자이너"}, {"id": "사람인|전시공간 디자이너 5년 이상|(주)에어로예성", "site": "사람인", "title": "전시공간 디자이너 5년 이상", "company": "(주)에어로예성", "location": "서울 강남구", "experience": "5년", "employment_type": "", "deadline": "~08.10(월)", "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=list&rec_idx=54432812", "keyword": "브랜드 디자이너"}, {"id": "사람인|[프롬리에] 국내영업 파트장(팀장) (5년 이상)|이닛컴퍼니(주)", "site": "사람인", "title": "[프롬리에] 국내영업 파트장(팀장) (5년 이상)", "company": "이닛컴퍼니(주)", "location": "서울 강동구 외", "experience": "5년", "employment_type": "", "deadline": "~08.18(화)", "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=list&rec_idx=54488787", "keyword": "브랜드 디자이너"}, {"id": "사람인|그래픽 디자이너|(주)골든웨일즈", "site": "사람인", "title": "그래픽 디자이너", "company": "(주)골든웨일즈", "location": "서울 광진구 외", "experience": "2년", "employment_type": "", "deadline": "~08.11(화)", "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=list&rec_idx=54449056", "keyword": "브랜드 디자이너"}, {"id": "사람인|[HKN] - 크리에이티브 웹 디자이너 (정식채용)|주식회사 에이치케이엔", "site": "사람인", "title": "[HKN] - 크리에이티브 웹 디자이너 (정식채용)", "company": "주식회사 에이치케이엔", "location": "서울 강남구 외", "experience": "경력무관", "employment_type": "", "deadline": "~08.29(토)", "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=list&rec_idx=54327233", "keyword": "웹디자이너"}, {"id": "사람인|수학/영어 교육 분야|아이헤이트플라잉버그스(주)", "site": "사람인", "title": "수학/영어 교육 분야", "company": "아이헤이트플라잉버그스(주)", "location": "서울 강남구 외", "experience": "경력무관", "employment_type": "", "deadline": "~08.05(수)", "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=list&rec_idx=54364237", "keyword": "웹디자이너"}, {"id": "사람인|Senior AI Agent Builder|팔레트(주)", "site": "사람인", "title": "Senior AI Agent Builder", "company": "팔레트(주)", "location": "서울 강남구 외", "experience": "8년", "employment_type": "", "deadline": "~08.17(월)", "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?view_type=list&rec_idx=54486953", "keyword": "웹디자이너"}];
 
 // ── 서버 모드 감지 (file:// 면 localStorage 폴백) ──
 const IS_SERVER = location.protocol !== 'file:';
